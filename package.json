@@ -1,0 +1,28 @@
+{
+  "name": "danland",
+  "version": "1.0.0",
+  "description": "Superfish Drop Menu:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --danland/ scss scss/main.scss   style(1).css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattcllhn/enablement_labs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattcllhn/enablement_labs/issues"
+  },
+  "homepage": "https://github.com/mattcllhn/enablement_labs#readme",
+  "keywords": [],
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
