@@ -1,15 +1,33 @@
-.fa.fa-users {
-  background: #E74E4E;
-  color: #246bc2;
-  border-radius: 50%;
-  width: 5.6em;
-  line-height: 2.2;
-  text-align: center;
-  font-size: 1.6em;
+$background-color: #4B6C79;
+$circle-color: #FFFFFF;
+
+.view-header {
+  background-color: $background-color;
 }
 
-.fa-users::before {
-  content: "\f0c0";
-  font-size: 2.6em;
+.title-block {
+  display: inline-block;
+
+  .main-title{
+    text-transform: uppercase;
+  }
 }
 
+.lab-icon {
+  display: inline-block;
+
+  .fa.fa-users {
+    background-color: $circle-color;
+    color: $background-color;
+    border-radius: 50%;
+    width: 5.6em;
+    line-height: 2.2;
+    text-align: center;
+    font-size: 1.6em;
+  }
+
+  .fa-users::before {
+    content: "\f0c0";
+    font-size: 2.6em;
+  }
+}
