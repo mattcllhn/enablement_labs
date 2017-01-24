@@ -22,6 +22,7 @@ function danland_preprocess_maintenance_page(&$variables) {
   if (!$variables['db_is_active']) {
     unset($variables['site_name']);
   }
+  drupal_add_css(drupal_get_path('theme', 'danland') . '/css/main.css', array('group' => CSS_THEME, 'type' => 'file'));
   drupal_add_css(drupal_get_path('theme', 'danland') . '/maintenance.css');
   drupal_add_js(drupal_get_path('theme', 'danland') . '/scripts/jquery.cycle.all.js');
 }
