@@ -20,7 +20,9 @@
   "homepage": "https://github.com/mattcllhn/enablement_labs#readme",
   "keywords": [],
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-watch": "^4.3.11",
+    "gulp-sass": "^2.0.4"
   },
   "dependencies": {
     "nodemon": "^1.11.0"
