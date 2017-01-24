@@ -32,6 +32,7 @@ core = "7.x"
 
 scripts[] = scripts/hoverIntent.js
 scripts[] = scripts/superfish.js
+stylesheets[all][] = css/main.css
 
 
 ; Information added by drupal.org packaging script on 2011-01-06
