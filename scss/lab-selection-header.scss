@@ -29,7 +29,7 @@
     text-transform: uppercase;
     line-height: 1.1;
     @include fonts("Oswald", 600, 1.5rem);
-    color: $con-bone;
+    color: $white;
     padding-bottom: 1rem;
   }
 
@@ -43,14 +43,14 @@
 
 }
 
-.lab-icon {
+.header-icon {
   display: inline-block;
   padding: 1rem;
   position: relative;
   bottom: 1rem;
 
   .fa.fa-users {
-    background-color: $con-bone;
+    background-color: $white;
     color: $background-color;
     border-radius: 50%;
     width: 5.6em;
