@@ -10,9 +10,10 @@
 .view-id-lab_selection {
   .view-content {
     width: 100%;
-    margin: 0 auto;
+    margin: 20rem auto 0 auto;
     background-color: $labs-grey-background;
     display: inline-flex;
+    padding: 10rem 0 10rem 0;
 
     .views-row {
       display: inline-block;
@@ -92,6 +93,8 @@
 .lab-modules {
   position: relative;
   font-family: "Source Sans Pro", sans-serif;
+  box-shadow: 7px 5px 0 #BEBEBE;
+
   .topic-shortlist {
     background-color: $con-harvest;
   }
