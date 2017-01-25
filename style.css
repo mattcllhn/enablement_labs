@@ -615,8 +615,8 @@ float: left;
 
 #layout-type-1 #sidebar-right {
 width: 26%;
-float: right;
-font-size:12px;	      
+float: right;  
+font-size:12px;	       
 }
 
 #layout-type-2 #sidebar-right {
