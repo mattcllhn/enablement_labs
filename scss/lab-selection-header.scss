@@ -18,17 +18,20 @@
 
 .view-header {
   background-color: $background-color;
+  margin: 0 auto;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .title-block {
   display: inline-block;
-  width: 70%;
+  width: 78%;
   padding: 1rem;
 
   .main-title{
     text-transform: uppercase;
     line-height: 1.1;
-    @include fonts("Oswald", 600, 1.5rem);
+    @include fonts("Oswald", 600, 4rem);
     color: $white;
     padding-bottom: 1rem;
   }
@@ -38,7 +41,15 @@
     padding: .5rem;
     text-transform: uppercase;
     background-color: #65828E; //Need updating
-    @include fonts("Source Sans Pro", 400, 1rem);
+    @include fonts("Source Sans Pro", 400, 2rem);
+  }
+
+  .down-arrow-icon {
+    text-align: center;
+    .fa.fa-angle-double-down {
+      color: $white;
+      font-size: 9rem;
+    }
   }
 
 }
@@ -47,7 +58,7 @@
   display: inline-block;
   padding: 1rem;
   position: relative;
-  bottom: 1rem;
+  bottom: 16rem;
 
   .fa.fa-users {
     background-color: $white;
