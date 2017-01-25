@@ -1,15 +1,106 @@
 @import "main-site-colors";
 
-.view-content {
-  width: 100%;
-  margin: 0 auto;
-  background-color: $labs-grey-background;
+#notice {
+  display: none;
+}
+#footer-wrapper {
+  border: none;
+}
 
-  .views-row {
-    display: inline-block;
-    width: 22%;
-    padding: 1rem;
-    background-color: $white;
-    text-align: center;
+.view-id-lab_selection {
+  .view-content {
+    width: 100%;
+    margin: 0 auto;
+    background-color: $labs-grey-background;
+    display: inline-flex;
+
+    .views-row {
+      display: inline-block;
+      width: 26%;
+      background-color: $white;
+      text-align: center;
+      margin: 2rem .5rem 2rem 2rem;
+
+        .lab-title {
+          padding: 1rem;
+        }
+
+        .topic-shortlist {
+          line-height: 1;
+          font-size: .7rem;
+          padding: .5rem;
+          color: $white;
+          position: relative;
+        }
+      }
+    }
+
+  }
+
+.lab-icon {
+      .fa {
+        border-radius: 50%;
+        width: 5.6em;
+        line-height: 2.2;
+        font-size: 1rem;
+        border: 3px solid #ACACAC;
+        color: $white;
+        background-color: #7F973B;
+
+        &:before {
+        font-size: 2.5rem;
+      }
+    }
+  .fa-user-md {
+    background-color: $awesomeinc_perrywinkle;
+  }
+  .fa-shopping-bag {
+    background-color: $con-burnt;
+  }
+
+  .fa-database {
+    background-color: $con-gold;
+  }
+
+  .fa-life-ring {
+    background-color: $con-ecoforest;
+  }
+
+  .fa-thermometer-full {
+    background-color: $con-sandstone;
+  }
+
+  .fa-id-card-o {
+    background-color: $con-brick;
   }
 }
+
+.lab-modules {
+  position: relative;
+  font-family: "Source Sans Pro", sans-serif;
+  .topic-shortlist {
+    background-color: $con-harvest;
+  }
+}
+
+  .lab-perrywinkle .topic-shortlist {
+    background-color: $awesomeinc_perrywinkle;
+  }
+  .lab-burnt .topic-shortlist {
+    background-color: $con-burnt;
+  }
+  .lab-gold .topic-shortlist {
+    background-color: $con-gold;
+  }
+
+  .lab-ecoforest .topic-shortlist {
+    background-color: $con-ecoforest;
+  }
+
+  .lab-sandstone .topic-shortlist {
+    background-color: $con-sandstone;
+  }
+
+  .lab-brick .topic-shortlist {
+    background-color: $con-brick;
+  }
