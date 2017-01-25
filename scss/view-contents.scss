@@ -35,6 +35,20 @@
       }
     }
 
+  .item-list .pager {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+
+    .pager-current {
+      padding: .3rem;
+    }
+  }
+
   }
 
 .lab-icon {
