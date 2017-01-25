@@ -1,0 +1,15 @@
+@import "main-site-colors";
+
+.view-content {
+  width: 100%;
+  margin: 0 auto;
+  background-color: $labs-grey-background;
+
+  .views-row {
+    display: inline-block;
+    width: 22%;
+    padding: 1rem;
+    background-color: $white;
+    text-align: center;
+  }
+}
