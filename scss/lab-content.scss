@@ -26,35 +26,30 @@ $con-gold: #B4975A ;
   font-size: $font-size;
 }
 
-h1{
-        background-color: #1460AB;
+    .field-name-title{
+    background-color: #3a52a0;
     text-align: center;
     color: white;
     padding: 20px;
-        
     }
 
-.title{
-    background-color: #1460AB;
-    text-align: center;
-    color: white;
-    padding: 20px;
-    }  
+.lab-header-wrapper{
     
-
-#page-title{
-     background-color: #1460AB;
-    text-align: center;
-    color: white;
-    padding: 20px; 
-}
+    .field-name-field-fa-icon{
+        p{
+        margin-top: -40px;
+        margin-left: 40px;
+        }
+        
+    }
 
  .field-name-body{
    p{
     text-align: center;
     font-size: 1.5rem;
     line-height: 1.1;
-    font-weight: 600; 
+    font-weight: 600;
+    margin-top: -34px;
         }  
      
 }
@@ -63,19 +58,20 @@ h1{
     text-align: center;
     width: 160px;
     margin: auto;
-    background-color: #1460AB;
+    background-color: #3a52a0;
     color: white;
     padding: 4px;   
     }
 }
 
 .fa.fa-user-md{
-     background-color: #1460AB;
+    background-color: #3a52a0;
     color: white;
     border-radius: 50%;
-    width: 5.6em;
+    width: 4.6em;
     line-height: 2.2;
     text-align: center;
+    border: 5px solid #959484;
     @include fontSize(16px); //1.6em;
 }
 
@@ -83,4 +79,5 @@ h1{
     content: "\f0c0";
     @include fontSize(32px); //2.6em;
   }
+}
 
