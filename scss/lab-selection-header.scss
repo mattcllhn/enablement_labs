@@ -1,5 +1,30 @@
 $background-color: #4B6C79;
-$circle-color: #FFFFFF;
+$con-wesson: #414042 ;
+$con-brick: #A03133 ;
+$con-seattle: #4B6C79 ;
+$con-harvest: #E4A025 ;
+$con-ecoforest: #7F973B ;
+$con-burnt: #D34209 ;
+$con-kraft: #c3B48B ;
+$con-bone: #DFE1CF ;
+$con-sandstone: #959484 ;
+$con-gold: #B4975A ;
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+@mixin fonts($font-family, $font-weight, $font-size) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+}
 
 .view-header {
   background-color: $background-color;
@@ -7,27 +32,45 @@ $circle-color: #FFFFFF;
 
 .title-block {
   display: inline-block;
+  width: 70%;
+  padding: 1rem;
 
   .main-title{
     text-transform: uppercase;
+    line-height: 1.1;
+    @include fonts("Oswald", 600, 1.5rem);
+    color: $con-bone;
+    padding-bottom: 1rem;
   }
+
+  .sub-title {
+    color: $con-harvest;
+    padding: .5rem;
+    text-transform: uppercase;
+    background-color: #65828E; //Need updating
+    @include fonts("Source Sans Pro", 400, 1rem);
+  }
+
 }
 
 .lab-icon {
   display: inline-block;
+  padding: 1rem;
+  position: relative;
+  bottom: 1rem;
 
   .fa.fa-users {
-    background-color: $circle-color;
+    background-color: $con-bone;
     color: $background-color;
     border-radius: 50%;
     width: 5.6em;
     line-height: 2.2;
     text-align: center;
-    font-size: 1.6em;
+    @include fontSize(16px); //1.6em;
   }
 
   .fa-users::before {
     content: "\f0c0";
-    font-size: 2.6em;
+    @include fontSize(32px); //2.6em;
   }
 }
