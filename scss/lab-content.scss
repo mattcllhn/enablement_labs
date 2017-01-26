@@ -37,14 +37,22 @@ $con-gold: #B4975A ;
     text-align: center;
     color: white;
     padding: 20px;
+        
+     h2{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    font-weight: bold;   
+        }
     }
 
 .lab-header-wrapper{
 
     .field-name-field-fa-icon{
         p{
-        margin-top: -40px;
+        margin-top: -50px;
         margin-left: 40px;
+        margin-bottom:-30px;
         }
 
     }
@@ -52,10 +60,9 @@ $con-gold: #B4975A ;
  .field-name-body{
    p{
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2.6rem;
     line-height: 1.1;
     font-weight: 600;
-    margin-top: -34px;
         }
 
 }
@@ -66,7 +73,10 @@ $con-gold: #B4975A ;
     margin: auto;
     background-color: #3a52a0;
     color: white;
-    padding: 4px;
+    padding: 8px 8px 8px 8px;
+    margin-bottom:30px;
+    font-weight:500;
+    margin-top:20px;
     }
 }
 
@@ -74,15 +84,18 @@ $con-gold: #B4975A ;
     background-color: #3a52a0;
     color: white;
     border-radius: 50%;
-    width: 4.6em;
-    line-height: 2.2;
+    width: 6.6em;
+    height:6.6em;
+    line-height: 6.6em;
     text-align: center;
-    border: 5px solid #959484;
+    border: 7px solid #999999;
     @include fontSize(16px); //1.6em;
+    font-size: 1.6rem;
 }
 
   .fa-user-md:before {
     content: "\f0c0";
     @include fontSize(32px); //2.6em;
+      font-size:5rem;
   }
 }
