@@ -41,7 +41,7 @@
     padding: .5rem;
     text-transform: uppercase;
     background-color: #65828E; //Need updating
-    @include fonts("Source Sans Pro", 400, 2rem);
+    @include fonts("Open Sans", 400, 2rem);
   }
 
   .down-arrow-icon {
@@ -67,11 +67,11 @@
     width: 5.6em;
     line-height: 2.2;
     text-align: center;
-    @include fontSize(16px); //1.6em;
+    @include fontSize(20px); //1.6em;
   }
 
   .fa-users::before {
     content: "\f0c0";
-    @include fontSize(32px); //2.6em;
+    @include fontSize(50px); //2.6em;
   }
 }
