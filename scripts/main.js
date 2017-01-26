@@ -19,5 +19,16 @@ jQuery(document).ready(function ($) {
         });
     });
 
-    
-});//docready
+    $('#block-views-chapter-view-v2-block').on('click', '#chapter-back span', function(e) {
+        console.log("Clicked back");
+        $(".pager-previous a").click();
+        e.preventDefault();
+    });
+
+    $('#block-views-chapter-view-v2-block').on('click', '#chapter-forward span', function(e) {
+        console.log("Clicked forward");
+        $(".pager-next a").click();
+        e.preventDefault();
+    });
+
+});
