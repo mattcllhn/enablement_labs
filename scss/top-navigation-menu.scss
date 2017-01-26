@@ -12,7 +12,7 @@ $con-gold: #B4975A ;
 
 @import "main-site-colors";
 @import "//fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'";
-@import "//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'";
+@import "//fonts.googleapis.com/css?family=Open+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'";
 @import "//fonts.googleapis.com/css?family=Karla:400,300' rel='stylesheet' type='text/css'";
 
 @function calculateRem($size) {
@@ -31,9 +31,21 @@ $con-gold: #B4975A ;
   font-size: $font-size;
 }
 
+.node{
+    margin:0px;
+}
+
+.content{
+    margin:0px;
+}
+
+#navigation-wrapper{
+    background-color:#E4A025;
+}
+
 .node-top-navigation-menu{
     background-color: #E4A025;
-    height: 32px;
+    height: 54px;
     
     .group-left{
         display:inline-block;
@@ -42,11 +54,6 @@ $con-gold: #B4975A ;
     }
     .field-name-field-hamburger-menu{
         display:inline-block;
-        background-color: #ecbc66;
-    color: white;
-    border-radius: 50%;
-    width: 2.6em;
-    text-align: center;
         float:left;
     
         
@@ -55,15 +62,23 @@ $con-gold: #B4975A ;
     .fa.fa-bars{
         display:inline-block;
         font-size: 20px;
+        background-color: #ecbc66;
+        color: white;
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+        line-height: 2em;
+        text-align: center;
     }
     
     .field-name-field-concord-logo{
          display: inline-block; 
-        width:100px;
+        width:125px;
         
         img{
-            width:100px;
+            width:125px;
             margin-left:8px;
+            height:40px;
         }
     }
     
@@ -76,31 +91,114 @@ $con-gold: #B4975A ;
     
     .field-name-field-search-icon{
         display:inline-block;
-         background-color: #ecbc66;
-    color: white;
-    border-radius: 50%;
-    width: 2.6em;
-    text-align: center;
     
+    }
+    
+    .fa.fa-search{
+        display:inline-block;
+        font-size: 20px;
+        background-color: #ecbc66;
+        color: white;
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+        line-height: 2em;
+        text-align: center;
+        margin-right:8px;
     }
     
     .field-name-field-account-icon{
         display:inline-block;
-         background-color: #ecbc66;
-    color: white;
-    border-radius: 50%;
-    width: 2.6em;
-    text-align: center;
-    
     } 
+    
+    .fa.fa-user{
+         display:inline-block;
+        font-size: 20px;
+        background-color: #ecbc66;
+        color: white;
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+        line-height: 2em;
+        text-align: center;
+    }
 }
 
-#block-menu-menu-hamburger-menu{
-    background-color: #414042;
-    /* right: -250px; */
-    height: 100%;
-    position: fixed;
-    width: 250px;
-    z-index: 1;
-    transition: right 500ms linear;
+#block-user-login{
+    background-color:#E4A025;
+    border-top: 2px solid #f7e2bb;
+    
+    .form-item-name{
+        display:inline-block;
+    }
+    .form-type-password{
+        margin-left: 36px;
+       display: inline-block; 
+    }
+    
+    #edit-actions{
+       margin-left: 30px;
+    display: inline-block; 
+    }
+    
+    
+    #user-login-form{
+        label{
+            display:none;
+        }
+        
+        #edit-name{
+     width:12em;
+    text-transform: lowercase;
+    font-size: 20px;
+    font-family: 'Open Sans Pro', sans-serif;
+    font-weight: 400;
+    border-radius: 25px;
+    padding: 2px 0 2px;
+    text-align: center;
+    font-weight: bold; 
+        }
+    }
+    #edit-name{
+        background-color: #ecbc66; 
+        border:2px;
+    }
+    #edit-pass{
+        background-color:#ecbc66;
+        border:2px;
+    }
+    
+    .form-type-password{
+        #edit-pass{
+    width: 12em;
+    text-transform: lowercase;
+    font-size: 20px;
+    font-family: 'Open Sans Pro', sans-serif;
+    font-weight: 400;
+    border-radius: 25px;
+    padding: 2px 0 2px;
+    text-align: center;
+    font-weight: bold;
+        }
+    }
+    #edit-actions{
+    #edit-submit{
+            color: white;
+    padding: 5px 22px;
+    background-color: #3a52a0;
+    border-radius: 37%;
+    width: 5em;
+    text-transform: lowercase;
+    font-size: 20px;
+    font-family: 'Open Sans Pro', sans-serif;
+    font-weight: 400;
+    border-radius: 25px;
+    padding: 7px 0 7px;
+    border:2px;
+        }
+        
+    }
+    .item-list{
+        display:none;
+    }
 }
