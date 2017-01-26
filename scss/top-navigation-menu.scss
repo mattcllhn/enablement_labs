@@ -47,6 +47,7 @@ $con-gold: #B4975A ;
     border-radius: 50%;
     width: 2.6em;
     text-align: center;
+        float:left;
     
         
     }
@@ -55,6 +56,17 @@ $con-gold: #B4975A ;
         display:inline-block;
         font-size: 20px;
     }
+    
+    .field-name-field-concord-logo{
+         display: inline-block; 
+        width:100px;
+        
+        img{
+            width:100px;
+            margin-left:8px;
+        }
+    }
+    
     
     .group-left-group{
       float: right;
@@ -81,4 +93,14 @@ $con-gold: #B4975A ;
     text-align: center;
     
     } 
+}
+
+#block-menu-menu-hamburger-menu{
+    background-color: #414042;
+    /* right: -250px; */
+    height: 100%;
+    position: fixed;
+    width: 250px;
+    z-index: 1;
+    transition: right 500ms linear;
 }
