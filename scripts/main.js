@@ -3,6 +3,7 @@
  * https://css-tricks.com/snippets/jquery/smooth-scrolling/
  */
 jQuery(document).ready(function ($) {
+    //Function for smooth scroll to anchor on page
     $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
