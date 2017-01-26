@@ -99,3 +99,43 @@ $con-gold: #B4975A ;
       font-size:5rem;
   }
 }
+
+.group-pre-lab-info{
+    margin-left: 246px;
+    width: 550px;
+    
+    .field-label{
+        text-transform:uppercase;
+        margin-right:5px;
+    }
+} 
+
+.field-name-field-description{
+   margin-bottom: 15px;
+    
+    .field-items{
+        width:420px;
+        line-height:1.3;
+    }
+}
+
+.field-name-field-level{
+    margin-bottom:15px;
+}
+
+.field-name-field-length{
+    margin-bottom:15px;
+}
+
+.field-name-field-prerequisites{
+    margin-bottom:15px;
+}
+
+.field-collection-container .field-items .field-items .field-item {
+  margin-bottom: 0;
+  background-color: #3a52a0 ;
+  display: inline-block;
+  margin: 0 1rem;
+  color: white;
+  padding: 4px;
+}

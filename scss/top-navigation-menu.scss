@@ -11,9 +11,6 @@ $con-sandstone: #959484 ;
 $con-gold: #B4975A ;
 
 @import "main-site-colors";
-@import "//fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'";
-@import "//fonts.googleapis.com/css?family=Open+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'";
-@import "//fonts.googleapis.com/css?family=Karla:400,300' rel='stylesheet' type='text/css'";
 
 @function calculateRem($size) {
   $remSize: $size / 16px;
@@ -200,5 +197,46 @@ $con-gold: #B4975A ;
     }
     .item-list{
         display:none;
+    }
+}
+
+
+#block-views-chapter-view-v2-block{
+    .view-chapter-view-v2{
+        h3{
+    text-align: center;
+    background: #3a52a0;
+    color: white;
+    height: 65px;
+    padding: 18px;
+    font-size: 2.6rem;
+        }
+        .exercise-title{
+         text-align: center;
+    background: #3a52a0;
+    color: white;
+    height: 65px;
+    padding: 18px;
+    font-size: 2.6rem;
+        }
+        .chapter-title-wrapper{
+     text-align: center;
+    font-size: 2.6rem;
+    margin-top: 24px;
+        }
+        
+        .chapter-navigation{
+            display:inline-block;
+        }
+        .chapter-title{
+     padding-left: 8px;
+    padding-right: 8px;
+    display: inline-block;
+        }
+    }
+    
+    .step-wrapper{
+    font-size: 1.6rem;
+    line-height: 1.5;
     }
 }
