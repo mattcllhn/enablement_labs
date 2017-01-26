@@ -16,11 +16,13 @@
   font-size: $font-size;
 }
 
-.view-header {
-  background-color: $background-color;
-  margin: 0 auto;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+.view-id-lab_selection {
+  .view-header {
+    background-color: $background-color;
+    margin: 0 auto;
+    padding-top: 20rem;
+    padding-bottom: 10rem;
+  }
 }
 
 .title-block {
@@ -31,17 +33,17 @@
   .main-title{
     text-transform: uppercase;
     line-height: 1.1;
-    @include fonts("Oswald", 600, 4rem);
+    @include fonts("Oswald", 600, 7rem);
     color: $white;
     padding-bottom: 1rem;
   }
 
   .sub-title {
     color: $con-harvest;
-    padding: .5rem;
+    padding: 2.5rem;
     text-transform: uppercase;
     background-color: #65828E; //Need updating
-    @include fonts("Source Sans Pro", 400, 2rem);
+    @include fonts("Open Sans", 600, 3rem);
   }
 
   .down-arrow-icon {
@@ -58,7 +60,7 @@
   display: inline-block;
   padding: 1rem;
   position: relative;
-  bottom: 16rem;
+  bottom: 21rem;
 
   .fa.fa-users {
     background-color: $white;
@@ -67,11 +69,11 @@
     width: 5.6em;
     line-height: 2.2;
     text-align: center;
-    @include fontSize(16px); //1.6em;
+    font-size: 2.25rem !important; //1.6em;
   }
 
   .fa-users::before {
-    content: "\f0c0";
-    @include fontSize(32px); //2.6em;
+    //content: "\f0c0";
+    font-size: 5.125rem !important; //2.6em;
   }
 }

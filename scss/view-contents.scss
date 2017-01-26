@@ -1,4 +1,5 @@
 @import "main-site-colors";
+@import "font";
 
 #notice {
   display: none;
@@ -10,9 +11,8 @@
 .view-id-lab_selection {
   .view-content {
     width: 100%;
-    margin: 20rem auto 0 auto;
+    margin: 0 auto; //20rem auto
     background-color: $labs-grey-background;
-    display: inline-flex;
     padding: 10rem 0 10rem 0;
 
     .views-row {
@@ -21,49 +21,98 @@
       background-color: $white;
       text-align: center;
       margin: 2rem .5rem 2rem 2rem;
-
-        .lab-title {
-          padding: 1rem;
-        }
-
-        .topic-shortlist {
-          line-height: 1;
-          font-size: .7rem;
-          padding: .5rem;
-          color: $white;
-          position: relative;
-        }
       }
     }
+}
 
-  .item-list .pager {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    padding-left: 0;
-    list-style: none;
-    border-radius: .25rem;
+.lab-title {
+  padding: 2rem;
+  font-size: 2rem;
+  line-height: 1.3;
+}
 
-    .pager-current {
-      padding: .3rem;
-    }
+.topic-shortlist {
+  line-height: 1.5;
+  font-size: 1.7rem;
+  padding: .5rem;
+  color: $white;
+  position: relative;
+}
+
+#scroll {
+
+  padding: 0.2rem;
+}
+
+//Carousel overrides
+
+.jcarousel-clip {
+  overflow: hidden;
+}
+
+//Arrows
+.jcarousel-next {
+  font-size: 5rem;
+  float: right;
+  color: $con-seattle !important;
+  background-color: $white;
+  padding: 2.6rem 1rem 2.6rem 1rem;
+  box-shadow: 0 6px 0 #BEBEBE;
+  position: relative;
+  top: 1.4rem;
+
+    &:before {
+    font-family: 'FontAwesome';
+    content: "\f054";
   }
+}
 
+.jcarousel-prev {
+  font-size: 5rem;
+  color: $con-seattle !important;
+  background-color: $white;
+  padding: 0 1.4rem 0 1rem;
+  box-shadow: 7px 5px 0 #BEBEBE;
+  position: relative;
+  top: 4rem;
+
+  &:before {
+    font-family: 'FontAwesome';
+    content: "\f053";
   }
+}
 
+
+.jcarousel-skin-default .jcarousel-container-horizontal {
+  width: 50%;
+  height: initial;
+  padding: 20px 100px;
+  margin: auto;
+}
+
+.jcarousel-skin-default .jcarousel-item {
+  padding: 0;
+  width: 100px;
+  height: 22rem;
+  overflow: initial;
+  border: none;
+  list-style: none;
+  background: none;
+}
+
+//Lab boxes
 .lab-icon {
       .fa {
         border-radius: 50%;
         width: 5.6em;
         line-height: 2.2;
-        font-size: 1rem;
+        font-size: 2rem;
         border: 3px solid #ACACAC;
         color: $white;
         background-color: #7F973B;
 
         &:before {
-        font-size: 2.5rem;
+        font-size: 5.5rem;
       }
     }
   .fa-user-md {
@@ -92,8 +141,12 @@
 
 .lab-modules {
   position: relative;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Open Sans", sans-serif;
   box-shadow: 7px 5px 0 #BEBEBE;
+  background-color: $white;
+  text-align: center;
+  padding-top: 2rem;
+  width: 95%;
 
   .topic-shortlist {
     background-color: $con-harvest;
@@ -121,3 +174,4 @@
   .lab-brick .topic-shortlist {
     background-color: $con-brick;
   }
+
