@@ -23,15 +23,37 @@ jQuery(document).ready(function ($) {
         console.log("Clicked backward");
         $(".pager-previous a")[0].click();
     });
-
+    
     $('#chapter-forward span').click(function(e) {
         console.log("Clicked forward");
         $(".pager-next a")[0].click();
     });
 
-    if( $('.pager li.first').length > 0) {
+    var currentPage = $('.pager-current').index();
+
+    // var percentage =
+    $('.progress-bar').css('width', function () {
+
+    });
+
+    if( currentPage === 1) {
+        $('#chapter-back').addClass('hide-pagination');
+    } else if (currentPage === 12) {
         $('#chapter-back').addClass('hide-pagination');
     }
+    // } else {
+    //     $('#chapter-back').removeClass('hide-pagination');
+    // }
+
+    console.log("The text is: " + $(currentPage).text());
+
+    console.log("Current page is: " + currentPage);
+
+    
+
+
+
+
 
     $('#search-block-form').hide();
     $('#edit-submit').click(function(e){
@@ -48,7 +70,7 @@ jQuery(document).ready(function ($) {
 //        $(".pager-previous a").click();
 //        //e.preventDefault();
 //    });
-//
+
 //    $('#block-views-chapter-view-v2-block').on('click', '#chapter-forward span', function(e) {
 //        console.log("Clicked forward");
 //        $(".pager-next a").click();
@@ -56,3 +78,4 @@ jQuery(document).ready(function ($) {
 //    });
 
 });
+
