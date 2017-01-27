@@ -33,7 +33,6 @@ jQuery(document).ready(function ($) {
     var str = $('.pager-current').text();
 
     var array = str.split(' ');
-
     var firstA = array.shift();
     var lastA = array.pop();
 
@@ -42,25 +41,17 @@ jQuery(document).ready(function ($) {
     var percentage = ((firstA/lastA) * 100);
     $('.progress-bar').css('width', percentage + '%');
 
-    // if( currentPage === 1) {
-    //     $('#chapter-back').addClass('hide-pagination');
-    // } else if (currentPage === 12) {
-    //     $('#chapter-back').addClass('hide-pagination');
-    // } else {
-    //     $('#chapter-back').removeClass('hide-pagination');
-    // }
-
-
+    if( currentPage === 0) {
+        $('#chapter-back').addClass('hide-pagination');
+    } else if (currentPage === 12) {
+        $('#chapter-back').addClass('hide-pagination');
+    } else {
+        $('#chapter-back').removeClass('hide-pagination');
+    }
 
     console.log($('.pager-current').text());
 
     console.log("Current page is: " + currentPage);
-
-    
-
-
-
-
 
     $('#search-block-form').hide();
     $('#edit-submit').click(function(e){
