@@ -18,7 +18,7 @@ jQuery(document).ready(function ($) {
             }
         });
     });
-    
+
      $('#chapter-back span').click(function(e) {
         console.log("Clicked backward");
         $(".pager-previous a")[0].click();
@@ -50,12 +50,27 @@ jQuery(document).ready(function ($) {
     console.log("Current page is: " + currentPage);
 
     
+
+
+
+
+
+    $('#search-block-form').hide();
+    $('#edit-submit').click(function(e){
+      e.preventDefault();
+    });
+
+    $('.search_icon').click(function(){
+      $('#search-block-form').toggle(400);
+    });//search icon onclick
+
+
 //       $('#block-views-chapter-view-v2-block').on('click', '#chapter-back span', function(e) {
 //         console.log("Clicked back");
 //        $(".pager-previous a").click();
 //        //e.preventDefault();
 //    });
-//    
+
 //    $('#block-views-chapter-view-v2-block').on('click', '#chapter-forward span', function(e) {
 //        console.log("Clicked forward");
 //        $(".pager-next a").click();
@@ -63,3 +78,4 @@ jQuery(document).ready(function ($) {
 //    });
 
 });
+
