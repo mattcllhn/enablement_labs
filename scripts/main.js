@@ -93,6 +93,7 @@ jQuery(document).ready(function ($) {
     });
 
 
+
 //       $('#block-views-chapter-view-v2-block').on('click', '#chapter-back span', function(e) {
 //         console.log("Clicked back");
 //        $(".pager-previous a").click();

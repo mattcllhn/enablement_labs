@@ -20,22 +20,21 @@
   .view-header {
     background-color: $background-color;
     margin: 0 auto;
-    padding-top: 20rem;
-    padding-bottom: 10rem;
+    padding-top: 13rem;
+    padding-bottom: 26rem;
   }
 }
 
 .title-block {
   display: inline-block;
-  width: 78%;
-  padding: 1rem;
+  width: 74.6%;
 
   .main-title{
     text-transform: uppercase;
     line-height: 1.1;
-    @include fonts("Oswald", 600, 7rem);
+    @include fonts("Open Sans", 600, 6rem);
     color: $white;
-    padding-bottom: 1rem;
+    padding-bottom: 7rem;
   }
 
   .sub-title {
@@ -44,11 +43,16 @@
     text-transform: uppercase;
     background-color: #65828E; //Need updating
     line-height: 1;
-    @include fonts("Open Sans", 600, 3rem);
+    transform: translateX(8%);
+    @include fonts("Open Sans", 600, 4rem);
   }
 
   .down-arrow-icon {
-    text-align: center;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    padding-top: 13%;
+
     .fa.fa-angle-double-down {
       color: $white;
       font-size: 9rem;
@@ -59,9 +63,9 @@
 
 .header-icon {
   display: inline-block;
-  padding: 1rem;
+  padding: 2.35rem;
   position: relative;
-  bottom: 21rem;
+  bottom: 15rem;
 
   .fa.fa-users {
     background-color: $white;
@@ -70,12 +74,12 @@
     width: 5.6em;
     line-height: 2.2;
     text-align: center;
-    font-size: 2.25rem !important; //1.6em;
+    font-size: 3.25rem !important; //1.6em;
   }
 
   .fa-users::before {
     //content: "\f0c0";
     //content: "\f0c0";
-    font-size: 5.125rem !important; //2.6em;
+    font-size: 9.125rem !important; //2.6em;
   }
 }

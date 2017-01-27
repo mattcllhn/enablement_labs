@@ -104,11 +104,20 @@ $con-gold: #B4975A ;
 
 .group-pre-lab-info{
     margin-left: 246px;
-    width: 550px;
+    width: 780px;
     
     .field-label{
         text-transform:uppercase;
         margin-right:5px;
+    }
+    .group-left-column{
+       display: inline-block;
+       width: 300px;
+    }  
+    
+    .group-right-column{
+       float: right;
+       width: 430px; 
     }
 } 
 
@@ -116,7 +125,7 @@ $con-gold: #B4975A ;
    margin-bottom: 15px;
     
     .field-items{
-        width:420px;
+        width:520px;
         line-height:1.3;
     }
 }
@@ -196,13 +205,14 @@ $con-gold: #B4975A ;
     margin-bottom:4px;
 }
 .step-wrapper{
-    
+    margin-left:50px;
     margin-bottom:50px;
     
     img{
         max-width:100%;
         height:auto;
         margin-left:80px;
+        border: 2px solid lightgray;
     }
 .field-name-field-content-list-item{
     margin-bottom: 16px;
@@ -229,13 +239,13 @@ caption {
 
 .document-download-wrapper{
     th{
-    background-color: #E6A000;
+    background-color: gray;
     padding-top: 5px;
     padding-bottom: 5px;
     }
     
     td{
-      background-color:#ecbc66;  
+      background-color: lightgray;  
     }
     .file{
         a{
@@ -273,4 +283,8 @@ input[type=submit] {
 
 .field-name-field-content-list-item{
     margin-left:40px;
+}
+
+.pager {
+  display: none;
 }
