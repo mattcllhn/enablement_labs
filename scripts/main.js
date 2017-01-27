@@ -18,6 +18,21 @@ jQuery(document).ready(function ($) {
             }
         });
     });
+    var currentSideTab;
+    var menuOpen = false;
+    
+    $(".side-menu div").click(function(e) { 
+        console.log(e);
+        //currentSideTab = e.currentTarget.className;
+        console.log (currentSideTab);
+        if (currentSideTab == e.currentTarget.className || menuOpen == false) {
+            $("#offside-wrapper").addClass("expanded");
+            $(".secondary-offsides .page-wrapper").addClass("shrunk");
+            currentSideTab = e.currentTarget.className;
+            menuOpen = true;
+        };
+        
+    });
 
      $('#chapter-back span').click(function(e) {
         console.log("Clicked backward");
