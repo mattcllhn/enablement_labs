@@ -13,3 +13,30 @@
 
   }
 }
+
+//CSS for open and closed side menu
+.secondary-offsides { 
+    position: relative;
+    #offside-wrapper {
+        background-color: rgb(65, 64, 66);
+        left: -250px;
+        position: absolute;
+        width: 250px;
+        z-index: 1;
+        transition: left 500ms linear;
+        &.expanded { 
+            left: 0px;
+            min-height: 100vh;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+    }
+    .page-wrapper { 
+        right: 0px;
+        position: relative;
+        transition: right 500ms linear;
+        &.shrunk { 
+            right: -250px;
+        }
+    }
+}
