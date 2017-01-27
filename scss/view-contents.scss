@@ -9,11 +9,13 @@
 }
 
 .view-id-lab_selection {
+     background-color: $labs-grey-background;
   .view-content {
-    width: 100%;
+    width: 80%;
     margin: 0 auto; //20rem auto
     background-color: $labs-grey-background;
     padding: 10rem 0 10rem 0;
+    position: relative;
 
     .views-row {
       display: inline-block;
@@ -52,15 +54,18 @@
 
 //Arrows
 .jcarousel-next {
-  font-size: 5rem;
-  float: right;
-  color: $con-seattle !important;
-  background-color: $white;
-  padding: 2.6rem 1rem 2.6rem 1rem;
-  box-shadow: 0 6px 0 #BEBEBE;
-  position: relative;
-  top: 1.4rem;
-
+    position: absolute;
+    font-size: 50px;
+    color: $con-seattle !important;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 6px 0 #BEBEBE;
+    right: -9%;
+    top: calc(50% - 30px);
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    
     &:before {
     font-family: 'FontAwesome';
     content: "\f054";
@@ -68,18 +73,22 @@
 }
 
 .jcarousel-prev {
-  font-size: 5rem;
-  color: $con-seattle !important;
-  background-color: $white;
-  padding: 0 1.4rem 0 1rem;
-  box-shadow: 7px 5px 0 #BEBEBE;
-  position: relative;
-  top: 4rem;
+    position: absolute;
+    font-size: 50px;
+    color: $con-seattle !important;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 6px 0 #BEBEBE;
+    left: -9%;
+    top: calc(50% - 30px);
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
 
-  &:before {
-    font-family: 'FontAwesome';
-    content: "\f053";
-  }
+    &:before {
+        font-family: 'FontAwesome';
+        content: "\f053";
+    }
 }
 
 
