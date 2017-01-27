@@ -80,24 +80,24 @@ $con-gold: #B4975A ;
     }
 }
 
-.fa.fa-user-md{
-    background-color: #3a52a0;
-    color: white;
-    border-radius: 50%;
-    width: 6.6em;
-    height:6.6em;
-    line-height: 6.6em;
-    text-align: center;
-    border: 7px solid #999999;
-    @include fontSize(16px); //1.6em;
-    font-size: 1.6rem;
-}
+.fa { //.fa.fa-user-md
+  background-color: #3a52a0;
+  color: white;
+  border-radius: 50%;
+  width: 6.6em;
+  height: 6.6em;
+  line-height: 6.6em;
+  text-align: center;
+  border: 7px solid #999999;
+  @include fontSize(16px); //1.6em;
+  font-size: 1.6rem;
 
-  .fa-user-md:before {
+  &:before { //.fa-user-md:before
     //content: "\f0c0";
     @include fontSize(32px); //2.6em;
-      font-size:5rem;
+    font-size: 5rem;
   }
+}
 }
 
 .group-pre-lab-info{
