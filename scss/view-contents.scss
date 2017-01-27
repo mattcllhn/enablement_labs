@@ -38,7 +38,7 @@
   font-size: 1.7rem;
   padding: .5rem;
   color: $white;
-  position: relative;
+  display: table-row-group;
 }
 
 #scroll {
@@ -155,7 +155,9 @@
   background-color: $white;
   text-align: center;
   padding-top: 2rem;
+  display: table;
   width: 95%;
+  height: 300px;
 
   .topic-shortlist {
     background-color: $con-harvest;
