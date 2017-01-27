@@ -20,8 +20,8 @@ jQuery(document).ready(function ($) {
     });
     var currentSideTab;
     var menuOpen = false;
-    
-    $(".side-menu div").click(function(e) { 
+
+    $(".side-menu div").click(function(e) {
         console.log(e);
         //currentSideTab = e.currentTarget.className;
         console.log (currentSideTab);
@@ -31,14 +31,14 @@ jQuery(document).ready(function ($) {
             currentSideTab = e.currentTarget.className;
             menuOpen = true;
         };
-        
+
     });
 
      $('#chapter-back span').click(function(e) {
         console.log("Clicked backward");
         $(".pager-previous a")[0].click();
     });
-    
+
     $('#chapter-forward span').click(function(e) {
         console.log("Clicked forward");
         $(".pager-next a")[0].click();
@@ -78,6 +78,12 @@ jQuery(document).ready(function ($) {
     });//search icon onclick
 
 
+    $('#user-login-form').hide();
+    $('.account_icon').click(function(){
+      $('#user-login-form').toggle(400);
+    });
+
+
 //       $('#block-views-chapter-view-v2-block').on('click', '#chapter-back span', function(e) {
 //         console.log("Clicked back");
 //        $(".pager-previous a").click();
@@ -91,4 +97,3 @@ jQuery(document).ready(function ($) {
 //    });
 
 });
-
