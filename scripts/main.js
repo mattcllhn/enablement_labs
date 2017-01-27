@@ -44,6 +44,8 @@ jQuery(document).ready(function ($) {
         $(".pager-next a")[0].click();
     });
 
+
+    //Progress bar logic
     var currentPage = $('.pager-current').index();
     var str = $('.pager-current').text();
 
@@ -53,12 +55,15 @@ jQuery(document).ready(function ($) {
 
     console.log(firstA + lastA);
 
-    var percentage = ((firstA/lastA) * 100);
-    $('.progress-bar').css('width', percentage + '%');
+    var progressBar =  $('.progress-bar');
+    progressBar.attr('style', "width: 0%");
 
-    if( currentPage === 0) {
+    var percentage = ((firstA/lastA) * 100);
+    progressBar.css('width', percentage + '%');
+
+    if( currentPage === firstA) {
         $('#chapter-back').addClass('hide-pagination');
-    } else if (currentPage === 12) {
+    } else if (currentPage === lastA) {
         $('#chapter-back').addClass('hide-pagination');
     } else {
         $('#chapter-back').removeClass('hide-pagination');
@@ -81,6 +86,10 @@ jQuery(document).ready(function ($) {
     $('#user-login-form').hide();
     $('.account_icon').click(function(){
       $('#user-login-form').toggle(400);
+    });
+
+    $('.hamburger_menu').click(function(){
+      $('#offside-navigation-wrapper').addClass('expanded');
     });
 
 

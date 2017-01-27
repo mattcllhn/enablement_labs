@@ -9,6 +9,7 @@ $con-kraft: #c3B48B ;
 $con-bone: #DFE1CF ;
 $con-sandstone: #959484 ;
 $con-gold: #B4975A ;
+$top-border:darken($con-gold, 15%);
 
 @import "main-site-colors";
 
@@ -41,6 +42,7 @@ $con-gold: #B4975A ;
 }
 
 .node-top-navigation-menu{
+    border-top:5px solid $top-border;
     background-color: #E4A025;
     height: 54px;
 
@@ -152,18 +154,19 @@ $con-gold: #B4975A ;
     font-size: 20px;
     font-family: 'Open Sans Pro', sans-serif;
     font-weight: 400;
-    border-radius: 25px;
+    border-radius: 5px;
     padding: 2px 0 2px;
     text-align: center;
     font-weight: bold;
+    height:40px;
         }
     }
     #edit-name{
-        background-color: #ecbc66;
+        background-color: white;
         border:2px;
     }
     #edit-pass{
-        background-color:#ecbc66;
+        background-color:white;
         border:2px;
     }
 
@@ -174,10 +177,11 @@ $con-gold: #B4975A ;
     font-size: 20px;
     font-family: 'Open Sans Pro', sans-serif;
     font-weight: 400;
-    border-radius: 25px;
+    border-radius: 5px;
     padding: 2px 0 2px;
     text-align: center;
     font-weight: bold;
+    height:40px;
         }
     }
     #edit-actions{
@@ -191,7 +195,7 @@ $con-gold: #B4975A ;
     font-size: 20px;
     font-family: 'Open Sans Pro', sans-serif;
     font-weight: 400;
-    border-radius: 25px;
+    border-radius: 5px;
     padding: 7px 0 7px;
     border:2px;
         }
