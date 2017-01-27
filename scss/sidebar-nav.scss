@@ -1,21 +1,39 @@
 @import "main-site-colors";
-
 .view-id-exercise_view {
-
-  .view-content {
-    h3 {
-      background-color: $sidenav-main;
+    .view-content {
+        h3 {
+            color: white;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgb(255, 255, 255);
+        }
+        .views-row {
+            margin-left: 10px;
+            width: calc(100% - 20px);
+            margin-bottom: 3px;
+            margin-right: 10px;
+        }
+        .views-row-first {
+            margin-top: 10px;
+        }
+        .views-row-last {
+            margin-bottom: 10px;
+        }
+        .sidebar-chapters {
+            a {
+                width: 100%;
+                padding: 10px 7px;
+                background: rgb(160, 49, 51);
+                display: block;
+                color: rgb(255, 255, 255);
+                font-size: 1.5rem;
+                text-transform: capitalize;
+            }
+        }
     }
-
-    .sidebar-chapters {
-      background-color: #E6A000;
-    }
-
-  }
 }
 
 //CSS for open and closed side menu
-.secondary-offsides { 
+.secondary-offsides {
     position: relative;
     #offside-wrapper {
         //background-color: rgb(65, 64, 66);
@@ -24,39 +42,77 @@
         width: 300px;
         z-index: 1;
         transition: left 500ms linear;
-        &.expanded { 
+        &.expanded {
             left: 0px;
             min-height: 100vh;
             overflow: hidden;
             overflow-y: auto;
         }
     }
-    .page-wrapper { 
+    .page-wrapper {
         right: 0px;
         position: relative;
         transition: right 500ms linear;
-        &.shrunk { 
+        &.shrunk {
             right: -250px;
         }
     }
 }
 
-.view-id-exercise_view {     
-    .view-content { 
+.view-id-exercise_view {
+    .view-header,
+    .view-content {
         width: 250px;
-        float: left;
         height: 100vh;
-        background: rgb(65, 64, 66);
+        background: #434343;
     }
-    .view-footer { 
-        float: right;
+    .view-content {
+        padding: 0px 10px;
+    }
+    .view-header {
+        .node {
+            padding: 0px 10px;
+            background: #434343;
+            border-bottom: none;
+            textarea {
+                min-height: 350px;
+            }
+            .form-item {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+            label {
+                text-align: center;
+                text-transform: lowercase;
+                font-size: 2rem;
+                height: 65px;
+                font-weight: 400;
+                color: rgb(255, 255, 255);
+                vertical-align: middle;
+                line-height: 65px;
+            }
+        }
+        .grippie {
+            display: none;
+        }
+        .form-actions {
+            margin-top: 2rem;
+            input.webform-submit {
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+    .view-footer {
+        position: absolute;
         width: 50px;
-        margin-top: 80px;
-        .side-menu div { 
+        right: 0px;
+        top: 80px;
+        .side-menu div {
             text-align: center;
             font-size: 35px;
             color: rgb(255, 255, 255);
-            background: rgb(128, 128, 128);
+            background: #434343;
             margin-bottom: 5px;
             padding-top: 5px;
             padding-bottom: 5px;
@@ -64,8 +120,8 @@
             cursor: pointer;
         }
     }
-
 }
+
 #offside-navigation-wrapper {
     background-color: rgb(65, 64, 66);
     left: -300px;
@@ -80,6 +136,7 @@
         overflow-y: auto;
     }
 }
+
 .site {
     right: 0px;
     position: relative;
