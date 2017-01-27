@@ -1,6 +1,10 @@
 @import "main-site-colors";
 
 #block-views-chapter-view-v2-block{
+    //jquery calculates the first and last item and should add this class to the forward or back button
+    .hide-pagination { 
+        display: none;
+    }
     .view-chapter-view-v2{
         h3{
     text-align: center;
@@ -19,13 +23,14 @@
     font-size: 2.6rem;
         }
         .chapter-title-wrapper{
-     text-align: center;
-    font-size: 2.6rem;
-    margin-top: 24px;
+             text-align: center;
+            font-size: 2.6rem;
+            margin-top: 0px;
         }
         
         .chapter-navigation{
             display:inline-block;
+            cursor: pointer;
         }
         .chapter-title{
      padding-left: 8px;

@@ -8,6 +8,10 @@
   border: none;
 }
 
+#content {
+  overflow: hidden;
+}
+
 .view-id-lab_selection {
      background-color: $labs-grey-background;
   .view-content {
@@ -31,19 +35,22 @@
   padding: 2rem;
   font-size: 2rem;
   line-height: 1.3;
+  color: #000000;
 }
 
 .topic-shortlist {
-  line-height: 1.5;
+  line-height: 2.8;
   font-size: 1.7rem;
   padding: .5rem;
   color: $white;
-  position: relative;
+  display: table-row-group;
 }
 
 #scroll {
-
   padding: 0.2rem;
+  a:hover {
+    color: initial;
+  }
 }
 
 //Carousel overrides
@@ -58,8 +65,8 @@
     font-size: 50px;
     color: $con-seattle !important;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 6px 0 #BEBEBE;
-    right: -9%;
+    box-shadow: 6px 6px 0 #BEBEBE;
+    right: -12.5%;
     top: calc(50% - 30px);
     width: 60px;
     height: 60px;
@@ -77,8 +84,8 @@
     font-size: 50px;
     color: $con-seattle !important;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 6px 0 #BEBEBE;
-    left: -9%;
+    box-shadow: 6px 6px 0 #BEBEBE;
+    left: -12.4%;
     top: calc(50% - 30px);
     width: 60px;
     height: 60px;
@@ -115,15 +122,40 @@
         border-radius: 50%;
         width: 5.6em;
         line-height: 2.2;
-        font-size: 2rem;
+        font-size: 3rem;
         border: 3px solid #ACACAC;
         color: $white;
         background-color: #7F973B;
 
         &:before {
-        font-size: 4.5rem;
+        font-size: 8rem;
       }
     }
+  .fa-user-md {
+    background-color: $awesomeinc_perrywinkle;
+  }
+  .fa-shopping-bag {
+    background-color: $con-burnt;
+  }
+
+  .fa-database {
+    background-color: $con-gold;
+  }
+
+  .fa-life-ring {
+    background-color: $con-ecoforest;
+  }
+
+  .fa-thermometer-full {
+    background-color: $con-sandstone;
+  }
+
+  .fa-id-card-o {
+    background-color: $con-brick;
+  }
+}
+
+.lab-header-wrapper {
   .fa-user-md {
     background-color: $awesomeinc_perrywinkle;
   }
@@ -155,7 +187,9 @@
   background-color: $white;
   text-align: center;
   padding-top: 2rem;
+  display: table;
   width: 95%;
+  height: 360px;
 
   .topic-shortlist {
     background-color: $con-harvest;
