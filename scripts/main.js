@@ -20,8 +20,8 @@ jQuery(document).ready(function ($) {
     });
     var currentSideTab;
     var menuOpen = false;
-    
-    $(".side-menu div").click(function(e) { 
+
+    $(".side-menu div").click(function(e) {
         console.log(e);
         //currentSideTab = e.currentTarget.className;
         console.log (currentSideTab);
@@ -31,19 +31,21 @@ jQuery(document).ready(function ($) {
             currentSideTab = e.currentTarget.className;
             menuOpen = true;
         };
-        
+
     });
 
      $('#chapter-back span').click(function(e) {
         console.log("Clicked backward");
         $(".pager-previous a")[0].click();
     });
-    
+
     $('#chapter-forward span').click(function(e) {
         console.log("Clicked forward");
         $(".pager-next a")[0].click();
     });
 
+
+    //Progress bar logic
     var currentPage = $('.pager-current').index();
     var str = $('.pager-current').text();
 
@@ -53,12 +55,15 @@ jQuery(document).ready(function ($) {
 
     console.log(firstA + lastA);
 
-    var percentage = ((firstA/lastA) * 100);
-    $('.progress-bar').css('width', percentage + '%');
+    var progressBar =  $('.progress-bar');
+    progressBar.attr('style', "width: 0%");
 
-    if( currentPage === 0) {
+    var percentage = ((firstA/lastA) * 100);
+    progressBar.css('width', percentage + '%');
+
+    if( currentPage === firstA) {
         $('#chapter-back').addClass('hide-pagination');
-    } else if (currentPage === 12) {
+    } else if (currentPage === lastA) {
         $('#chapter-back').addClass('hide-pagination');
     } else {
         $('#chapter-back').removeClass('hide-pagination');
@@ -78,6 +83,12 @@ jQuery(document).ready(function ($) {
     });//search icon onclick
 
 
+    $('#user-login-form').hide();
+    $('.account_icon').click(function(){
+      $('#user-login-form').toggle(400);
+    });
+
+
 //       $('#block-views-chapter-view-v2-block').on('click', '#chapter-back span', function(e) {
 //         console.log("Clicked back");
 //        $(".pager-previous a").click();
@@ -91,4 +102,3 @@ jQuery(document).ready(function ($) {
 //    });
 
 });
-
