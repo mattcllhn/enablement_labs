@@ -30,22 +30,29 @@ jQuery(document).ready(function ($) {
     });
 
     var currentPage = $('.pager-current').index();
+    var str = $('.pager-current').text();
 
-    // var percentage =
-    $('.progress-bar').css('width', function () {
+    var array = str.split(' ');
 
-    });
+    var firstA = array.shift();
+    var lastA = array.pop();
 
-    if( currentPage === 1) {
-        $('#chapter-back').addClass('hide-pagination');
-    } else if (currentPage === 12) {
-        $('#chapter-back').addClass('hide-pagination');
-    }
+    console.log(firstA + lastA);
+
+    var percentage = ((firstA/lastA) * 100);
+    $('.progress-bar').css('width', percentage + '%');
+
+    // if( currentPage === 1) {
+    //     $('#chapter-back').addClass('hide-pagination');
+    // } else if (currentPage === 12) {
+    //     $('#chapter-back').addClass('hide-pagination');
     // } else {
     //     $('#chapter-back').removeClass('hide-pagination');
     // }
 
-    console.log("The text is: " + $(currentPage).text());
+
+
+    console.log($('.pager-current').text());
 
     console.log("Current page is: " + currentPage);
 
