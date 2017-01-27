@@ -1,6 +1,10 @@
 @import "main-site-colors";
 
 #block-views-chapter-view-v2-block{
+    //jquery calculates the first and last item and should add this class to the forward or back button
+    .hide-pagination { 
+        display: none;
+    }
     .view-chapter-view-v2{
         h3{
     text-align: center;
