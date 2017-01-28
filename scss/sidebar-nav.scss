@@ -1,6 +1,37 @@
 @import "main-site-colors";
+//CSS for open and closed side menu
+.secondary-offsides {
+    position: relative;
+    #offside-wrapper {
+        //background-color: rgb(65, 64, 66);
+        left: -250px;
+        position: absolute;
+        width: 300px;
+        z-index: 1;
+        transition: left 500ms linear;
+        &.expanded {
+            left: 0px;
+            min-height: 100vh;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+    }
+    .page-wrapper {
+        right: 0px;
+        position: relative;
+        transition: right 500ms linear;
+        &.shrunk {
+            right: -250px;
+        }
+    }
+}
+
 .view-id-exercise_view {
     .view-content {
+        width: 250px;
+        height: 100vh;
+        background: #434343;
+        padding: 0px 10px;
         h3 {
             color: white;
             padding-bottom: 5px;
@@ -30,49 +61,13 @@
             }
         }
     }
-}
-
-//CSS for open and closed side menu
-.secondary-offsides {
-    position: relative;
-    #offside-wrapper {
-        //background-color: rgb(65, 64, 66);
-        left: -250px;
-        position: absolute;
-        width: 300px;
-        z-index: 1;
-        transition: left 500ms linear;
-        &.expanded {
-            left: 0px;
-            min-height: 100vh;
-            overflow: hidden;
-            overflow-y: auto;
-        }
-    }
-    .page-wrapper {
-        right: 0px;
-        position: relative;
-        transition: right 500ms linear;
-        &.shrunk {
-            right: -250px;
-        }
-    }
-}
-
-.view-id-exercise_view {
-    .view-header,
-    .view-content {
-        width: 250px;
-        height: 100vh;
-        background: #434343;
-    }
-    .view-content {
-        padding: 0px 10px;
-    }
     .view-header {
+        width: 250px;
+        background: #434343;
         .node {
             padding: 0px 10px;
             background: #434343;
+            height: 100vh;
             border-bottom: none;
             textarea {
                 min-height: 350px;
@@ -102,6 +97,18 @@
                 display: block;
             }
         }
+        .contents-label {
+            text-align: center;
+            background: #434343;
+            text-transform: lowercase;
+            font-size: 2rem;
+            height: 65px;
+            font-weight: 400;
+            color: rgb(255, 255, 255);
+            vertical-align: middle;
+            line-height: 65px;
+            display: block;
+        }
     }
     .view-footer {
         position: absolute;
@@ -118,6 +125,35 @@
             padding-bottom: 5px;
             display: block;
             cursor: pointer;
+        }
+    }
+    
+    &.note { 
+        .view-header { 
+            .help-area { 
+                display: none;
+            }
+        }
+        .view-content { 
+            display: none;
+        }
+    }
+    &.question { 
+        .view-header { 
+            .notes-area { 
+                display: none;
+            }
+        }
+        .view-content { 
+            display: none;
+        }
+    }
+    
+    &.toc { 
+        .view-header { 
+            .node { 
+                display: none;
+            }
         }
     }
 }
