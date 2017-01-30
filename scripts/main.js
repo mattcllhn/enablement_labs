@@ -23,14 +23,14 @@ jQuery(document).ready(function ($) {
     
     $(".side-menu div").click(function (e) {
         if (menuOpen == false) {
-            $("#offside-wrapper").addClass("expanded");
+            $("#offside").addClass("expanded");
             $(".view-id-exercise_view").addClass(e.currentTarget.className);
             menuOpen = true;
             currentSideTab = e.currentTarget.className;
         }
         else if (menuOpen == true) {
             if (currentSideTab == e.currentTarget.className) {
-                $("#offside-wrapper").removeClass("expanded");
+                $("#offside").removeClass("expanded");
                 setTimeout(resetSideMenu, 500);
                 menuOpen = false;
             }

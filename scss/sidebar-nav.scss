@@ -2,7 +2,7 @@
         //CSS for open and closed side menu
         .secondary-offsides {
             position: relative;
-            #offside-wrapper {
+            #offside {
                 //background-color: rgb(65, 64, 66);
                 left: -250px;
                 position: absolute;
@@ -11,7 +11,7 @@
                 transition: left 500ms linear;
                 &.expanded {
                     left: 0px;
-                    min-height: 100vh;
+                    //min-height: 100vh;
                     overflow: hidden;
                     //overflow-y: auto;
                 }
@@ -21,7 +21,7 @@
         .view-id-exercise_view {
             .view-content {
                 width: 250px;
-                height: 100vh;
+                height: 100%;
                 background: #434343;
                 padding: 0px 10px;
                 h3 {
@@ -59,7 +59,7 @@
                 .node {
                     padding: 0px 10px;
                     background: #434343;
-                    height: 100vh;
+                    max-height: 100%;
                     border-bottom: none;
                     textarea {
                         min-height: 350px;
@@ -161,7 +161,6 @@
             transition: left 500ms linear;
             &.expanded {
                 left: 0px;
-                min-height: 100vh;
                 overflow: hidden;
                 overflow-y: auto;
             }
