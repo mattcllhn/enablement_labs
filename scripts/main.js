@@ -54,37 +54,8 @@ jQuery(document).ready(function ($) {
         console.log("Clicked forward");
         $(".pager-next a")[0].click();
     });
-
-    //Progress bar logic
-    var currentPage = $('.pager-current').index();
-    var str = $('.pager-current').text();
-    var array = str.split(' ');
-    var firstA = array.shift();
-    var lastA = array.pop();
-    firstA = parseInt(firstA);
-    lastA = parseInt(lastA);
-
-    //Get page number
-    var href = $(location).attr('href');
-    var pageNum = href.split("?page=")[1].split("/")[0];
-
-    var progressBar = $('.progress-bar');
-    progressBar.attr('style', "width: 0%");
-    var percentage = ((firstA / lastA) * 100);
-    progressBar.css('width', percentage + '%');
-
-    if (currentPage === firstA) {
-        $('#chapter-back').addClass('hide-pagination');
-    }
-    else if (currentPage === (lastA - 1)) {
-        $('#chapter-forward').addClass('hide-pagination');
-    }
-    else {
-        $('#chapter-back').removeClass('hide-pagination');
-    }
-
-
-    $('#search-block-form').hide();
+    
+      $('#search-block-form').hide();
     $('#edit-submit').click(function (e) {
         // e.preventDefault();
     });
@@ -101,6 +72,43 @@ jQuery(document).ready(function ($) {
     });
 
 
+
+    //Progress bar logic
+    if ($('.pager-current').length > 0) { 
+        progressBar();
+    };
+    
+    function progressBar() {
+        var currentPage = $('.pager-current').index();
+        var str = $('.pager-current').text();
+        var array = str.split(' ');
+        var firstA = array.shift();
+        var lastA = array.pop();
+        firstA = parseInt(firstA);
+        lastA = parseInt(lastA);
+
+        //Get page number
+        //var href = $(location).attr('href');
+        //var pageNum = href.split("?page=")[1].split("/")[0];
+
+        var progressBar = $('.progress-bar');
+        progressBar.attr('style', "width: 0%");
+        var percentage = ((firstA / lastA) * 100);
+        progressBar.css('width', percentage + '%');
+    
+        if (currentPage === firstA) {
+            $('#chapter-back').addClass('hide-pagination');
+        }
+        else if (currentPage === (lastA - 1)) {
+            $('#chapter-forward').addClass('hide-pagination');
+        }
+        else {
+            $('#chapter-back').removeClass('hide-pagination');
+        }
+    }
+
+
+  
 
 
 //       $('#block-views-chapter-view-v2-block').on('click', '#chapter-back span', function(e) {
