@@ -65,8 +65,8 @@ jQuery(document).ready(function ($) {
     lastA = parseInt(lastA);
 
     //Get page number
-    var href = $(location).attr('href');
-    var pageNum = href.split("?page=")[1].split("/")[0];
+    // var href = $(location).attr('href');
+    // var pageNum = href.split("?page=")[1].split("/")[0];
 
     var progressBar = $('.progress-bar');
     progressBar.attr('style', "width: 0%");
