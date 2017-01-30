@@ -115,7 +115,8 @@ jQuery(document).ready(function ($) {
         $('#user-login-form').toggle(400);
     });
     $('.hamburger_menu').click(function () {
-        $('#offside-navigation-wrapper').addClass('expanded');
+        $('#offside-navigation-wrapper').toggleClass('expanded');
+        $('.page-wrapper').toggleClass('body-menu-open');
     });
 
 
