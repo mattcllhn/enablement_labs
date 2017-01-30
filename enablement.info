@@ -1,0 +1,18 @@
+name = Concord Enablement
+description = Drupal theme for Concord's web-enabled enablement labs.
+core = "7.x"
+screenshot = images/Concord-Logo.png
+engine = phptemplate
+
+stylesheets[all][] = style.css
+;stylesheets[all][] = local.css
+regions[navoffside] = Navigation Offside
+regions[navigation] = Navigation
+regions[content] = Content
+regions[offside] = Off Sides
+regions[content2] = Secondary Content
+regions[footer] = Footer
+
+
+scripts[] = scripts/main.js
+stylesheets[all][] = css/main.css
