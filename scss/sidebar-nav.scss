@@ -3,7 +3,6 @@
         .secondary-offsides {
             position: relative;
             #offside {
-                //background-color: rgb(65, 64, 66);
                 left: -250px;
                 position: absolute;
                 width: 300px;
@@ -11,9 +10,8 @@
                 transition: left 500ms linear;
                 &.expanded {
                     left: 0px;
-                    //min-height: 100vh;
+                    display: block;
                     overflow: hidden;
-                    //overflow-y: auto;
                 }
             }
         }
@@ -119,7 +117,8 @@
                     cursor: pointer;
                 }
             }
-            &.take-notes, &.question-submit {
+            &.take-notes,
+            &.question-submit {
                 .view-header {
                     .contents-label {
                         display: none;
