@@ -1,5 +1,8 @@
 @import "font";
 
+#site{
+  transition: all 500ms linear;
+}
 .page-wrapper {
   width: 100%;
   // max-width: 1200px;
@@ -8,7 +11,7 @@
   //overflow: hidden;
 }
 
-.item-list ul li { 
+.item-list ul li {
     margin: 0px;
 }
 
