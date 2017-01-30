@@ -4,77 +4,68 @@
             position: relative;
             #offside {
                 left: -250px;
-                position: absolute;
-                width: 300px;
+                position: fixed;
+                width: 250px;
+                height: 100vh;
+                top: 0px;
                 z-index: 1;
+                background: rgb(235, 235, 235);
                 transition: left 500ms linear;
                 &.expanded {
                     left: 0px;
                     display: block;
                     overflow: hidden;
+                    overflow: scroll;
+                    .view-footer { 
+                        left: 250px;
+                    }
                 }
             }
         }
         
         .view-id-exercise_view {
             .view-content {
-                width: 250px;
                 height: 100%;
-                background: #434343;
-                padding: 0px 10px;
+               
                 h3 {
-                    color: white;
-                    padding-bottom: 5px;
-                    border-bottom: 1px solid rgb(255, 255, 255);
+                    font-size: 2rem;
+                    padding: 10px;
                 }
                 .views-row {
-                    margin-left: 10px;
-                    width: calc(100% - 20px);
-                    margin-bottom: 3px;
-                    margin-right: 10px;
+
                 }
                 .views-row-first {
-                    margin-top: 10px;
+                    //margin-top: 10px;
                 }
                 .views-row-last {
-                    margin-bottom: 10px;
+                    //margin-bottom: 10px;
                 }
                 .sidebar-chapters {
                     a {
+                        color: #333333;
                         width: 100%;
-                        padding: 10px 7px;
-                        background: rgb(160, 49, 51);
+                        padding: 15px 10px;
+                        text-transform: uppercase;
                         display: block;
-                        color: rgb(255, 255, 255);
                         font-size: 1.5rem;
-                        text-transform: capitalize;
+                        border-bottom: 1px solid rgba(0, 0, 0, .20);
+                        &:hover { 
+                            background-color: rgba(255, 255, 255, .6);
+                        }
                     }
                 }
             }
             .view-header {
-                width: 250px;
-                background: #434343;
                 .node {
                     padding: 0px 10px;
-                    background: #434343;
                     max-height: 100%;
                     border-bottom: none;
                     textarea {
-                        min-height: 350px;
+                        min-height: 86vh;
                     }
                     .form-item {
                         margin-top: 0px;
                         margin-bottom: 0px;
-                    }
-                    label {
-                        text-align: center;
-                        text-transform: lowercase;
-                        font-size: 2rem;
-                        height: 65px;
-                        font-weight: 400;
-                        color: rgb(255, 255, 255);
-                        vertical-align: middle;
-                        line-height: 65px;
                     }
                 }
                 .grippie {
@@ -87,36 +78,36 @@
                         display: block;
                     }
                 }
-                .contents-label {
+                .contents-label, .node label {
                     text-align: center;
-                    background: #434343;
-                    text-transform: lowercase;
-                    font-size: 2rem;
+                    text-transform: capitalize;
+                    font-size: 2.5rem;
                     height: 65px;
                     font-weight: 400;
-                    color: rgb(255, 255, 255);
                     vertical-align: middle;
                     line-height: 65px;
                     display: block;
                 }
             }
             .view-footer {
-                position: absolute;
+                position: fixed;
                 width: 50px;
-                right: 0px;
-                top: 80px;
+                left: 0px;
+                bottom: 80px;
+                transition: left 500ms linear;
                 .side-menu div {
                     text-align: center;
                     font-size: 35px;
-                    color: rgb(255, 255, 255);
                     background: #434343;
                     margin-bottom: 5px;
                     padding-top: 5px;
                     padding-bottom: 5px;
                     display: block;
+                    color: white;
                     cursor: pointer;
                 }
             }
+            //classes for side menu click toggles.
             &.take-notes,
             &.question-submit {
                 .view-header {
