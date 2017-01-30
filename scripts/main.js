@@ -18,79 +18,105 @@ jQuery(document).ready(function ($) {
             }
         });
     });
-    var currentSideTab;
+    var currentSideTab = "nothing";
     var menuOpen = false;
-
-    $(".side-menu div").click(function(e) {
-        console.log(e);
-        //currentSideTab = e.currentTarget.className;
-        console.log (currentSideTab);
-        if (currentSideTab == e.currentTarget.className || menuOpen == false) {
-            $("#offside-wrapper").addClass("expanded");
-            $(".secondary-offsides .page-wrapper").addClass("shrunk");
-            currentSideTab = e.currentTarget.className;
-            menuOpen = true;
+    $(".side-menu div").click(function (e) {
+        if (menuOpen == false) {
+            if (e.currentTarget.className == "take-notes") {
+                $("#offside-wrapper").addClass("expanded");
+                $(".secondary-offsides .page-wrapper").addClass("shrunk");
+                $(".view-id-exercise_view").addClass("note");
+                menuOpen = true;
+                currentSideTab = e.currentTarget.className;
+            }
+            else if (e.currentTarget.className == "question-submit") {
+                $("#offside-wrapper").addClass("expanded");
+                $(".secondary-offsides .page-wrapper").addClass("shrunk");
+                $(".view-id-exercise_view").addClass("question");
+                menuOpen = true;
+                currentSideTab = e.currentTarget.className;
+            }
+            else if (e.currentTarget.className == "table-of-contents") {
+                $("#offside-wrapper").addClass("expanded");
+                $(".secondary-offsides .page-wrapper").addClass("shrunk");
+                $(".view-id-exercise_view").addClass("toc");
+                menuOpen = true;
+                currentSideTab = e.currentTarget.className;
+            };
+        }
+        else if (menuOpen == true) {
+            if (currentSideTab == e.currentTarget.className) {
+                $("#offside-wrapper").removeClass("expanded");
+                $(".secondary-offsides .page-wrapper").removeClass("shrunk");
+                menuOpen = false;
+            }
+            else if (currentSideTab != e.currentTarget.className) {
+                if (e.currentTarget.className == "take-notes") {
+                    $(".view-id-exercise_view").removeClass("question");
+                    $(".view-id-exercise_view").removeClass("toc");
+                    $(".view-id-exercise_view").addClass("note");
+                    currentSideTab = e.currentTarget.className;
+                }
+                else if (e.currentTarget.className == "question-submit") {
+                    $(".view-id-exercise_view").removeClass("note");
+                    $(".view-id-exercise_view").removeClass("toc");
+                    $(".view-id-exercise_view").addClass("question");
+                    currentSideTab = e.currentTarget.className;
+                }
+                else if (e.currentTarget.className == "table-of-contents") {
+                    $(".view-id-exercise_view").removeClass("note");
+                    $(".view-id-exercise_view").removeClass("question");
+                    $(".view-id-exercise_view").addClass("toc");
+                    currentSideTab = e.currentTarget.className;
+                };
+            };
         };
-
     });
-
-     $('#chapter-back span').click(function(e) {
+    $('#chapter-back span').click(function (e) {
         console.log("Clicked backward");
         $(".pager-previous a")[0].click();
     });
-
-    $('#chapter-forward span').click(function(e) {
+    $('#chapter-forward span').click(function (e) {
         console.log("Clicked forward");
         $(".pager-next a")[0].click();
     });
-
-
     //Progress bar logic
     var currentPage = $('.pager-current').index();
     var str = $('.pager-current').text();
-
     var array = str.split(' ');
     var firstA = array.shift();
     var lastA = array.pop();
-
     console.log(firstA + lastA);
-
-    var progressBar =  $('.progress-bar');
+    var progressBar = $('.progress-bar');
     progressBar.attr('style', "width: 0%");
-
-    var percentage = ((firstA/lastA) * 100);
+    var percentage = ((firstA / lastA) * 100);
     progressBar.css('width', percentage + '%');
-
-    if( currentPage === firstA) {
+    if (currentPage === firstA) {
         $('#chapter-back').addClass('hide-pagination');
-    } else if (currentPage === lastA) {
+    }
+    else if (currentPage === lastA) {
         $('#chapter-back').addClass('hide-pagination');
-    } else {
+    }
+    else {
         $('#chapter-back').removeClass('hide-pagination');
     }
-
     console.log($('.pager-current').text());
-
     console.log("Current page is: " + currentPage);
-
     $('#search-block-form').hide();
-    $('#edit-submit').click(function(e){
-      // e.preventDefault();
+    $('#edit-submit').click(function (e) {
+        // e.preventDefault();
     });
-
-    $('.search_icon').click(function(){
-      $('#search-block-form').toggle(400);
-    });//search icon onclick
-
-
+    $('.search_icon').click(function () {
+        $('#search-block-form').toggle(400);
+    }); //search icon onclick
     $('#user-login-form').hide();
-    $('.account_icon').click(function(){
-      $('#user-login-form').toggle(400);
+    $('.account_icon').click(function () {
+        $('#user-login-form').toggle(400);
+    });
+    $('.hamburger_menu').click(function () {
+        $('#offside-navigation-wrapper').addClass('expanded');
     });
 
-    $('.hamburger_menu').click(function(){
-      $('#offside-navigation-wrapper').addClass('expanded');
-    });
 
 
 

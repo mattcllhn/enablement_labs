@@ -1,7 +1,6 @@
 <?php
-// $Id: page.tpl.php,v 1.8.2.4 2010/11/19 14:42:44 danprobo Exp $
 ?>
-<div <?php print danland_page_class($page['sidebar_first'], $page['sidebar_second']); ?>>
+<div id="site">
 <div id="header">
 <div id="header-wrapper">
 	<?php if ($logo): ?> 
@@ -67,7 +66,26 @@
 </div> <!-- end menu -->
 <div style="clear:both"></div>
 
-<?php if ($page['highlighted']): ?><div id="mission-wrapper"><div id="mission"><?php print render ($page['highlighted']); ?></div></div><?php endif; ?>
+<?php if($is_front): ?>
+<div id="slideshow-wrapper">
+<div class="slideshow-inner">
+<div id="slideshow-preface">
+ <?php if ($page['preface']): ?>
+          <div id="preface">
+            <?php print render ($page['preface']); ?>
+          </div><!-- end preface -->
+ <?php endif; ?>
+</div>
+<?php if ($page['highlighted']) : ?><div id="slideshow-bottom">
+<div id="mission"><?php print render ($page['highlighted']); ?></div></div><?php endif; ?>
+<div class="slideshow">
+<img src="<?php print $base_path . $directory; ?>/images/slideshows/sea.jpg" width="950" height="355" alt="slideshow 1"/>
+<img src="<?php print $base_path . $directory; ?>/images/slideshows/noon.jpg" width="950" height="355" alt="slideshow 2"/>
+<img src="<?php print $base_path . $directory; ?>/images/slideshows/snow.jpg" width="950" height="355" alt="slideshow 3"/>
+</div>
+</div>
+</div>
+<?php endif; ?>
 
  <?php if($page['preface_first'] || $page['preface_middle'] || $page['preface_last']) : ?>
     <div style="clear:both"></div>
@@ -99,7 +117,6 @@
         <?php print render($page['sidebar_first']); ?>
       </div></div> <!-- end sidebar-first -->
     <?php endif; ?>
-
 <div id="content">
 			<a id="main-content"></a>
 			<?php if ($page['content_top']) : ?><div class="content-top"><?php print render ($page['content_top']); ?></div>
@@ -192,7 +209,7 @@
 
 <div style="clear:both"></div>
 <div id="footer-wrapper">
-<?php if ($page['footer']): ?>
+<?php if($page['footer']): ?>
 <div id="footer">
  <?php print render ($page['footer']); ?>
 </div>
@@ -205,5 +222,5 @@
 </div> <!-- end footer wrapper -->
 
 <div style="clear:both"></div>
-<div id="notice"><p>Theme by <a href="http://www.danetsoft.com">Danetsoft</a> and <a href="http://www.danpros.com">Danang Probo Sayekti</a> inspired by <a href="http://www.maksimer.no">Maksimer</a></p></div>
+
 </div>
