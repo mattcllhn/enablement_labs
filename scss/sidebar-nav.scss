@@ -1,183 +1,177 @@
-@import "main-site-colors";
-//CSS for open and closed side menu
-.secondary-offsides {
-    position: relative;
-    #offside-wrapper {
-        //background-color: rgb(65, 64, 66);
-        left: -250px;
-        position: absolute;
-        width: 300px;
-        z-index: 1;
-        transition: left 500ms linear;
-        &.expanded {
-            left: 0px;
-            min-height: 100vh;
-            overflow: hidden;
-            overflow-y: auto;
-        }
-    }
-    .page-wrapper {
-        right: 0px;
-        position: relative;
-        transition: right 500ms linear;
-        &.shrunk {
-            right: -250px;
-        }
-    }
-}
-
-.view-id-exercise_view {
-    .view-content {
-        width: 250px;
-        height: 100vh;
-        background: #434343;
-        padding: 0px 10px;
-        h3 {
-            color: white;
-            padding-bottom: 5px;
-            border-bottom: 1px solid rgb(255, 255, 255);
-        }
-        .views-row {
-            margin-left: 10px;
-            width: calc(100% - 20px);
-            margin-bottom: 3px;
-            margin-right: 10px;
-        }
-        .views-row-first {
-            margin-top: 10px;
-        }
-        .views-row-last {
-            margin-bottom: 10px;
-        }
-        .sidebar-chapters {
-            a {
-                width: 100%;
-                padding: 10px 7px;
-                background: rgb(160, 49, 51);
-                display: block;
-                color: rgb(255, 255, 255);
-                font-size: 1.5rem;
-                text-transform: capitalize;
+        @import "main-site-colors";
+        //CSS for open and closed side menu
+        .secondary-offsides {
+            position: relative;
+            #offside-wrapper {
+                //background-color: rgb(65, 64, 66);
+                left: -250px;
+                position: absolute;
+                width: 300px;
+                z-index: 1;
+                transition: left 500ms linear;
+                &.expanded {
+                    left: 0px;
+                    min-height: 100vh;
+                    overflow: hidden;
+                    //overflow-y: auto;
+                }
             }
         }
-    }
-    .view-header {
-        width: 250px;
-        background: #434343;
-        .node {
-            padding: 0px 10px;
-            background: #434343;
-            height: 100vh;
-            border-bottom: none;
-            textarea {
-                min-height: 350px;
+        
+        .view-id-exercise_view {
+            .view-content {
+                width: 250px;
+                height: 100vh;
+                background: #434343;
+                padding: 0px 10px;
+                h3 {
+                    color: white;
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid rgb(255, 255, 255);
+                }
+                .views-row {
+                    margin-left: 10px;
+                    width: calc(100% - 20px);
+                    margin-bottom: 3px;
+                    margin-right: 10px;
+                }
+                .views-row-first {
+                    margin-top: 10px;
+                }
+                .views-row-last {
+                    margin-bottom: 10px;
+                }
+                .sidebar-chapters {
+                    a {
+                        width: 100%;
+                        padding: 10px 7px;
+                        background: rgb(160, 49, 51);
+                        display: block;
+                        color: rgb(255, 255, 255);
+                        font-size: 1.5rem;
+                        text-transform: capitalize;
+                    }
+                }
             }
-            .form-item {
-                margin-top: 0px;
-                margin-bottom: 0px;
+            .view-header {
+                width: 250px;
+                background: #434343;
+                .node {
+                    padding: 0px 10px;
+                    background: #434343;
+                    height: 100vh;
+                    border-bottom: none;
+                    textarea {
+                        min-height: 350px;
+                    }
+                    .form-item {
+                        margin-top: 0px;
+                        margin-bottom: 0px;
+                    }
+                    label {
+                        text-align: center;
+                        text-transform: lowercase;
+                        font-size: 2rem;
+                        height: 65px;
+                        font-weight: 400;
+                        color: rgb(255, 255, 255);
+                        vertical-align: middle;
+                        line-height: 65px;
+                    }
+                }
+                .grippie {
+                    display: none;
+                }
+                .form-actions {
+                    margin-top: 2rem;
+                    input.webform-submit {
+                        margin: 0 auto;
+                        display: block;
+                    }
+                }
+                .contents-label {
+                    text-align: center;
+                    background: #434343;
+                    text-transform: lowercase;
+                    font-size: 2rem;
+                    height: 65px;
+                    font-weight: 400;
+                    color: rgb(255, 255, 255);
+                    vertical-align: middle;
+                    line-height: 65px;
+                    display: block;
+                }
             }
-            label {
-                text-align: center;
-                text-transform: lowercase;
-                font-size: 2rem;
-                height: 65px;
-                font-weight: 400;
-                color: rgb(255, 255, 255);
-                vertical-align: middle;
-                line-height: 65px;
+            .view-footer {
+                position: absolute;
+                width: 50px;
+                right: 0px;
+                top: 80px;
+                .side-menu div {
+                    text-align: center;
+                    font-size: 35px;
+                    color: rgb(255, 255, 255);
+                    background: #434343;
+                    margin-bottom: 5px;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    display: block;
+                    cursor: pointer;
+                }
+            }
+            &.take-notes, &.question-submit {
+                .view-header {
+                    .contents-label {
+                        display: none;
+                    }
+                }
+                .view-content {
+                    display: none;
+                }
+            }
+            &.take-notes {
+                .view-header {
+                    .help-area {
+                        display: none;
+                    }
+                }
+            }
+            &.question-submit {
+                .view-header {
+                    .notes-area {
+                        display: none;
+                    }
+                }
+            }
+            &.table-of-contents {
+                .view-header {
+                    .node {
+                        display: none;
+                    }
+                }
             }
         }
-        .grippie {
-            display: none;
-        }
-        .form-actions {
-            margin-top: 2rem;
-            input.webform-submit {
-                margin: 0 auto;
-                display: block;
+        
+        #offside-navigation-wrapper {
+            background-color: rgb(65, 64, 66);
+            left: -300px;
+            position: fixed;
+            width: 300px;
+            z-index: 1;
+            transition: left 500ms linear;
+            &.expanded {
+                left: 0px;
+                min-height: 100vh;
+                overflow: hidden;
+                overflow-y: auto;
             }
         }
-        .contents-label {
-            text-align: center;
-            background: #434343;
-            text-transform: lowercase;
-            font-size: 2rem;
-            height: 65px;
-            font-weight: 400;
-            color: rgb(255, 255, 255);
-            vertical-align: middle;
-            line-height: 65px;
-            display: block;
-        }
-    }
-    .view-footer {
-        position: absolute;
-        width: 50px;
-        right: 0px;
-        top: 80px;
-        .side-menu div {
-            text-align: center;
-            font-size: 35px;
-            color: rgb(255, 255, 255);
-            background: #434343;
-            margin-bottom: 5px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            display: block;
-            cursor: pointer;
-        }
-    }
-    
-    &.note { 
-        .view-header { 
-            .help-area { 
-                display: none;
+        
+        .site {
+            right: 0px;
+            position: relative;
+            transition: right 500ms linear;
+            &.shrunk {
+                right: -300px;
             }
         }
-        .view-content { 
-            display: none;
-        }
-    }
-    &.question { 
-        .view-header { 
-            .notes-area { 
-                display: none;
-            }
-        }
-        .view-content { 
-            display: none;
-        }
-    }
-    
-    &.toc { 
-        .view-header { 
-            .node { 
-                display: none;
-            }
-        }
-    }
-}
-
-#offside-navigation-wrapper {
-    background-color: rgb(65, 64, 66);
-    left: -300px;
-    position: fixed;
-    width: 300px;
-    z-index: 1;
-    transition: left 500ms linear;
-    &.expanded {
-        left: 0px;
-        min-height: 100vh;
-        overflow: hidden;
-        overflow-y: auto;
-    }
-}
-
-.site {
-    right: 0px;
-    position: relative;
-    transition: right 500ms linear;
-    &.shrunk {
-        right: -300px;
-    }
-}
