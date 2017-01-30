@@ -1,29 +1,36 @@
 @import "main-site-colors";
 
 #block-views-chapter-view-v2-block{
+    .views-content-wrapper {
+        margin: 0 auto;
+        max-width: 1000px;
+        padding-left: 65px;
+        padding-right: 65px;
+        width: 100%;
+    }
     //jquery calculates the first and last item and should add this class to the forward or back button
     .hide-pagination { 
         display: none;
     }
     .view-chapter-view-v2{
         h3{
-    text-align: center;
-    background: #3a52a0;
-    color: white;
-    height: 65px;
-    padding: 18px;
-    font-size: 2.6rem;
+            text-align: center;
+            background: #3a52a0;
+            color: white;
+            height: 65px;
+            padding: 18px;
+            font-size: 2.6rem;
         }
         .exercise-title{
-         text-align: center;
-    background: #3a52a0;
-    color: white;
-    height: 65px;
-    padding: 18px;
-    font-size: 2.6rem;
+            text-align: center;
+            background: #3a52a0;
+            color: white;
+            height: 65px;
+            padding: 18px;
+            font-size: 2.6rem;
         }
         .chapter-title-wrapper{
-             text-align: center;
+            text-align: center;
             font-size: 2.6rem;
             margin-top: 0px;
         }
@@ -33,9 +40,9 @@
             cursor: pointer;
         }
         .chapter-title{
-     padding-left: 8px;
-    padding-right: 8px;
-    display: inline-block;
+            padding-left: 8px;
+            padding-right: 8px;
+            display: inline-block;
         }
     }
     

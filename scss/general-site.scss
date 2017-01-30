@@ -5,9 +5,11 @@
   // max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  overflow: hidden;
+  //overflow: hidden;
+}
 
-
+.item-list ul li { 
+    margin: 0px;
 }
 
 body {
