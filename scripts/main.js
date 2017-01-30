@@ -20,7 +20,7 @@ jQuery(document).ready(function ($) {
     });
     var currentSideTab = "nothing";
     var menuOpen = false;
-    
+
     $(".side-menu div").click(function (e) {
         if (menuOpen == false) {
             $("#offside").addClass("expanded");
@@ -41,11 +41,11 @@ jQuery(document).ready(function ($) {
             };
         };
     });
-    
-    function resetSideMenu() { 
+
+    function resetSideMenu() {
         $(".view-id-exercise_view").removeClass("take-notes question-submit table-of-contents");
     }
-    
+
     $('#chapter-back span').click(function (e) {
         console.log("Clicked backward");
         $(".pager-previous a")[0].click();
@@ -55,39 +55,6 @@ jQuery(document).ready(function ($) {
         $(".pager-next a")[0].click();
     });
 
-
-    //Progress bar logic
-    var currentPage = $('.pager-current').index();
-    var str = $('.pager-current').text();
-    var array = str.split(' ');
-    var firstA = array.shift();
-    var lastA = array.pop();
-    firstA = parseInt(firstA);
-    lastA = parseInt(lastA);
-
-    //Get page number
-    // var href = $(location).attr('href');
-    // var pageNum = href.split("?page=")[1].split("/")[0];
-
-    var progressBar = $('.progress-bar');
-    progressBar.attr('style', "width: 0%");
-    var percentage = ((firstA / lastA) * 100);
-    progressBar.css('width', percentage + '%');
-
-    if (currentPage === firstA) {
-        $('#chapter-back').addClass('hide-pagination');
-    }
-    else if (currentPage === (lastA - 1)) {
-        $('#chapter-forward').addClass('hide-pagination');
-    }
-    else {
-        $('#chapter-back').removeClass('hide-pagination');
-    }
-
-
-    $('#search-block-form').hide();
-
-    
       $('#search-block-form').hide();
 
     $('#edit-submit').click(function (e) {
@@ -96,22 +63,24 @@ jQuery(document).ready(function ($) {
     $('.search_icon').click(function () {
         $('#search-block-form').toggle(400);
     }); //search icon onclick
+
+
     $('#user-login-form').hide();
     $('.account_icon').click(function () {
         $('#user-login-form').toggle(400);
     });
     $('.hamburger_menu').click(function () {
         $('#offside-navigation-wrapper').toggleClass('expanded');
-        $('.page-wrapper').toggleClass('body-menu-open');
+        $('#site').toggleClass('body-menu-open');
     });
 
 
 
     //Progress bar logic
-    if ($('.pager-current').length > 0) { 
+    if ($('.pager-current').length > 0) {
         progressBar();
     };
-    
+
     function progressBar() {
         var currentPage = $('.pager-current').index();
         var str = $('.pager-current').text();
@@ -129,7 +98,7 @@ jQuery(document).ready(function ($) {
         progressBar.attr('style', "width: 0%");
         var percentage = ((firstA / lastA) * 100);
         progressBar.css('width', percentage + '%');
-    
+
         if (currentPage === firstA) {
             $('#chapter-back').addClass('hide-pagination');
         }
@@ -142,7 +111,7 @@ jQuery(document).ready(function ($) {
     }
 
 
-  
+
 
 
 //       $('#block-views-chapter-view-v2-block').on('click', '#chapter-back span', function(e) {
