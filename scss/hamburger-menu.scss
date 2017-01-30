@@ -1,6 +1,8 @@
 @import "main-site-colors";
 
 .body-menu-open{
+  margin-left:300px;
+  transition: all 500ms linear;
 
 }
 .menu-menu-open{
@@ -8,12 +10,13 @@
 }
 
 #offside-navigation-wrapper {
+    display:inline-block;
     background-color: rgb(65, 64, 66);
     left: -300px;
     position: fixed;
     width: 300px;
     z-index: 1;
-    transition: left 500ms linear;
+    transition: all 500ms linear;
     &.expanded {
         left: 0px;
         min-height: 100vh;
