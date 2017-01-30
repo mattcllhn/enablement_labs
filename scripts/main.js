@@ -80,17 +80,18 @@ jQuery(document).ready(function ($) {
         console.log("Clicked forward");
         $(".pager-next a")[0].click();
     });
+
     //Progress bar logic
     var currentPage = $('.pager-current').index();
     var str = $('.pager-current').text();
     var array = str.split(' ');
     var firstA = array.shift();
     var lastA = array.pop();
-    console.log(firstA + lastA);
     var progressBar = $('.progress-bar');
     progressBar.attr('style', "width: 0%");
     var percentage = ((firstA / lastA) * 100);
     progressBar.css('width', percentage + '%');
+
     if (currentPage === firstA) {
         $('#chapter-back').addClass('hide-pagination');
     }
@@ -100,8 +101,8 @@ jQuery(document).ready(function ($) {
     else {
         $('#chapter-back').removeClass('hide-pagination');
     }
-    console.log($('.pager-current').text());
-    console.log("Current page is: " + currentPage);
+
+
     $('#search-block-form').hide();
     $('#edit-submit').click(function (e) {
         // e.preventDefault();
