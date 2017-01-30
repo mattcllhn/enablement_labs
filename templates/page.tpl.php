@@ -26,7 +26,7 @@
             <?php endif; ?>
         </div> 
     </div>
-    <div class="secondary-offsides clearfix">
+    <div class="secondary-offsides page-wrapper clearfix">
         <div id="offside-wrapper" class="clearfix">
             <?php if($page['offside']): ?>
                 <div id="offside">
