@@ -1,145 +1,145 @@
-        @import "main-site-colors";
-        //CSS for open and closed side menu
-        .secondary-offsides {
-            position: relative;
-            #offside {
-                left: -250px;
-                position: fixed;
-                width: 250px;
-                height: 100vh;
-                top: 0px;
-                z-index: 1;
-                background: rgb(235, 235, 235);
-                transition: left 500ms linear;
-                &.expanded {
-                    left: 0px;
-                    display: block;
-                    overflow: hidden;
-                    overflow: scroll;
-                    .view-footer { 
-                        left: 250px;
-                    }
-                }
-            }
-        }
-
-        .view-id-exercise_view {
-            .view-content {
-                height: 100%;
-               
-                h3 {
-                    font-size: 2rem;
-                    padding: 10px;
-                }
-                .views-row {
-
-                }
-                .views-row-first {
-                    //margin-top: 10px;
-                }
-                .views-row-last {
-                    //margin-bottom: 10px;
-                }
-                .sidebar-chapters {
-                    a {
-                        color: #333333;
-                        width: 100%;
-                        padding: 15px 10px;
-                        text-transform: uppercase;
-                        display: block;
-                        font-size: 1.5rem;
-                        border-bottom: 1px solid rgba(0, 0, 0, .20);
-                        &:hover { 
-                            background-color: rgba(255, 255, 255, .6);
-                        }
-                    }
-                }
-            }
-            .view-header {
-                .node {
-                    padding: 0px 10px;
-                    max-height: 100%;
-                    border-bottom: none;
-                    textarea {
-                        min-height: 86vh;
-                    }
-                    .form-item {
-                        margin-top: 0px;
-                        margin-bottom: 0px;
-                    }
-                }
-                .grippie {
-                    display: none;
-                }
-                .form-actions {
-                    margin-top: 2rem;
-                    input.webform-submit {
-                        margin: 0 auto;
-                        display: block;
-                    }
-                }
-                .contents-label, .node label {
-                    text-align: center;
-                    text-transform: capitalize;
-                    font-size: 2.5rem;
-                    height: 65px;
-                    font-weight: 400;
-                    vertical-align: middle;
-                    line-height: 65px;
-                    display: block;
-                }
-            }
+@import "main-site-colors";
+//CSS for open and closed side menu
+#secondary-content-wrapper {
+    min-height: calc(100vh - 200px);
+}
+.secondary-offsides {
+    position: relative;
+    #offside {
+        left: -350px;
+        position: fixed;
+        width: 350px;
+        height: 100vh;
+        top: 0px;
+        z-index: 1;
+        background: rgb(235, 235, 235);
+        border-right: 1px solid #434343;
+        transition: left 500ms linear;
+        &.expanded {
+            left: 0px;
+            display: block;
+            overflow-y: auto;
             .view-footer {
-                position: fixed;
-                width: 50px;
-                left: 0px;
-                bottom: 80px;
-                transition: left 500ms linear;
-                .side-menu div {
-                    text-align: center;
-                    font-size: 35px;
-                    background: #434343;
-                    margin-bottom: 5px;
-                    padding-top: 5px;
-                    padding-bottom: 5px;
-                    display: block;
-                    color: white;
-                    cursor: pointer;
-                }
+                left: 350px;
             }
-            //classes for side menu click toggles.
-            &.take-notes,
-            &.question-submit {
-                .view-header {
-                    .contents-label {
-                        display: none;
-                    }
-                }
-                .view-content {
-                    display: none;
-                }
-            }
-            &.take-notes {
-                .view-header {
-                    .help-area {
-                        display: none;
-                    }
-                }
-            }
-            &.question-submit {
-                .view-header {
-                    .notes-area {
-                        display: none;
-                    }
-                }
-            }
-            &.table-of-contents {
-                .view-header {
-                    .node {
-                        display: none;
-                    }
-                }
-            }
-
-
         }
+    }
+}
+
+.view-id-exercise_view {
+    .view-content {
+        height: 100%;
+        h3 {
+            font-size: 2rem;
+            padding: 10px;
+        }
+        .views-row {}
+        .views-row-first {
+            //margin-top: 10px;
+        }
+        .views-row-last {
+            //margin-bottom: 10px;
+        }
+        .sidebar-chapters {
+            a {
+                color: #333333;
+                width: 100%;
+                padding: 15px 10px;
+                text-transform: uppercase;
+                display: block;
+                font-size: 1.5rem;
+                border-bottom: 1px solid rgba(0, 0, 0, .20);
+                &:hover {
+                    background-color: rgba(255, 255, 255, .6);
+                }
+            }
+        }
+    }
+    .view-header {
+        .node {
+            padding: 0px 10px;
+            max-height: 100%;
+            border-bottom: none;
+            textarea {
+                max-width: 100%;
+                min-height: 75vh;
+            }
+            .form-item {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+        }
+        .grippie {
+            display: none;
+        }
+        .form-actions {
+            margin-top: 2rem;
+            input.webform-submit {
+                margin: 0 auto;
+                display: block;
+            }
+        }
+        .contents-label,
+        .node label {
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 2.5rem;
+            height: 65px;
+            font-weight: 400;
+            vertical-align: middle;
+            line-height: 65px;
+            display: block;
+        }
+    }
+    .view-footer {
+        position: fixed;
+        width: 50px;
+        left: 0px;
+        bottom: 80px;
+        transition: left 500ms linear;
+        .side-menu div {
+            text-align: center;
+            font-size: 35px;
+            background: #434343;
+            margin-bottom: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            display: block;
+            color: white;
+            cursor: pointer;
+        }
+    }
+    //classes for side menu click toggles.
+    &.take-notes,
+    &.question-submit {
+        .view-header {
+            .contents-label {
+                display: none;
+            }
+        }
+        .view-content {
+            display: none;
+        }
+    }
+    &.take-notes {
+        .view-header {
+            .help-area {
+                display: none;
+            }
+        }
+    }
+    &.question-submit {
+        .view-header {
+            .notes-area {
+                display: none;
+            }
+        }
+    }
+    &.table-of-contents {
+        .view-header {
+            .node {
+                display: none;
+            }
+        }
+    }
+}
