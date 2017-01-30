@@ -61,6 +61,13 @@ jQuery(document).ready(function ($) {
     var array = str.split(' ');
     var firstA = array.shift();
     var lastA = array.pop();
+    firstA = parseInt(firstA);
+    lastA = parseInt(lastA);
+
+    //Get page number
+    var href = $(location).attr('href');
+    var pageNum = href.split("?page=")[1].split("/")[0];
+
     var progressBar = $('.progress-bar');
     progressBar.attr('style', "width: 0%");
     var percentage = ((firstA / lastA) * 100);
@@ -69,8 +76,8 @@ jQuery(document).ready(function ($) {
     if (currentPage === firstA) {
         $('#chapter-back').addClass('hide-pagination');
     }
-    else if (currentPage === lastA) {
-        $('#chapter-back').addClass('hide-pagination');
+    else if (currentPage === (lastA - 1)) {
+        $('#chapter-forward').addClass('hide-pagination');
     }
     else {
         $('#chapter-back').removeClass('hide-pagination');

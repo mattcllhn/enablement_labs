@@ -2,17 +2,19 @@
 
 .page-wrapper {
   width: 100%;
-  max-width: 1200px;
+  // max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
   overflow: hidden;
+
+
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
 }
 
-h3 { 
+h3 {
     margin-top: 0px;
 }
 
@@ -28,4 +30,3 @@ a:focus, a:hover {
 li {
   list-style: none;
 }
-
