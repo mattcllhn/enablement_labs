@@ -14,3 +14,13 @@ body {
 #footer-wrapper {
   min-height: 200px;
 }
+
+a:focus, a:hover {
+  color: #23527c;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
