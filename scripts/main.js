@@ -56,6 +56,7 @@ jQuery(document).ready(function ($) {
     });
 
       $('#search-block-form').hide();
+
     $('#edit-submit').click(function (e) {
         // e.preventDefault();
     });

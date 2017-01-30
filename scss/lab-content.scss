@@ -130,6 +130,15 @@ $con-gold: #B4975A;
     margin-bottom: 15px;
 }
 
+.field-collection-container {
+    border-bottom: none;
+
+    .field-collection-view {
+        padding: 0 0 0 1rem;
+    }
+}
+
+
 .field-collection-container .field-items .field-items .field-item {
     margin-bottom: 0;
     background-color: #3a52a0;

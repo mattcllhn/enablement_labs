@@ -17,11 +17,14 @@
 }
 
 .view-id-lab_selection {
+
+
   .view-header {
     background-color: $background-color;
     margin: 0 auto;
     padding-top: 13rem;
     padding-bottom: 26rem;
+    height: calc(100vh - 60px);
   }
 }
 
@@ -32,9 +35,10 @@
   .main-title{
     text-transform: uppercase;
     line-height: 1.1;
-    @include fonts("Open Sans", 600, 6rem);
+    @include fonts("Open Sans", 600, 8rem);
     color: $white;
     padding-bottom: 7rem;
+    transform: translateX(13%);
   }
 
   .sub-title {
@@ -43,7 +47,7 @@
     text-transform: uppercase;
     background-color: #65828E; //Need updating
     line-height: 1;
-    transform: translateX(8%);
+    transform: translateX(13%);
     @include fonts("Open Sans", 600, 4rem);
   }
 
@@ -63,9 +67,11 @@
 
 .header-icon {
   display: inline-block;
-  padding: 2.35rem;
+  //padding: 2.35rem;
   position: relative;
   bottom: 15rem;
+  left: 7rem;
+  padding-left: 3%;
 
   .fa.fa-users {
     background-color: $white;
