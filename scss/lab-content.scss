@@ -37,12 +37,12 @@ $con-gold: #B4975A ;
     text-align: center;
     color: white;
     padding: 20px;
-        
+
      h2{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 2.6rem;
     text-transform: uppercase;
-    font-weight: bold;   
+    font-weight: bold;
         }
     }
 
@@ -106,7 +106,7 @@ $con-gold: #B4975A ;
     width: 80%;
     max-width: 800px;
     margin: auto;
-    
+
     .field-label{
         text-transform:uppercase;
         margin-right:5px;
@@ -116,17 +116,17 @@ $con-gold: #B4975A ;
     .group-left-column{
        display: inline-block;
        width: 55%;
-    }  
-    
+    }
+
     .group-right-column{
        float: right;
-       width: 45%; 
+       width: 45%;
     }
-} 
+}
 
 .field-name-field-description{
    margin-bottom: 15px;
-    
+
     .field-items{
         width: calc(100% - 125px);
         line-height:1.3;
@@ -210,7 +210,7 @@ $con-gold: #B4975A ;
 .step-wrapper{
     margin-left:50px;
     margin-bottom:50px;
-    
+
     img{
         max-width:100%;
         height:auto;
@@ -246,9 +246,9 @@ caption {
     padding-top: 5px;
     padding-bottom: 5px;
     }
-    
+
     td{
-      background-color: lightgray;  
+      background-color: lightgray;
     }
     .file{
         a{
@@ -282,7 +282,7 @@ input[type=submit] {
 
 .field-name-field-content-paragraph{
     margin-bottom:15px;
-} 
+}
 
 .field-name-field-content-list-item{
     margin-left:40px;

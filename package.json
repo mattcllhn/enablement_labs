@@ -21,8 +21,8 @@
   "keywords": [],
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-watch": "^4.3.11",
-    "gulp-sass": "^2.0.4"
+    "gulp-sass": "^2.0.4",
+    "gulp-watch": "^4.3.11"
   },
   "dependencies": {
     "nodemon": "^1.11.0"
