@@ -47,7 +47,7 @@
 }
 
 #scroll {
-  padding: 0.2rem;
+  padding: 1.2rem;
   a:hover {
     color: initial;
   }
@@ -120,12 +120,13 @@
 .lab-icon {
       .fa {
         border-radius: 50%;
-        width: 18.6rem;
-        line-height: 2.2;
-        font-size: 3rem;
-        border: 3px solid #ACACAC;
+        border: 7px solid #ACACAC;
         color: $white;
         background-color: #7F973B;
+        line-height: 5.6em;
+        width: 6.6em;
+        height: 6.6em;
+        font-size: 2.1rem;
 
         &:before {
         font-size: 8rem;

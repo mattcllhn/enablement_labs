@@ -54,7 +54,7 @@ jQuery(document).ready(function ($) {
         console.log("Clicked forward");
         $(".pager-next a")[0].click();
     });
-<<<<<<< HEAD
+
 
     //Progress bar logic
     var currentPage = $('.pager-current').index();
@@ -86,10 +86,10 @@ jQuery(document).ready(function ($) {
 
 
     $('#search-block-form').hide();
-=======
+
     
       $('#search-block-form').hide();
->>>>>>> 02a83b841543e8f55b70e9bbbfd4f82241a83c3b
+
     $('#edit-submit').click(function (e) {
         // e.preventDefault();
     });
