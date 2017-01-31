@@ -15,12 +15,16 @@
     margin: 0px;
 }
 
-.no-display { 
+.no-display {
     display: none;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
+  button{
+    background-color:$con-sandstone;
+    border-radius:5px;
+  }
 }
 
 h3 {
