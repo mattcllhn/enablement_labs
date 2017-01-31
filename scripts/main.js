@@ -104,6 +104,14 @@ jQuery(document).ready(function ($) {
             $('#chapter-back').removeClass('hide-pagination');
         }
     }
+
+    //Placeholders for username and password
+    function addPlaceholders() {
+        $('#edit-name').attr('placeholder', 'Username');
+        $('#edit-pass').attr('placeholder', 'Password');
+    }
+
+    addPlaceholders();
     
     function UpdateTableHeaders() {
         $("#block-views-chapter-view-v2-block .view-content").each(function () {
