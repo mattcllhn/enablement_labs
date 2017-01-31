@@ -1,91 +1,85 @@
 @import "main-site-colors";
-
 @function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return #{$remSize}rem;
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
 }
 
 @mixin fontSize($size) {
-  font-size: $size; //Fallback in px
-  font-size: calculateRem($size);
+    font-size: $size; //Fallback in px
+    font-size: calculateRem($size);
 }
 
 @mixin fonts($font-family, $font-weight, $font-size) {
-  font-family: $font-family;
-  font-weight: $font-weight;
-  font-size: $font-size;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: $font-size;
 }
 
 .view-id-lab_selection {
+    .view-header {
+        background-color: $background-color;
+        position: relative;
+        height: calc(100vh - 65px);
+    }
+}
 
-
-  .view-header {
-    background-color: $background-color;
-    margin: 0 auto;
-    padding-top: 13rem;
-    padding-bottom: 26rem;
-    height: calc(100vh - 65px);
-  }
+.down-arrow-icon {
+    font-size: 125px;
+    position: absolute;
+    left: calc(50% - 41.5px);
+    bottom: 1%;
+    .fa {
+        color: $white;
+        font-size: 13rem;
+    }
 }
 
 .title-block {
-  display: inline-block;
-  position: absolute;
-  width: 72.6%;
-
-  .main-title{
-    text-transform: uppercase;
-    line-height: 1.1;
-    @include fonts("Open Sans", 600, 6rem);
-    color: $white;
-    padding-bottom: 7rem;
-    transform: translateX(15.6%);
-  }
-
-  .sub-title {
-    color: $con-harvest;
-    padding: 2.5rem;
-    text-transform: uppercase;
-    background-color: #65828E; //Need updating
-    line-height: 1;
-    transform: translateX(15.6%);
-    @include fonts("Open Sans", 600, 4rem);
-  }
-
-  .down-arrow-icon {
-    transform: translateX(-50%);
+    display: inline-block;
     position: absolute;
-    left: 50%;
-    padding-top: 5%;
-
-    .fa.fa-angle-double-down {
-      color: $white;
-      font-size: 9rem;
+    width: 100%;
+    top: 15%;
+    .icon-and-title {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 50px;
     }
-  }
-
-}
-
-.header-icon {
-  display: inline-block;
-  //padding: 2.35rem;
-  position: relative;
-  left: 7rem;
-  padding-left: 3%;
-
-  .fa.fa-users {
-    background-color: $white;
-    color: $background-color;
-    border-radius: 50%;
-    width: 20.6rem;
-    line-height: 2.2;
-    text-align: center;
-    font-size: 3.25rem !important; //1.6em;
-  }
-
-  .fa-users::before {
-    //content: "\f0c0";
-    //content: "\f0c0";
-    font-size: 9.125rem !important; //2.6em;
-  }
+    .header-icon {
+        display: block;
+        float: left;
+        margin-right: 15px;
+        .fa.fa-users {
+            background-color: rgb(255, 255, 255);
+            color: rgb(75, 108, 121);
+            border-radius: 50%;
+            line-height: 2.2;
+            text-align: center;
+            font-size: 3.25rem !important;
+        }
+        .fa-users::before {
+            font-size: 9.125rem !important; //2.6em;
+        }
+    }
+    .main-title {
+        @include fonts("Open Sans", 600, 6rem);
+        text-transform: uppercase;
+        color: $white;
+        display: table;
+        width: calc(100% - 250px);
+        line-height: 1.2;
+        height: 215px;
+        span {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+    .sub-title {
+        color: $con-harvest;
+        padding: 2.5rem;
+        text-transform: uppercase;
+        background-color: #65828E; //Need updating
+        line-height: 1;
+        @include fonts("Open Sans", 600, 4rem);
+        margin-left: calc(5% + 235px);
+    }
 }
