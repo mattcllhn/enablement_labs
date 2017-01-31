@@ -20,13 +20,9 @@ jQuery(document).ready(function ($) {
     });
     //function to clone the exercise title - related function below.
     $(function () {
-        var clonedHeaderRow;
-        $("#block-views-chapter-view-v2-block .view-content").each(function () {
-            //clonedHeaderRow = $(".exercise-name", this);
-            clonedHeaderRow = $(".chapter-block", this);
-            clonedHeaderRow.before(clonedHeaderRow.clone()).addClass("floatingHeader");
-        });
-        $(window).scroll(UpdateTableHeaders).trigger("scroll");
+        console.log("here");
+        $(".floating-header").next().wrap("<div class='sticky-next-wrapper'></div>");
+        $(window).scroll(UpdateFixedHeaders).trigger("scroll");
     });
     
     var currentSideTab = "nothing";
@@ -52,14 +48,14 @@ jQuery(document).ready(function ($) {
         };
     });
     
-    // $('#chapter-back span').click(function (e) {
-    //     console.log("Clicked backward");
-    //     $(".pager-previous a")[0].click();
-    // });
-    // $('#chapter-forward span').click(function (e) {
-    //     console.log("Clicked forward");
-    //     $(".pager-next a")[0].click();
-    // });
+    $('#chapter-back span').click(function (e) {
+        console.log("Clicked backward");
+        $(".pager-previous a")[0].click();
+    });
+    $('#chapter-forward span').click(function (e) {
+        console.log("Clicked forward");
+        $(".pager-next a")[0].click();
+    });
 
 
 
@@ -96,7 +92,10 @@ jQuery(document).ready(function ($) {
         //var pageNum = href.split("?page=")[1].split("/")[0];
         var progressBar = $('.progress-bar');
         progressBar.attr('style', "width: 0%");
+        console.log("First: " + firstA + "Last: " + lastA);
         var percentage = ((firstA / lastA) * 100);
+        console.log("Progress total" + percentage);
+
         progressBar.css('width', percentage + '%');
         if (currentPage === firstA) {
             $('#chapter-back').addClass('hide-pagination');
@@ -116,24 +115,21 @@ jQuery(document).ready(function ($) {
     }
 
     addPlaceholders();
+    progressBar();
     
-    function UpdateTableHeaders() {
+    function UpdateFixedHeaders() {
         $("#block-views-chapter-view-v2-block .view-content").each(function () {
             var el = $(this)
                 , offset = el.offset()
                 , scrollTop = $(window).scrollTop()
-                , floatingHeader = $(".floatingHeader", this)
+                , floatingHeader = $(".floating-header", this)
             if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height())) {
-                // $("#offside-wrapper").removeClass("no-display");
-                floatingHeader.css({
-                    "visibility": "visible"
-                });
+                $(".sticky-next-wrapper").css({"padding-top": floatingHeader.css("height")});
+                floatingHeader.addClass("floated-header");
             }
             else {
-                // $("#offside-wrapper").addClass("no-display");
-                floatingHeader.css({
-                    "visibility": "hidden"
-                });
+                $(".sticky-next-wrapper").css({"padding-top": "0px"});
+                floatingHeader.removeClass("floated-header");
             };
         });
     }
@@ -143,14 +139,14 @@ jQuery(document).ready(function ($) {
     }
     
     
-          $('#block-views-chapter-view-v2-block').on('click', '#chapter-back span', function(e) {
-            console.log("Clicked back");
-           $(".pager-previous a").click();
-           //e.preventDefault();
-       });
-       $('#block-views-chapter-view-v2-block').on('click', '#chapter-forward span', function(e) {
-           console.log("Clicked forward");
-           $(".pager-next a").click();
-           //e.preventDefault();
-       });
+       //    $('#block-views-chapter-view-v2-block').on('click', '#chapter-back span', function(e) {
+       //      console.log("Clicked back");
+       //     $(".pager-previous a").click();
+       //     //e.preventDefault();
+       // });
+       // $('#block-views-chapter-view-v2-block').on('click', '#chapter-forward span', function(e) {
+       //     console.log("Clicked forward");
+       //     $(".pager-next a").click();
+       //     //e.preventDefault();
+       // });
 });

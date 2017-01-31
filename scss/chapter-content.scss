@@ -1,11 +1,13 @@
 @import "main-site-colors";
 #block-views-chapter-view-v2-block {
     min-height: calc(100vh - 195px);
-    .floatingHeader {
+    .floating-header {
         width: 100%;
-        position: fixed;
         top: 0;
-        visibility: hidden;
+        position: static;
+        &.floated-header { 
+            position: fixed;
+        }
     }
 
     .chapter-title-wrapper {
