@@ -64,11 +64,11 @@ jQuery(document).ready(function ($) {
         // e.preventDefault();
     });
     $('.search_icon').click(function () {
-        $('#search-block-form').toggle(400);
+        $('#search-block-form').toggle();
     }); //search icon onclick
     $('#user-login-form').hide();
     $('.account_icon').click(function () {
-        $('#user-login-form').toggle(400);
+        $('#user-login-form').toggle();
     });
     $('.hamburger_menu').click(function () {
         $('#offside-navigation-wrapper').toggleClass('expanded');
