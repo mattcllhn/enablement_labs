@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
         });
         $(window).scroll(UpdateTableHeaders).trigger("scroll");
     });
-    
+
     var currentSideTab = "nothing";
     var menuOpen = false;
     $(".side-menu div").click(function (e) {
@@ -50,7 +50,7 @@ jQuery(document).ready(function ($) {
             };
         };
     });
-    
+
     $('#chapter-back span').click(function (e) {
         console.log("Clicked backward");
         $(".pager-previous a")[0].click();
@@ -60,6 +60,9 @@ jQuery(document).ready(function ($) {
         $(".pager-next a")[0].click();
     });
     $('#search-block-form').hide();
+    $('.edit').hide();
+    $('.delete').hide();
+
     $('#edit-submit').click(function (e) {
         // e.preventDefault();
     });
@@ -112,7 +115,7 @@ jQuery(document).ready(function ($) {
     }
 
     addPlaceholders();
-    
+
     function UpdateTableHeaders() {
         $("#block-views-chapter-view-v2-block .view-content").each(function () {
             var el = $(this)
@@ -133,12 +136,12 @@ jQuery(document).ready(function ($) {
             };
         });
     }
-    
+
      function resetSideMenu() {
         $(".view-id-exercise_view").removeClass("take-notes question-submit table-of-contents");
     }
-    
-    
+
+
     //       $('#block-views-chapter-view-v2-block').on('click', '#chapter-back span', function(e) {
     //         console.log("Clicked back");
     //        $(".pager-previous a").click();
