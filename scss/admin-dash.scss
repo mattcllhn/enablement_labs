@@ -1,0 +1,25 @@
+@import "main-site-colors";
+
+.views-table.sticky-enabled.cols-6.tableheader-processed.sticky-table {
+  width: 100%;
+
+  caption {
+    background-color:$con-seattle;
+    margin-bottom: 0;
+  }
+
+  thead {
+    font-size: 1.5rem;
+    background-color: $labs-grey-background;
+  }
+
+  td, th {
+    padding: 0px;
+    padding-left: 2rem;
+  }
+
+  .views-field {
+    font-size: 2rem;
+  }
+
+}
