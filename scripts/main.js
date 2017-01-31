@@ -18,9 +18,18 @@ jQuery(document).ready(function ($) {
             }
         });
     });
+    //function to clone the exercise title - related function below.
+    $(function () {
+        var clonedHeaderRow;
+        $("#block-views-chapter-view-v2-block .view-content").each(function () {
+            clonedHeaderRow = $(".exercise-name", this);
+            clonedHeaderRow.before(clonedHeaderRow.clone()).addClass("floatingHeader");
+        });
+        $(window).scroll(UpdateTableHeaders).trigger("scroll");
+    });
+    
     var currentSideTab = "nothing";
     var menuOpen = false;
-
     $(".side-menu div").click(function (e) {
         if (menuOpen == false) {
             $("#offside").addClass("expanded");
@@ -41,11 +50,7 @@ jQuery(document).ready(function ($) {
             };
         };
     });
-
-    function resetSideMenu() {
-        $(".view-id-exercise_view").removeClass("take-notes question-submit table-of-contents");
-    }
-
+    
     $('#chapter-back span').click(function (e) {
         console.log("Clicked backward");
         $(".pager-previous a")[0].click();
@@ -54,17 +59,13 @@ jQuery(document).ready(function ($) {
         console.log("Clicked forward");
         $(".pager-next a")[0].click();
     });
-
-      $('#search-block-form').hide();
-
+    $('#search-block-form').hide();
     $('#edit-submit').click(function (e) {
         // e.preventDefault();
     });
     $('.search_icon').click(function () {
         $('#search-block-form').toggle(400);
     }); //search icon onclick
-
-
     $('#user-login-form').hide();
     $('.account_icon').click(function () {
         $('#user-login-form').toggle(400);
@@ -73,9 +74,6 @@ jQuery(document).ready(function ($) {
         $('#offside-navigation-wrapper').toggleClass('expanded');
         $('#site').toggleClass('body-menu-open');
     });
-
-
-
     //Progress bar logic
     if ($('.pager-current').length > 0) {
         progressBar();
@@ -89,16 +87,13 @@ jQuery(document).ready(function ($) {
         var lastA = array.pop();
         firstA = parseInt(firstA);
         lastA = parseInt(lastA);
-
         //Get page number
         //var href = $(location).attr('href');
         //var pageNum = href.split("?page=")[1].split("/")[0];
-
         var progressBar = $('.progress-bar');
         progressBar.attr('style', "width: 0%");
         var percentage = ((firstA / lastA) * 100);
         progressBar.css('width', percentage + '%');
-
         if (currentPage === firstA) {
             $('#chapter-back').addClass('hide-pagination');
         }
@@ -109,21 +104,41 @@ jQuery(document).ready(function ($) {
             $('#chapter-back').removeClass('hide-pagination');
         }
     }
-
-
-
-
-
-//       $('#block-views-chapter-view-v2-block').on('click', '#chapter-back span', function(e) {
-//         console.log("Clicked back");
-//        $(".pager-previous a").click();
-//        //e.preventDefault();
-//    });
-
-//    $('#block-views-chapter-view-v2-block').on('click', '#chapter-forward span', function(e) {
-//        console.log("Clicked forward");
-//        $(".pager-next a").click();
-//        //e.preventDefault();
-//    });
-
+    
+    function UpdateTableHeaders() {
+        $("#block-views-chapter-view-v2-block .view-content").each(function () {
+            var el = $(this)
+                , offset = el.offset()
+                , scrollTop = $(window).scrollTop()
+                , floatingHeader = $(".floatingHeader", this)
+            if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height())) {
+                $("#offside-wrapper").removeClass("no-display");
+                floatingHeader.css({
+                    "visibility": "visible"
+                });
+            }
+            else {
+                $("#offside-wrapper").addClass("no-display");
+                floatingHeader.css({
+                    "visibility": "hidden"
+                });
+            };
+        });
+    }
+    
+     function resetSideMenu() {
+        $(".view-id-exercise_view").removeClass("take-notes question-submit table-of-contents");
+    }
+    
+    
+    //       $('#block-views-chapter-view-v2-block').on('click', '#chapter-back span', function(e) {
+    //         console.log("Clicked back");
+    //        $(".pager-previous a").click();
+    //        //e.preventDefault();
+    //    });
+    //    $('#block-views-chapter-view-v2-block').on('click', '#chapter-forward span', function(e) {
+    //        console.log("Clicked forward");
+    //        $(".pager-next a").click();
+    //        //e.preventDefault();
+    //    });
 });
