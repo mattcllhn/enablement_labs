@@ -1,6 +1,11 @@
 @import "main-site-colors";
-
-#block-views-chapter-view-v2-block{
+#block-views-chapter-view-v2-block {
+    .floatingHeader {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        visibility: hidden;
+    }
     .views-content-wrapper {
         margin: 0 auto;
         max-width: 1000px;
@@ -9,11 +14,20 @@
         width: 100%;
     }
     //jquery calculates the first and last item and should add this class to the forward or back button
-    .hide-pagination { 
+    .hide-pagination {
         display: none;
     }
-    .view-chapter-view-v2{
-        h3{
+    .view-chapter-view-v2 {
+        h3 {
+            text-align: center;
+            background: #3a52a0;
+            color: white;
+            width: 100%;
+            height: 65px;
+            padding: 18px;
+            font-size: 2.6rem;
+        }
+        .exercise-title {
             text-align: center;
             background: #3a52a0;
             color: white;
@@ -21,33 +35,23 @@
             padding: 18px;
             font-size: 2.6rem;
         }
-        .exercise-title{
-            text-align: center;
-            background: #3a52a0;
-            color: white;
-            height: 65px;
-            padding: 18px;
-            font-size: 2.6rem;
-        }
-        .chapter-title-wrapper{
+        .chapter-title-wrapper {
             text-align: center;
             font-size: 2.6rem;
             margin-top: 0px;
         }
-        
-        .chapter-navigation{
-            display:inline-block;
+        .chapter-navigation {
+            display: inline-block;
             cursor: pointer;
         }
-        .chapter-title{
+        .chapter-title {
             padding-left: 8px;
             padding-right: 8px;
             display: inline-block;
         }
     }
-    
-    .step-wrapper{
-    font-size: 1.6rem;
-    line-height: 1.5;
+    .step-wrapper {
+        font-size: 1.6rem;
+        line-height: 1.5;
     }
 }
