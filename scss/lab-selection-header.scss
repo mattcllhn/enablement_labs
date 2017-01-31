@@ -30,15 +30,16 @@
 
 .title-block {
   display: inline-block;
-  width: 74.6%;
+  position: absolute;
+  width: 72.6%;
 
   .main-title{
     text-transform: uppercase;
     line-height: 1.1;
-    @include fonts("Open Sans", 600, 8rem);
+    @include fonts("Open Sans", 600, 6rem);
     color: $white;
     padding-bottom: 7rem;
-    transform: translateX(13%);
+    transform: translateX(15.6%);
   }
 
   .sub-title {
@@ -47,7 +48,7 @@
     text-transform: uppercase;
     background-color: #65828E; //Need updating
     line-height: 1;
-    transform: translateX(13%);
+    transform: translateX(15.6%);
     @include fonts("Open Sans", 600, 4rem);
   }
 
@@ -55,7 +56,7 @@
     transform: translateX(-50%);
     position: absolute;
     left: 50%;
-    padding-top: 10%;
+    padding-top: 5%;
 
     .fa.fa-angle-double-down {
       color: $white;
@@ -69,7 +70,6 @@
   display: inline-block;
   //padding: 2.35rem;
   position: relative;
-  bottom: 15rem;
   left: 7rem;
   padding-left: 3%;
 
