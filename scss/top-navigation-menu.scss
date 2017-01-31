@@ -152,7 +152,6 @@ $top-border:darken($con-gold, 15%);
         }
         #edit-name{
             width: 12em;
-            text-transform: lowercase;
             font-size: 20px;
             font-family: 'Open Sans Pro', sans-serif;
             font-weight: 400;
@@ -161,13 +160,16 @@ $top-border:darken($con-gold, 15%);
             font-weight: bold;
             height: 40px;
             padding-left:1rem;
+            background-color: rgba(0,0,0,.25);
+            &::-webkit-input-placeholder {
+                color: black;
+            }
         }
     }
 
     .form-type-password {
         #edit-pass {
             width: 12em;
-            text-transform: lowercase;
             font-size: 20px;
             font-family: 'Open Sans Pro', sans-serif;
             font-weight: 400;
@@ -176,6 +178,11 @@ $top-border:darken($con-gold, 15%);
             font-weight: bold;
             height: 40px;
             padding-left:1rem;
+            background-color: rgba(0,0,0,.25);
+            &::-webkit-input-placeholder {
+                color: black;
+            }
+
         }
     }
 
@@ -186,7 +193,7 @@ $top-border:darken($con-gold, 15%);
             background-color: #3a52a0;
             border-radius: 37%;
             width: 5em;
-            text-transform: lowercase;
+            text-transform: uppercase;
             font-size: 20px;
             font-family: 'Open Sans Pro', sans-serif;
             font-weight: 400;
