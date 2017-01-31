@@ -144,10 +144,11 @@ $top-border:darken($con-gold, 15%);
     }
 
     #user-login-form{
+        text-align: right;
+        padding-right:3rem;
         label {
             display: none;
-            text-align: right;
-            padding-right:3rem;
+
         }
         #edit-name{
             width: 12em;
