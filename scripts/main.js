@@ -88,14 +88,12 @@ jQuery(document).ready(function ($) {
         var lastA = array.pop();
         firstA = parseInt(firstA);
         lastA = parseInt(lastA);
-        //Get page number
-        //var href = $(location).attr('href');
-        //var pageNum = href.split("?page=")[1].split("/")[0];
+
         var progressBar = $('.progress-bar');
         progressBar.attr('style', "width: 0%");
         console.log("First: " + firstA + "Last: " + lastA);
         var percentage = ((firstA / lastA) * 100);
-        console.log("Progress total" + percentage);
+        console.log("Progress total " + percentage);
 
         progressBar.css('width', percentage + '%');
         if (currentPage === firstA) {
@@ -107,6 +105,22 @@ jQuery(document).ready(function ($) {
         else {
             $('#chapter-back').removeClass('hide-pagination');
         }
+    }
+
+    //Scroll to anchor
+    if ($('.pager-current').length > 0) {
+        var href = $(location).attr('href');
+        var pageNum = href.split("?page=")[1].split("/")[0];
+        console.log("Current page: " + pageNum);
+    };
+    function scrollPage() {
+        $('html, body').animate({
+            scrollTop: $('#scroll-here').offset().top
+        }, 'slow');
+    }
+
+    if(pageNum >= 1) {
+        scrollPage();
     }
 
     //Placeholders for username and password
@@ -149,4 +163,6 @@ jQuery(document).ready(function ($) {
     //        $(".pager-next a").click();
     //        //e.preventDefault();
     //    });
+
+
 });
