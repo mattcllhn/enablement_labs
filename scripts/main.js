@@ -52,14 +52,14 @@ jQuery(document).ready(function ($) {
         };
     });
     
-    // $('#chapter-back span').click(function (e) {
-    //     console.log("Clicked backward");
-    //     $(".pager-previous a")[0].click();
-    // });
-    // $('#chapter-forward span').click(function (e) {
-    //     console.log("Clicked forward");
-    //     $(".pager-next a")[0].click();
-    // });
+    $('#chapter-back span').click(function (e) {
+        console.log("Clicked backward");
+        $(".pager-previous a")[0].click();
+    });
+    $('#chapter-forward span').click(function (e) {
+        console.log("Clicked forward");
+        $(".pager-next a")[0].click();
+    });
 
 
 
@@ -96,7 +96,10 @@ jQuery(document).ready(function ($) {
         //var pageNum = href.split("?page=")[1].split("/")[0];
         var progressBar = $('.progress-bar');
         progressBar.attr('style', "width: 0%");
+        console.log("First: " + firstA + "Last: " + lastA);
         var percentage = ((firstA / lastA) * 100);
+        console.log("Progress total" + percentage);
+
         progressBar.css('width', percentage + '%');
         if (currentPage === firstA) {
             $('#chapter-back').addClass('hide-pagination');
@@ -116,6 +119,7 @@ jQuery(document).ready(function ($) {
     }
 
     addPlaceholders();
+    progressBar();
     
     function UpdateTableHeaders() {
         $("#block-views-chapter-view-v2-block .view-content").each(function () {
@@ -143,14 +147,14 @@ jQuery(document).ready(function ($) {
     }
     
     
-          $('#block-views-chapter-view-v2-block').on('click', '#chapter-back span', function(e) {
-            console.log("Clicked back");
-           $(".pager-previous a").click();
-           //e.preventDefault();
-       });
-       $('#block-views-chapter-view-v2-block').on('click', '#chapter-forward span', function(e) {
-           console.log("Clicked forward");
-           $(".pager-next a").click();
-           //e.preventDefault();
-       });
+       //    $('#block-views-chapter-view-v2-block').on('click', '#chapter-back span', function(e) {
+       //      console.log("Clicked back");
+       //     $(".pager-previous a").click();
+       //     //e.preventDefault();
+       // });
+       // $('#block-views-chapter-view-v2-block').on('click', '#chapter-forward span', function(e) {
+       //     console.log("Clicked forward");
+       //     $(".pager-next a").click();
+       //     //e.preventDefault();
+       // });
 });
