@@ -27,7 +27,7 @@
         </div> 
     </div>
     <div class="secondary-offsides page-wrapper clearfix">
-        <div id="offside-wrapper" class="clearfix no-display">
+        <div id="offside-wrapper" class="clearfix">
             <?php if($page['offside']): ?>
                 <div id="offside">
                     <?php print render ($page['offside']); ?>
