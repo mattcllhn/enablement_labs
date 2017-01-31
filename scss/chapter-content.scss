@@ -1,5 +1,6 @@
 @import "main-site-colors";
 #block-views-chapter-view-v2-block {
+    min-height: calc(100vh - 195px);
     .floatingHeader {
         width: 100%;
         position: fixed;
