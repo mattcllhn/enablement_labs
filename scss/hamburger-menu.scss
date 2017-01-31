@@ -1,10 +1,13 @@
 
 @import "main-site-colors";
 
-.body-menu-open{
-  margin-left:300px;
-  transition: all 500ms linear;
-
+#site { 
+    position: relative;
+    left: 0px;
+    transition: left 250ms linear;
+    &.body-menu-open {
+        left: 300px;
+    }
 }
 
 
@@ -17,7 +20,7 @@
     bottom:0;
     width: 300px;
     z-index: 2;
-    transition: all 500ms linear;
+    transition: all 250ms linear;
     #offside-navigation{
       margin-top:3rem;
       ul{
