@@ -1,9 +1,11 @@
 @import "font";
 
+
 #site{
   transition: all 500ms linear;
-  //overflow-x: hidden;
+  
 }
+
 .page-wrapper {
   width: 100%;
   // max-width: 1200px;
@@ -14,10 +16,6 @@
 
 .item-list ul li {
     margin: 0px;
-}
-
-.no-display {
-    display: none;
 }
 
 body {
