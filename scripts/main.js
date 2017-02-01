@@ -80,7 +80,6 @@ jQuery(document).ready(function ($) {
         progressBar();
     };
 
-
     var currentPage = $('.pager-current').index();
     var str = $('.pager-current').text();
     var array = str.split(' ');
