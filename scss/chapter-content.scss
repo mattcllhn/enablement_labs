@@ -1,6 +1,22 @@
 @import "main-site-colors";
 #block-views-chapter-view-v2-block {
     min-height: calc(100vh - 195px);
+    
+    .document-download-wrapper {
+        table {     
+            width: 100%;
+        }
+        
+        th {
+            padding-left: 8px;
+            color: white;
+            background: $con-harvest;
+        }
+        tr td { 
+            padding: 5px;
+        }
+        
+    }
     .floating-header {
         width: 100%;
         top: 0;
@@ -58,5 +74,9 @@
     .step-wrapper {
         font-size: 1.6rem;
         line-height: 1.5;
+        .item-list ul li { 
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
     }
 }
