@@ -106,13 +106,12 @@ jQuery(document).ready(function ($) {
             $('#chapter-back').removeClass('hide-pagination');
         }
     }
-
     //Scroll to anchor
-    if ($('.pager-current').length > 0) {
+    if ($('.pager-current').length > 1) {
         var href = $(location).attr('href');
         var pageNum = href.split("?page=")[1].split("/")[0];
         console.log("Current page: " + pageNum);
-    };
+    }
     function scrollPage() {
         $('html, body').animate({
             scrollTop: $('#scroll-here').offset().top
