@@ -80,15 +80,16 @@ jQuery(document).ready(function ($) {
         progressBar();
     };
 
-    function progressBar() {
-        var currentPage = $('.pager-current').index();
-        var str = $('.pager-current').text();
-        var array = str.split(' ');
-        var firstA = array.shift();
-        var lastA = array.pop();
-        firstA = parseInt(firstA);
-        lastA = parseInt(lastA);
 
+    var currentPage = $('.pager-current').index();
+    var str = $('.pager-current').text();
+    var array = str.split(' ');
+    var firstA = array.shift();
+    var lastA = array.pop();
+    firstA = parseInt(firstA);
+    lastA = parseInt(lastA);
+
+    function progressBar() {
         var progressBar = $('.progress-bar');
         progressBar.attr('style', "width: 0%");
         console.log("First: " + firstA + "Last: " + lastA);
@@ -107,7 +108,7 @@ jQuery(document).ready(function ($) {
         }
     }
     //Scroll to anchor
-    if ($('.pager-current').length > 1) {
+    if (firstA > 1) {
         var href = $(location).attr('href');
         var pageNum = href.split("?page=")[1].split("/")[0];
         console.log("Current page: " + pageNum);
