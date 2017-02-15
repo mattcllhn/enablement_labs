@@ -20,9 +20,18 @@
   "homepage": "https://github.com/mattcllhn/enablement_labs#readme",
   "keywords": [],
   "devDependencies": {
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-jshint": "^2.0.4",
     "gulp-sass": "^2.0.4",
-    "gulp-watch": "^4.3.11"
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.0.1",
+    "gulp-watch": "^4.3.11",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1"
   },
   "dependencies": {
     "nodemon": "^1.11.0"
