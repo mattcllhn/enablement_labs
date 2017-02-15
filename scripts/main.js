@@ -18,12 +18,7 @@ jQuery(document).ready(function ($) {
             }
         });
     });
-    //function to clone the exercise title - related function below.
-    $(function () {
-        console.log("here");
-        $(".floating-header").next().wrap("<div class='sticky-next-wrapper'></div>");
-        $(window).scroll(UpdateFixedHeaders).trigger("scroll");
-    });
+
 
     var currentSideTab = "nothing";
     var menuOpen = false;
@@ -33,14 +28,12 @@ jQuery(document).ready(function ($) {
             $(".view-id-exercise_view").addClass(e.currentTarget.className);
             menuOpen = true;
             currentSideTab = e.currentTarget.className;
-        }
-        else if (menuOpen == true) {
+        } else if (menuOpen == true) {
             if (currentSideTab == e.currentTarget.className) {
                 $("#offside").removeClass("expanded");
                 setTimeout(resetSideMenu, 500);
                 menuOpen = false;
-            }
-            else if (currentSideTab != e.currentTarget.className) {
+            } else if (currentSideTab != e.currentTarget.className) {
                 resetSideMenu();
                 $(".view-id-exercise_view").addClass(e.currentTarget.className);
                 currentSideTab = e.currentTarget.className;
@@ -75,50 +68,41 @@ jQuery(document).ready(function ($) {
         $('#offside-navigation-wrapper').toggleClass('expanded');
         $('#site').toggleClass('body-menu-open');
     });
-    //Progress bar logic
-    if ($('.pager-current').length > 0) {
-        progressBar();
-    };
 
     var currentPage = $('.pager-current').index();
     var str = $('.pager-current').text();
     var array = str.split(' ');
     var firstA = array.shift();
-    var lastA = array.pop();
     firstA = parseInt(firstA);
-    lastA = parseInt(lastA);
 
-    function progressBar() {
-        var progressBar = $('.progress-bar');
-        progressBar.attr('style', "width: 0%");
-        console.log("First: " + firstA + "Last: " + lastA);
-        var percentage = ((firstA / lastA) * 100);
-        console.log("Progress total " + percentage);
-
-        progressBar.css('width', percentage + '%');
-        if (currentPage === firstA) {
-            $('#chapter-back').addClass('hide-pagination');
-        }
-        else if (currentPage === (lastA - 1)) {
-            $('#chapter-forward').addClass('hide-pagination');
-        }
-        else {
-            $('#chapter-back').removeClass('hide-pagination');
-        }
-    }
-    //Scroll to anchor
     if (firstA > 1) {
         var href = $(location).attr('href');
         var pageNum = href.split("?page=")[1].split("/")[0];
         console.log("Current page: " + pageNum);
     }
-    function scrollPage() {
+
+    // function showPager() {
+    //     var href = $(location).attr('href');
+    //     var pageNum = href.split("?page=")[1].split("/")[0];
+    //     if (!pageNum) {
+    //         $('#chapter-back').addClass('hide-pagination');
+    //     } else if (pageNum === 11) {
+    //         $('#chapter-forward').addClass('hide-pagination');
+    //     } else {
+    //         $('#chapter-back').removeClass('hide-pagination');
+    //     }
+    // }
+    // showPager();
+
+    //Scroll to anchor
+    function scrollPage(speed) {
+        var speed = speed || 0;
         $('html, body').animate({
             scrollTop: $('#scroll-here').offset().top
-        }, 'slow');
+        }, speed);
     }
 
-    if(pageNum >= 1) {
+    if (pageNum >= 1) {
         scrollPage();
     }
 
@@ -129,27 +113,10 @@ jQuery(document).ready(function ($) {
     }
 
     addPlaceholders();
-    progressBar();
-    
-    function UpdateFixedHeaders() {
+    // progressBar();
 
-        $("#block-views-chapter-view-v2-block .view-content").each(function () {
-            var el = $(this)
-                , offset = el.offset()
-                , scrollTop = $(window).scrollTop()
-                , floatingHeader = $(".floating-header", this)
-            if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height())) {
-                $(".sticky-next-wrapper").css({"padding-top": floatingHeader.css("height")});
-                floatingHeader.addClass("floated-header");
-            }
-            else {
-                $(".sticky-next-wrapper").css({"padding-top": "0px"});
-                floatingHeader.removeClass("floated-header");
-            };
-        });
-    }
 
-     function resetSideMenu() {
+    function resetSideMenu() {
         $(".view-id-exercise_view").removeClass("take-notes question-submit table-of-contents");
     }
     //       $('#block-views-chapter-view-v2-block').on('click', '#chapter-back span', function(e) {
