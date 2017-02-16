@@ -8,6 +8,7 @@ stylesheets[all][] = style.css
 ;stylesheets[all][] = local.css
 regions[navoffside] = Navigation Offside
 regions[navigation] = Navigation
+regions[tabs] = Tabs
 regions[content] = Content
 regions[offside] = Off Sides
 regions[content2] = Secondary Content
