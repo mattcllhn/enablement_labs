@@ -68,33 +68,42 @@ jQuery(document).ready(function ($) {
         $('#offside-navigation-wrapper').toggleClass('expanded');
         $('#site').toggleClass('body-menu-open');
     });
+    //Progress bar logic
+    // if ($('.pager-current').length > 0) {
+    //     progressBar();
+    // };
 
-    var currentPage = $('.pager-current').index();
+    // var currentPage = $('.pager-current').index();
     var str = $('.pager-current').text();
     var array = str.split(' ');
     var firstA = array.shift();
+    var lastA = array.pop();
     firstA = parseInt(firstA);
+    lastA = parseInt(lastA);
 
+    // function progressBar() {
+    //     var progressBar = $('.progress-bar');
+    //     progressBar.attr('style', "width: 0%");
+    //     console.log("First: " + firstA + "Last: " + lastA);
+    //     var percentage = ((firstA / lastA) * 100);
+    //     console.log("Progress total " + percentage);
+    //
+    //     progressBar.css('width', percentage + '%');
+    //     if (currentPage === firstA) {
+    //         $('#chapter-back').addClass('hide-pagination');
+    //     } else if (currentPage === (lastA - 1)) {
+    //         $('#chapter-forward').addClass('hide-pagination');
+    //     } else {
+    //         $('#chapter-back').removeClass('hide-pagination');
+    //     }
+    // }
+    //Scroll to anchor
     if (firstA > 1) {
         var href = $(location).attr('href');
         var pageNum = href.split("?page=")[1].split("/")[0];
         console.log("Current page: " + pageNum);
     }
 
-    // function showPager() {
-    //     var href = $(location).attr('href');
-    //     var pageNum = href.split("?page=")[1].split("/")[0];
-    //     if (!pageNum) {
-    //         $('#chapter-back').addClass('hide-pagination');
-    //     } else if (pageNum === 11) {
-    //         $('#chapter-forward').addClass('hide-pagination');
-    //     } else {
-    //         $('#chapter-back').removeClass('hide-pagination');
-    //     }
-    // }
-    // showPager();
-
-    //Scroll to anchor
     function scrollPage(speed) {
         var speed = speed || 0;
         $('html, body').animate({

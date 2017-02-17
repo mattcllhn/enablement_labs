@@ -8,6 +8,7 @@ stylesheets[all][] = style.css
 ;stylesheets[all][] = local.css
 regions[navoffside] = Navigation Offside
 regions[navigation] = Navigation
+regions[tabs] = Tabs
 regions[content] = Content
 regions[offside] = Off Sides
 regions[content2] = Secondary Content
@@ -15,4 +16,6 @@ regions[footer] = Footer
 
 
 scripts[] = scripts/main.js
+scripts[] = scripts/fixed-header.jquery.js
+scripts[] = scripts/progress-bar.jquery.js
 stylesheets[all][] = css/main.css
