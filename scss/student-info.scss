@@ -1,0 +1,29 @@
+@import "main-site-colors";
+#content-wrapper{
+  #content{
+    padding: 2rem 5rem;
+  }//content
+}//content-wrapper
+.tabs{
+  ul.primary{
+    border-bottom:none;
+    padding: 0 5rem;
+    li{
+      a{
+        border:none;
+        background-color: $con-wesson;
+        color:white;
+        border-radius: 2px;
+        padding:0 1rem;
+      }//a
+    }//li
+    li.active{
+      a{
+        background-color: lighten($con-wesson, 15%);
+        text-decoration:underline;
+        border:1px solid lighten($con-wesson, 20%);
+
+      }//a
+    }//.active
+  }// .primary
+}//tabs

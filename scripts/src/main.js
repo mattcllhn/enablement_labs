@@ -70,7 +70,6 @@ if($('#edit-submit').val() == "Log in"){
     $('.search_icon').click(function () {
         $('#search-block-form').toggle();
     }); //search icon onclick
-    // $('#user-login-form').hide();
     $('.account_icon').click(function () {
         $('#user-login-form').toggle();
     });
