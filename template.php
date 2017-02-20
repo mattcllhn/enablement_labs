@@ -3,14 +3,13 @@
  * Mini Pager override
  * @see /public_html/drupal/sites/all/modules/views/theme/theme.inc 
  */
-function theme_views_mini_pager($vars) {
+function enablement_views_mini_pager($vars) {
   global $pager_page_array, $pager_total;
 
   $tags = $vars['tags'];
   $element = $vars['element'];
   $parameters = $vars['parameters'];
 
-  $view_title = get_title();
   // current is the page we are currently paged to
   $pager_current = $pager_page_array[$element] + 1;
   // max is the maximum page number
@@ -25,6 +24,7 @@ function theme_views_mini_pager($vars) {
         'element' => $element,
         'interval' => 1,
         'parameters' => $parameters,
+        'html' => true,
       )
     );
     if (empty($li_previous)) {
@@ -46,7 +46,7 @@ function theme_views_mini_pager($vars) {
 
     $items[] = array(
       'class' => array('pager-previous'),
-      'data' => $li_previous,
+      'data' => '<div id="chapter-back">'. $li_previous . '</div>',
     );
 
     $items[] = array(
@@ -69,5 +69,40 @@ function theme_views_mini_pager($vars) {
       )
     );
   }
+}
+function enablement_pager_link($text, $page_new, $element, $parameters = array(), $attributes = array()) {
+  $page = isset($_GET['page']) ? $_GET['page'] : '';
+  if ($new_page = implode(',', pager_load_array($page_new[$element], $element, explode(',', $page)))) {
+    $parameters['page'] = $new_page;
+  }
+
+  // $query = array();
+  // if (count($parameters)) {
+  //   $query[] = drupal_query_string_encode($parameters, array());
+  // }
+  // $querystring = pager_get_querystring();
+  // if ($querystring != '') {
+  //   $query[] = $querystring;
+  // }
+
+  // Set each pager link title
+  if (!isset($attributes['title'])) {
+    static $titles = NULL;
+    if (!isset($titles)) {
+      $titles = array(
+        t('« first') => t('Go to first page'),
+        t('‹ previous') => t('Go to previous page'),
+        t('next ›') => t('Go to next page'),
+        t('last »') => t('Go to last page'),
+      );
+    }
+    if (isset($titles[$text])) {
+      $attributes['title'] = $titles[$text];
+    }
+    else if (is_numeric($text)) {
+      $attributes['title'] = t('Go to page @number', array('@number' => $text));
+    }
+  }
+  return l($text, $_GET['q'], array('attributes' => $attributes, 'html' => TRUE, 'query' => count($query) ? implode('&', $query) : NULL));
 }
 ?>
