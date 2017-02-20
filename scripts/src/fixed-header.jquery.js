@@ -1,6 +1,7 @@
 jQuery(document).ready(function ($) {
     var floatingHeader = $("#block-views-chapter-view-v2-block .view-header"),
         adminMenu = $('body.admin-menu');
+
     if(floatingHeader.length == 0){ 
         /**
          * If the fixed header can't be found, immediately 
@@ -20,6 +21,13 @@ jQuery(document).ready(function ($) {
 //        elStart += 30;    
 //    }
 
+    if(adminMenu.length){
+        /**
+         * If an administrator is logged in, the admin menu will force
+         * the fixed header to begin ~50px further down.
+         */
+        elStart+=50;    
+    }
     console.log(JSON.stringify({
         elStart: elStart,
         elEnd: elEnd,
