@@ -36,6 +36,13 @@
             }
         }
         .views-row {}
+        div.item-list { 
+            counter-reset: exercise;
+            li a::before {
+                counter-increment: exercise;
+                content: counters(exercise,".") ". ";
+            }  
+        }
         .views-row-first {
             //margin-top: 10px;
         }
