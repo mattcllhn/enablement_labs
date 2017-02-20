@@ -3,46 +3,13 @@
  * Mini Pager override
  * @see /public_html/drupal/sites/all/modules/views/theme/theme.inc
  */
- function phptemplate_preprocess_page(&$vars) {
-    global $user;
-
-error_log(">>>>>> phptemplate_preprocess_page() hook called");
-error_log(print_r($var['primary_links'], TRUE));
-
-    if ($user->uid != 0) {
-      // code for the account and logout links
-      $vars['primary_links']['account-link'] = Array (
-          'attributes' => Array('title' => 'Account link'),
-          'href' => '?q=user',
-          'title' => t('Account')
-      );
-      $vars['primary_links']['logout-link'] = Array (
-          'attributes' => Array('title' => 'Logout link'),
-          'href' => 'logout',
-          'title' => t('Logout')
-      );
-    }
-    else {
-      // code for the login links
-      $vars['primary_links']['login-link'] = Array (
-          'attributes' => Array('title' => 'Login link'),
-          'href' => '/user',
-          'title' => t('Login')
-      );
-    }
-
-error_log("    >>>>>> AFTER phptemplate_preprocess_page() hook");
-error_log(print_r($var['primary_links'], TRUE));
-
-}
-function theme_views_mini_pager($vars) {
+function enablement_views_mini_pager($vars) {
   global $pager_page_array, $pager_total;
 
   $tags = $vars['tags'];
   $element = $vars['element'];
   $parameters = $vars['parameters'];
 
-  $view_title = get_title();
   // current is the page we are currently paged to
   $pager_current = $pager_page_array[$element] + 1;
   // max is the maximum page number
@@ -57,6 +24,7 @@ function theme_views_mini_pager($vars) {
         'element' => $element,
         'interval' => 1,
         'parameters' => $parameters,
+        'html' => true,
       )
     );
     if (empty($li_previous)) {
@@ -78,7 +46,7 @@ function theme_views_mini_pager($vars) {
 
     $items[] = array(
       'class' => array('pager-previous'),
-      'data' => $li_previous,
+      'data' => '<div id="chapter-back">'. $li_previous . '</div>',
     );
 
     $items[] = array(
@@ -102,4 +70,3 @@ function theme_views_mini_pager($vars) {
     );
   }
 }
-?>
