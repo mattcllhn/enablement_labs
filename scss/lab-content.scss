@@ -250,11 +250,18 @@ caption {
 
 input[type=submit] {
     -webkit-appearance: button;
-    background-color: #3a52a0;
+    background-color: $con-wesson;
     border-radius: 2px;
     height: 4rem;
     color: white;
     margin-left: 0;
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active{
+      border-color: lighten($con-wesson, 22%); // 12% default
+}
 }
 
 // #edit-search-block-form--2 {
