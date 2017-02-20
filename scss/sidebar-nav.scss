@@ -36,12 +36,22 @@
             }
         }
         .views-row {}
+        //counter for each chapter by exercise
         div.item-list { 
             counter-reset: exercise;
-            li a::before {
-                counter-increment: exercise;
-                content: counters(exercise,".") ". ";
-            }  
+            ul { 
+                margin: 0px;
+            }
+            li {
+                &:last-child a {
+                    //hide bottom border of last chapter per exercise
+                    border-bottom: none;
+                }
+                a::before {
+                    counter-increment: exercise;
+                    content: counters(exercise,".") ". ";
+                }  
+            }
         }
         .views-row-first {
             //margin-top: 10px;
