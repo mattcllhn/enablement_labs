@@ -4,7 +4,15 @@
  */
 jQuery(document).ready(function ($) {
     //Function for smooth scroll to anchor on page
-    $(function () {
+    // console.log('edit actions html content', typeof($('#edit-submit').val()));
+if($('#edit-submit').val() == "Log in"){
+    $('#edit-actions').append(
+      '<a id = "signup-link" href = "/user/register">sign up</a>'
+    );
+}else{
+  $('#user-login-form').hide();
+}
+    $(function () {$
         $('a[href*="#"]:not([href="#"])').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
@@ -58,10 +66,16 @@ jQuery(document).ready(function ($) {
         // e.preventDefault();
     });
     $('.search_icon').click(function () {
+      if($('#user-login-form').is(':visible')){
+        $('#user-login-form').hide();
+      }
         $('#search-block-form').toggle();
     }); //search icon onclick
-    $('#user-login-form').hide();
+
     $('.account_icon').click(function () {
+      if($('#search-block-form').is(':visible')){
+        $('#search-block-form').hide();
+      }
         $('#user-login-form').toggle();
     });
     $('.hamburger_menu').click(function () {
@@ -110,6 +124,8 @@ jQuery(document).ready(function ($) {
             scrollTop: $('#scroll-here').offset().top
         }, speed);
     }
+
+
 
     if (pageNum >= 1) {
         scrollPage();
