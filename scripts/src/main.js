@@ -4,11 +4,17 @@
  */
 jQuery(document).ready(function ($) {
     //Function for smooth scroll to anchor on page
-
+    // console.log('edit actions html content', typeof($('#edit-submit').val()));
+if($('#edit-submit').val() == "Log in"){
+  console.log('you have not logged in', $('#edit-submit').val());
     $('#edit-actions').append(
       '<a id = "signup-link" href = "/user/register">sign up</a>'
     );
-    $(function () {
+}else{
+  console.log("else");
+  $('#user-login-form').hide();
+}
+    $(function () {$
         $('a[href*="#"]:not([href="#"])').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
