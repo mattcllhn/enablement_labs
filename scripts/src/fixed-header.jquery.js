@@ -1,5 +1,7 @@
 jQuery(document).ready(function ($) {
-    var floatingHeader = $(".floating-header");
+    var floatingHeader = $(".floating-header"),
+        adminMenu      = $('#admin-menu-wrapper');
+
     if(floatingHeader.length == 0){ 
         /**
          * If the fixed header can't be found, immediately 
@@ -11,6 +13,13 @@ jQuery(document).ready(function ($) {
     var elStart = floatingHeader.offset().top,
         elEnd = (elStart + floatingHeader.height());
 
+    if(adminMenu.length){
+        /**
+         * If an administrator is logged in, the admin menu will force
+         * the fixed header to begin ~50px further down.
+         */
+        elStart+=50;    
+    }
     console.log(JSON.stringify({
         elStart: elStart,
         elEnd: elEnd,

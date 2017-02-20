@@ -70,6 +70,8 @@ function enablement_views_mini_pager($vars) {
     );
   }
 }
+
+
 function enablement_pager_link($text, $page_new, $element, $parameters = array(), $attributes = array()) {
   $page = isset($_GET['page']) ? $_GET['page'] : '';
   if ($new_page = implode(',', pager_load_array($page_new[$element], $element, explode(',', $page)))) {
