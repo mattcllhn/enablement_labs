@@ -6,7 +6,7 @@ jQuery(document).ready(function ($) {
     //Function for smooth scroll to anchor on page
 
     $('#edit-actions').append(
-      '<a href = "/user/register">sign up</a>'
+      '<a id = "signup-link" href = "/user/register">sign up</a>'
     );
     $(function () {
         $('a[href*="#"]:not([href="#"])').click(function () {
