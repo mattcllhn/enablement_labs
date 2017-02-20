@@ -206,9 +206,16 @@ $top-border:darken($con-gold, 15%);
         }
     }
 
+
     .item-list {
         display: none;
     }
+}
+
+#signup-link{
+  margin-left: 2rem;
+  text-transform: uppercase;
+  color: black;
 }
 #block-views-chapter-view-v2-block {
     .view-chapter-view-v2 {
