@@ -1,7 +1,13 @@
 @import "main-site-colors";
 #content-wrapper{
   #content{
-    padding: 2rem 5rem;
+    #block-system-main{
+      .content{
+        .ds-1col.user-profile.view-mode-full.clearfix{
+          padding: 2rem 5rem;
+        }//ds-1col
+      }//content
+    }//block-system-main
   }//content
 }//content-wrapper
 .tabs{
