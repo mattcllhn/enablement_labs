@@ -4,6 +4,10 @@
  */
 jQuery(document).ready(function ($) {
     //Function for smooth scroll to anchor on page
+
+    $('#edit-actions').append(
+      '<a href = "/user/register">sign up</a>'
+    );
     $(function () {
         $('a[href*="#"]:not([href="#"])').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -60,7 +64,7 @@ jQuery(document).ready(function ($) {
     $('.search_icon').click(function () {
         $('#search-block-form').toggle();
     }); //search icon onclick
-    $('#user-login-form').hide();
+    // $('#user-login-form').hide();
     $('.account_icon').click(function () {
         $('#user-login-form').toggle();
     });
@@ -111,6 +115,8 @@ jQuery(document).ready(function ($) {
         }, speed);
     }
 
+
+
     if (pageNum >= 1) {
         scrollPage();
     }
@@ -138,6 +144,7 @@ jQuery(document).ready(function ($) {
     //        $(".pager-next a").click();
     //        //e.preventDefault();
     //    });
-
+    var user = '<?php $user?>';
+console.log(user);
 
 });
