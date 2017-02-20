@@ -1,8 +1,40 @@
-<?php 
+<?php
 /**
  * Mini Pager override
- * @see /public_html/drupal/sites/all/modules/views/theme/theme.inc 
+ * @see /public_html/drupal/sites/all/modules/views/theme/theme.inc
  */
+ function phptemplate_preprocess_page(&$vars) {
+    global $user;
+
+error_log(">>>>>> phptemplate_preprocess_page() hook called");
+error_log(print_r($var['primary_links'], TRUE));
+
+    if ($user->uid != 0) {
+      // code for the account and logout links
+      $vars['primary_links']['account-link'] = Array (
+          'attributes' => Array('title' => 'Account link'),
+          'href' => '?q=user',
+          'title' => t('Account')
+      );
+      $vars['primary_links']['logout-link'] = Array (
+          'attributes' => Array('title' => 'Logout link'),
+          'href' => 'logout',
+          'title' => t('Logout')
+      );
+    }
+    else {
+      // code for the login links
+      $vars['primary_links']['login-link'] = Array (
+          'attributes' => Array('title' => 'Login link'),
+          'href' => '/user',
+          'title' => t('Login')
+      );
+    }
+
+error_log("    >>>>>> AFTER phptemplate_preprocess_page() hook");
+error_log(print_r($var['primary_links'], TRUE));
+
+}
 function theme_views_mini_pager($vars) {
   global $pager_page_array, $pager_total;
 
@@ -58,8 +90,8 @@ function theme_views_mini_pager($vars) {
       'class' => array('pager-next'),
       'data' => $li_next,
     );
-    
-    
+
+
     return theme('item_list',
       array(
         'items' => $items,
