@@ -49,14 +49,27 @@ if($('#edit-submit').val() == "Log in"){
         };
     });
 
-    $('#chapter-back span').click(function (e) {
-        console.log("Clicked backward");
-        $(".pager-previous a")[0].click();
-    });
-    $('#chapter-forward span').click(function (e) {
-        console.log("Clicked forward");
-        $(".pager-next a")[0].click();
-    });
+    var back = $(".chapter-pager .pager-previous a"),
+        forward = $(".chapter-pager .pager-next a");
+    if (!back.length) {
+        console.log('hide the back button');
+        $('.chapter-navigation #chapter-back').hide();
+    }else {
+        $('#chapter-back span').click(function (e) {
+            console.log("Clicked backward");
+            $(".pager-previous a")[0].click();
+        });
+    }
+
+    if (!forward.length) {
+        console.log('hide the forward button');
+        $('.chapter-navigation #chapter-forward').hide();
+    } else {
+        $('#chapter-forward span').click(function (e) {
+            console.log("Clicked forward");
+            $(".pager-next a")[0].click();
+        });
+    }
 
     $('#search-block-form').hide();
     $('.edit').hide();
