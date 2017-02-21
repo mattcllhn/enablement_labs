@@ -1,6 +1,5 @@
 @import "font";
 
-
 #site{
   transition: all 500ms linear;
   
@@ -15,7 +14,7 @@
 }
 
 .item-list ul li {
-    margin: 0px;
+    margin: 0;
 }
 
 body {
@@ -27,13 +26,15 @@ body {
 }
 
 h3 {
-    margin-top: 0px;
-     margin-bottom: 0px;
-
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 #footer-wrapper {
   min-height: 200px;
+    .footer-copywrite {
+      padding: 3rem 3rem;
+    }
 }
 
 a:focus, a:hover {
