@@ -69,6 +69,8 @@ function enablement_views_mini_pager($vars) {
   }
 }
 
+
+
 function custom_chapter_pager($variables){
     $items = $variables['items'];
     $title = $variables['title'];
