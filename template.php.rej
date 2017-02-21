@@ -1,0 +1,6 @@
+diff a/template.php b/template.php	(rejected hunks)
+@@ -71,2 +71,4 @@
+ 
++
++
+ function custom_chapter_pager($variables){
