@@ -35,11 +35,7 @@
   <?php print render($title_suffix); ?>
   <?php if ($header): ?>
     <div class="view-header">
-      <?php print $header; ?>
-
-        <?php if ($pager): ?>
-           <?php print $pager; ?>
-        <?php endif; ?>          
+      <?php print $header; ?>       
     </div>
   <?php endif; ?>
 
@@ -74,6 +70,10 @@
   <?php if ($more): ?>
     <?php print $more; ?>
   <?php endif; ?>
+
+    <?php if ($pager): ?>
+        <?php print $pager; ?>
+    <?php endif; ?>   
 
   <?php if ($footer): ?>
     <div class="view-footer">
