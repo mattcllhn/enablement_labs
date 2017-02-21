@@ -74,7 +74,7 @@ function custom_chapter_pager($variables){
     $title = $variables['title'];
     $attributes = $variables['attributes'];
 
-     $output = '<div class="chapter-pager">';
+     $output = '<div class="chapter-pager hide-pagination">';
     if (isset($title) && $title !== '') {
         $output .= '<span class="chapter-title"><h3>' . $title . '</h3></span>';
      }
