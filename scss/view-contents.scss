@@ -115,7 +115,6 @@
   list-style: none;
   background: none;
 }
-
 //Lab boxes
 .lab-icon {
       .fa {
@@ -132,28 +131,6 @@
         font-size: 8rem;
       }
     }
-  .fa-user-md {
-    background-color: $awesomeinc_perrywinkle;
-  }
-  .fa-shopping-bag {
-    background-color: $con-burnt;
-  }
-
-  .fa-database {
-    background-color: $con-gold;
-  }
-
-  .fa-life-ring {
-    background-color: $con-ecoforest;
-  }
-
-  .fa-thermometer-full {
-    background-color: $con-sandstone;
-  }
-
-  .fa-id-card-o {
-    background-color: $con-brick;
-  }
 }
 
 .lab-header-wrapper {
@@ -197,25 +174,53 @@
   }
 }
 
-  .lab-perrywinkle .topic-shortlist {
-    background-color: $awesomeinc_perrywinkle;
-  }
-  .lab-burnt .topic-shortlist {
-    background-color: $con-burnt;
-  }
-  .lab-gold .topic-shortlist {
-    background-color: $con-gold;
-  }
-
-  .lab-ecoforest .topic-shortlist {
-    background-color: $con-ecoforest;
+  .lab-perrywinkle
+  {
+    .topic-shortlist,
+    .fa,
+    .field-name-title {
+         background-color: $awesomeinc_perrywinkle;
+    }
   }
 
-  .lab-sandstone .topic-shortlist {
-    background-color: $con-sandstone;
+  .lab-burnt {
+    .topic-shortlist,
+    .fa,
+    .field-name-title {
+          background-color: $con-burnt;
+    }
   }
 
-  .lab-brick .topic-shortlist {
-    background-color: $con-brick;
-  }
+    .lab-gold {
+      .topic-shortlist,
+      .fa,
+      .field-name-title {
+            background-color: $con-gold;
+      }
+    }
+
+    .lab-ecoforest {
+      .topic-shortlist,
+      .fa,
+      .field-name-title {
+            background-color: $con-ecoforest;
+      }
+    }
+
+    .lab-sandstone {
+      .topic-shortlist,
+      .fa,
+      .field-name-title {
+            background-color: $con-sandstone;
+      }
+    }
+
+    .lab-brick {
+      .topic-shortlist,
+      .fa,
+      .field-name-title {
+            background-color: $con-brick;
+      }
+    }
+
 

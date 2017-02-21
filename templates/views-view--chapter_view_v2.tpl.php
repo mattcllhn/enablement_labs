@@ -36,9 +36,10 @@
   <?php if ($header): ?>
     <div class="view-header">
       <?php print $header; ?>
+
         <?php if ($pager): ?>
            <?php print $pager; ?>
-        <?php endif; ?>
+        <?php endif; ?>          
     </div>
   <?php endif; ?>
 

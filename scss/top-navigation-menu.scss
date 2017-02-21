@@ -28,11 +28,11 @@ $top-border:darken($con-gold, 15%);
 }
 
 .node {
-    margin: 0px;
+    margin: 0;
 }
 
 .content {
-    margin: 0px;
+    margin: 0;
 }
 
 #navigation-wrapper {
@@ -221,7 +221,6 @@ $top-border:darken($con-gold, 15%);
     .view-chapter-view-v2 {
         h3 {
             text-align: center;
-            background: #3a52a0;
             color: white;
             height: 65px;
             padding: 18px;
@@ -230,7 +229,7 @@ $top-border:darken($con-gold, 15%);
         .exercise-title {
             text-align: center;
             background: #3a52a0;
-            color: white;
+            color: $white;
             height: 65px;
             padding: 18px;
             font-size: 2.6rem;
