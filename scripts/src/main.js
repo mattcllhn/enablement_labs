@@ -55,7 +55,8 @@ if($('#edit-submit').val() == "Log in"){
     });
     $('#chapter-forward span').click(function (e) {
         console.log("Clicked forward");
-        $(".pager-next a")[0].click();
+        // $('.flag-completed-chapter > .flag-link-normal')[0].click();
+    $(".pager-next a")[0].click();
     });
 
     $('#search-block-form').hide();
