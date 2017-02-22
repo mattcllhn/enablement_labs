@@ -17,7 +17,7 @@ var config = {
         src: './scripts/src/',
         dest:'./scripts/dest/'
     },
-}
+};
 
 gulp.task('js',['clean:js','copy:js','uglify-js'], function(){
     console.log('Completed JavaScript task');
@@ -40,7 +40,7 @@ gulp.task('jshint',function(){
     return gulp.src(config.SCRIPTS_DIR.src + '*.js')
         .jshint()
         .pipe(jshint.reporter(stylish))
-        .pipe(jshint.reporter('fail'))
+        .pipe(jshint.reporter('fail'));
 });
 
 gulp.task('copy:js',function(){
@@ -51,12 +51,14 @@ gulp.task('copy:js',function(){
 });
 
 gulp.task('sass', function () {
-    gulp.src('./scss/main.scss')
-        // .pipe(sourcemaps.init())
+    var src = './scss/**/';
+    return gulp.src([src + '*.scss',
+            src + '*.sass'])
+        .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        // .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-        // .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('./css'));
+        .pipe(autoprefixer())
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('./css/'));
 });
 
 
