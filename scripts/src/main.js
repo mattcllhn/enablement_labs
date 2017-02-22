@@ -3,8 +3,55 @@
  * https://css-tricks.com/snippets/jquery/smooth-scrolling/
  */
 jQuery(document).ready(function ($) {
-    //Function for smooth scroll to anchor on page
-    // console.log('edit actions html content', typeof($('#edit-submit').val()));
+
+function caretNav(arg){
+  // console.log('caretNav still works');
+  switch (arg) {
+    case 'next':
+    //make sure action link exists
+    if($('.flag-action').is(':visible')){
+      //simulates click on flag wrapper
+    $('.flag-wrapper>.flag-action').click();
+      //listens for flag ajax call to complete
+      $(document).ajaxComplete(function(event,request, settings){
+      //makes sure it's flag url
+      if(settings.url.search("/flag/")!==-1){
+        //checks if the pager exists
+        if($('.pager-next a')){
+            $(".pager-next a")[0].click();
+          }//if pager-next
+      }//if setting-url
+    });//ajaxComplete
+  }else {
+  $(".pager-next a")[0].click();
+}//else
+      break;
+      case 'back':
+          //checks if the pager exists
+          if($('.pager-previous a')){
+              $(".pager-previous a")[0].click();
+            }//if
+        break;
+    default:console.log('switch malfunctioned in caretnav');
+
+  }
+  // console.log("caretnav click",arg);
+
+  // $(document).ajaxComplete(function(event,request, settings){
+  //   console.log('clickFlag\n\n',settings.url.search('/flag/'));
+  //   if(settings.url.search("/flag/")!==-1){
+  //     $(".pager-next a")[0].click();
+  //   }
+//     if(settings.url !=='/js/time_spent/ajax/26/KcXftISdFugDrw827FD-wqYHbRrm-E9O6EUSdRgEPZk?js=1' ){
+  //   console.log('ajaxComplete function\n\n\n event:\n '+JSON.stringify(event)+
+  //   '\n\n\nrequest\n'+JSON.stringify(request)+
+  // '\n\n\nsettings\n'+JSON.stringify(settings));
+// }
+  // console.log('window',window.location);
+  // console.log('time spent ajax called');
+// });//ajaxComplete
+}
+
 if($('#edit-submit').val() == "Log in"){
     $('#edit-actions').append(
       '<a id = "signup-link" href = "/user/register">sign up</a>'
@@ -12,7 +59,9 @@ if($('#edit-submit').val() == "Log in"){
 }else{
   $('#user-login-form').hide();
 }
-    $(function () {$
+
+    $(function () {
+
         $('a[href*="#"]:not([href="#"])').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
@@ -31,7 +80,7 @@ if($('#edit-submit').val() == "Log in"){
     var currentSideTab = "nothing";
     var menuOpen = false;
     $(".side-menu div").click(function (e) {
-        if (menuOpen == false) {
+        if (menuOpen === false) {
             $("#offside").addClass("expanded");
             $(".view-id-exercise_view").addClass(e.currentTarget.className);
             menuOpen = true;
@@ -45,31 +94,21 @@ if($('#edit-submit').val() == "Log in"){
                 resetSideMenu();
                 $(".view-id-exercise_view").addClass(e.currentTarget.className);
                 currentSideTab = e.currentTarget.className;
-            };
-        };
+            }
+        }
     });
 
-    var back = $(".chapter-pager .pager-previous a"),
-        forward = $(".chapter-pager .pager-next a");
-    if (!back.length) {
-        console.log('hide the back button');
-        $('.chapter-navigation #chapter-back').hide();
-    }else {
-        $('#chapter-back span').click(function (e) {
-            console.log("Clicked backward");
-            $(".pager-previous a")[0].click();
-        });
-    }
+    $('#chapter-back span').click(function (e) {
+        console.log("Clicked backward");
+        caretNav('back');
+        // $(".pager-previous a")[0].click();
+    });
+    $('#chapter-forward span').click(function (e) {
+        console.log("Clicked forward");
+        caretNav('next');
+    // $(".pager-next a")[0].click();
+    });
 
-    if (!forward.length) {
-        console.log('hide the forward button');
-        $('.chapter-navigation #chapter-forward').hide();
-    } else {
-        $('#chapter-forward span').click(function (e) {
-            console.log("Clicked forward");
-            $(".pager-next a")[0].click();
-        });
-    }
 
     $('#search-block-form').hide();
     $('.edit').hide();
@@ -101,33 +140,19 @@ if($('#edit-submit').val() == "Log in"){
     // };
 
     // var currentPage = $('.pager-current').index();
-    var str = $('.pager-current').text();
+    var str = $('.chapter-pager > .chapter-title').text();
     var array = str.split(' ');
     var firstA = array.shift();
     var lastA = array.pop();
     firstA = parseInt(firstA);
     lastA = parseInt(lastA);
 
-    // function progressBar() {
-    //     var progressBar = $('.progress-bar');
-    //     progressBar.attr('style', "width: 0%");
-    //     console.log("First: " + firstA + "Last: " + lastA);
-    //     var percentage = ((firstA / lastA) * 100);
-    //     console.log("Progress total " + percentage);
-    //
-    //     progressBar.css('width', percentage + '%');
-    //     if (currentPage === firstA) {
-    //         $('#chapter-back').addClass('hide-pagination');
-    //     } else if (currentPage === (lastA - 1)) {
-    //         $('#chapter-forward').addClass('hide-pagination');
-    //     } else {
-    //         $('#chapter-back').removeClass('hide-pagination');
-    //     }
-    // }
+
     //Scroll to anchor
+    var pageNum;
     if (firstA > 1) {
         var href = $(location).attr('href');
-        var pageNum = href.split("?page=")[1].split("/")[0];
+        pageNum = href.split("?page=")[1].split("/")[0];
         console.log("Current page: " + pageNum);
     }
 
