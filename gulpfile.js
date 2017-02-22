@@ -58,13 +58,15 @@ gulp.task('copy:js',function(){
 
 gulp.task('sass', function () {
     var src = './scss/**/';
-    return gulp.src([src + '*.scss',
-            src + '*.sass'])
-        .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    return gulp.src([
+//            src + '*.scss',
+//            src + '*.sass',
+            src + 'main.scss'])
+//        .pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(concat('main.css'))
-        .pipe(sourcemaps.write('./'))
+//        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./css/'));
 });
 
