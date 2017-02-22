@@ -1,28 +1,28 @@
 @import "main-site-colors";
 #block-views-chapter-view-v2-block {
     min-height: calc(100vh - 195px);
-    
+
     .document-download-wrapper {
-        table {     
+        table {
             width: 100%;
         }
-        
+
         th {
             padding-left: 8px;
             color: white;
             background: $con-harvest;
         }
-        tr td { 
+        tr td {
             padding: 5px;
         }
-        
+
     }
     .view-header {
         background: #FFFFFF;
         width: 100%;
         top: 0;
         position: static;
-        &.floated-header { 
+        &.floated-header {
             position: fixed;
         }
     }
@@ -81,5 +81,8 @@
                  background-color: $con-brick;
          }
      }
-
+.flag-wrapper{
+  display:none;
+  
+}
 }
