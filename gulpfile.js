@@ -19,8 +19,14 @@ var config = {
     },
 };
 
-gulp.task('js',['clean:js','copy:js','uglify-js'], function(){
-    console.log('Completed JavaScript task');
+gulp.task('js',['clean:js','uglify-js'], function(){
+    return gulp.src(config.SCRIPTS_DIR.src + '/**/*.js')
+        .pipe(sourcemaps.init())
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest(config.SCRIPTS_DIR.dest))
+        .pipe(uglify())
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(config.SCRIPTS_DIR.dest ));
 });
 
 gulp.task('imagemin', function () {
@@ -34,7 +40,7 @@ gulp.task('imagemin', function () {
 });
 
 gulp.task('clean:js', function(){
-    del(config.SCRIPTS_DIR.dest);
+    del(config.SCRIPTS_DIR.dest + '*.js');
 });
 gulp.task('jshint',function(){
     return gulp.src(config.SCRIPTS_DIR.src + '*.js')
@@ -64,7 +70,7 @@ gulp.task('sass', function () {
 
 
 gulp.task('uglify-js', function() {
-    gulp.src(config.SCRIPTS_DIR.dest + '*.js')
+    return gulp.src(config.SCRIPTS_DIR.dest + '*.js')
         .pipe(sourcemaps.init())
         .pipe(concat('bunle.js'))
         .pipe(gulp.dest(config.SCRIPTS_DIR.dest))
