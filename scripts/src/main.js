@@ -139,7 +139,7 @@ if($('#edit-submit').val() == "Log in"){
     // };
 
     // var currentPage = $('.pager-current').index();
-    var str = $('.pager-current').text();
+    var str = $('.chapter-pager > .chapter-title').text();
     var array = str.split(' ');
     var firstA = array.shift();
     var lastA = array.pop();
