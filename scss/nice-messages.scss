@@ -1,22 +1,26 @@
 @import "main-site-colors";
 
-#jGrowl .jGrowl-notification.error {
-  color: #FFDBF4;
-  background-color: $con-brick;
-  border: 1px solid #8b0000;
+#jGrowl {
+  font-size: 1.3rem;
 
-}
+    .jGrowl-notification.error {
+    color: #FFDBF4;
+    background-color: $con-brick;
+    border: 1px solid #8b0000;
+  }
 
-#jGrowl .jGrowl-notification.status {
-  color: #90ee90;
-  background-color:$con-ecoforest;
-  border: 1px solid #006400;
-}
+  .jGrowl-notification.status {
+    color: #90ee90;
+    background-color:$con-ecoforest;
+    border: 1px solid #006400;
+  }
 
-#jGrowl .jGrowl-notification {
-  //Original value, saving for later reference
-  //-moz-box-shadow: 0 0 20px rgba(0,0,0,0.6);
-  -moz-box-shadow:7px 5px 0 #BEBEBE;
-  -webkit-box-shadow: 7px 5px 0 #BEBEBE;
-  box-shadow: 7px 5px 0 #BEBEBE;
+  .jGrowl-notification {
+    //Original value, saving for later reference
+    //-moz-box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    border-radius: 0;
+    -moz-box-shadow:7px 5px 0 #BEBEBE;
+    -webkit-box-shadow: 7px 5px 0 #BEBEBE;
+    box-shadow: 7px 5px 0 #BEBEBE;
+  }
 }
