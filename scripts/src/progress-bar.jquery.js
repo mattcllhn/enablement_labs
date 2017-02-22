@@ -4,12 +4,10 @@
 jQuery(document).ready(function ($) {
     var $dataComplete = $('.progress-bar').data('percent-complete');
 
-    if ($('.pager-current').length > 0) {
-        progressBar();
-    }
-
     function progressBar() {
         var progressBar = $('.progress-bar');
         progressBar.css('width', $dataComplete + "%");
     }
+
+    progressBar();
 });

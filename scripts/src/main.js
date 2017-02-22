@@ -109,6 +109,7 @@ if($('#edit-submit').val() == "Log in"){
     // $(".pager-next a")[0].click();
     });
 
+
     $('#search-block-form').hide();
     $('.edit').hide();
     $('.delete').hide();
