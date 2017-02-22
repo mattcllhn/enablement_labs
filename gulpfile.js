@@ -57,6 +57,7 @@ gulp.task('sass', function () {
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer())
+        .pipe(concat('main.css'))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./css/'));
 });
