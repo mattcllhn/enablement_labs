@@ -1,6 +1,7 @@
 <?php
 // $Id: block.tpl.php,v 1.3.4.1 2010/11/11 13:52:44 danprobo Exp $
 ?>
+
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
 <?php print render($title_prefix); ?>
@@ -9,7 +10,15 @@
 <?php endif;?>
 <?php print render($title_suffix); ?>
 
-<div class="content"<?php print $content_attributes; ?>>
-  <?php print $content ?>
-</div> <!-- end block content -->
-</div> <!-- end block -->
+      <div class="content"<?php print $content_attributes; ?>>
+<!-- Page color -->
+<div class="page-color">
+  <!-- page wrapper -->
+  <div class="page-wrapper">
+        <?php print $content ?>
+
+  </div> <!-- End page wrapper -->
+</div> <!-- End page color -->
+      </div> <!-- end block content -->
+
+</div><!-- end block -->

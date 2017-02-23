@@ -131,8 +131,9 @@ $top-border:darken($con-gold, 15%);
 
 
 #block-user-login, #search-block-form{
-    background-color: #EBEBEB;
-    box-shadow: inset 0px 2px 7px 0 grey;
+    //Added to general-site.scss file
+    //background-color: #EBEBEB;
+    //box-shadow: inset 0px 2px 7px 0 grey;
     .form-item-name {
         display: inline-block;
     }
