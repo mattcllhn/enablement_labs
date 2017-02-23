@@ -8,14 +8,26 @@
   transition: all 500ms linear;
   
 }
+//Background colors for main blocks
+.front .main-content-wrapper {
+  background-color: $con-seattle;
+}
+
+.tabs {
+  background-color: $white;
+}
+
+#block-block-1 .page-color {
+  background-color: #EBEBEB;
+  box-shadow: inset 0px 2px 7px 0 grey;
+}
 
 .page-wrapper {
-  width: 100%;
-  // max-width: 1200px;
+  max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  //overflow: hidden;
 }
+
 
 .item-list ul li {
     margin: 0;
