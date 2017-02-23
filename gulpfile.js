@@ -56,11 +56,11 @@ gulp.task('sass', function () {
 //            src + '*.scss',
 //            src + '*.sass',
             src + 'main.scss'])
-//        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(concat('main.css'))
-//        .pipe(sourcemaps.write('./'))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./css/'));
 });
 
