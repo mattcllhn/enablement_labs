@@ -172,7 +172,6 @@ $con-gold: #B4975A;
 
 .form-actions {
     .webform-submit {
-        width: 84px;
         border: 0;
         border-radius: 5px;
         color: white;
@@ -180,7 +179,6 @@ $con-gold: #B4975A;
         background-color: $sidenav-main;
         margin-right: 4%;
         margin-top: 8px;
-        height: 24px;
     }
 }
 
@@ -189,8 +187,6 @@ $con-gold: #B4975A;
 }
 
 .form-managed-file .form-submit {
-    margin-top: 3px;
-    width: 84px;
     border: 0;
     border-radius: 5px;
     color: white;
@@ -198,7 +194,6 @@ $con-gold: #B4975A;
     background-color: $sidenav-main;
     margin-right: 4%;
     margin-top: 8px;
-    height: 24px;
     margin-bottom: 4px;
 }
 
@@ -218,6 +213,10 @@ $con-gold: #B4975A;
     label {
         margin-bottom: 8px;
     }
+}
+
+.field-item {
+    padding-bottom: 1rem;
 }
 
 caption {
@@ -260,7 +259,7 @@ input[type=submit] {
     font-weight: 400;
     border-radius: 5px;
     padding: 7px 7px 7px;
-    border: 2px solid #cccccc;
+    //border: 2px solid #cccccc;
     box-shadow: 1px 1px 2px 0px #8e8e8e;
     &:hover,
     &:focus,

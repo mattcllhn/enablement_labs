@@ -1,6 +1,9 @@
 @import "font";
 @import "main-site-colors";
 
+::-moz-selection { background: $con-harvest; }
+::selection { background: $con-harvest; }
+
 #site{
   transition: all 500ms linear;
   
