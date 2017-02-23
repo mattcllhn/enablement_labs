@@ -40,7 +40,7 @@ gulp.task('imagemin', function () {
 });
 
 gulp.task('clean:js', function(){
-    del(config.SCRIPTS_DIR.dest + '*.js');
+    del(config.SCRIPTS_DIR.dest + '**/*.js');
 });
 gulp.task('jshint',function(){
     return gulp.src(config.SCRIPTS_DIR.src + '*.js')
@@ -49,12 +49,6 @@ gulp.task('jshint',function(){
         .pipe(jshint.reporter('fail'));
 });
 
-gulp.task('copy:js',function(){
-    return gulp.src(config.SCRIPTS_DIR.src + '*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter(stylish))
-        .pipe(gulp.dest(config.SCRIPTS_DIR.dest));
-});
 
 gulp.task('sass', function () {
     var src = './scss/**/';
