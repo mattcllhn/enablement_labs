@@ -1,10 +1,17 @@
 @import "main-site-colors";
-form[id*="webform-client-form"] {
+
+form[id*="webform-client-form"],
+#user-profile-form,
+#user-register-form,
+#user-login,
+#user-pass
+{
   padding: 1.5rem;
-  margin-right: 0;
   margin-bottom: 0;
-  margin-left: 0;
   border-width: .2rem;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .marker, .form-required {
@@ -13,10 +20,9 @@ form[id*="webform-client-form"] {
 
 .form-textarea, .form-text {
   display: block;
-  width: 100%;
   padding: .5rem .75rem;
   font-size: 1.5rem;
-  line-height: 1.25;
+  line-height: 1.5;
   color: #464a4c;
   background-color: #fff;
   background-image: none;
