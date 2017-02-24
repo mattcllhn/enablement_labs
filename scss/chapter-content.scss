@@ -49,10 +49,17 @@
             cursor: pointer;
         }
     }
-    .step-wrapper {
-        .item-list ul li {
-            margin-top: 15px;
-            margin-bottom: 30px;
+    .steps-wrapper {
+        .item-list ul { 
+            counter-reset: step;
+            li {
+                margin-top: 15px;
+                margin-bottom: 30px;
+                &:before { 
+                    counter-increment: step;
+                    content: counters(step, ".") ". ";
+                }
+            }
         }
     }
      .chapter-block {
