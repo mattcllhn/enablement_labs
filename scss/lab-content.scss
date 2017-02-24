@@ -172,7 +172,6 @@ $con-gold: #B4975A;
 
 .form-actions {
     .webform-submit {
-        width: 84px;
         border: 0;
         border-radius: 5px;
         color: white;
@@ -180,7 +179,6 @@ $con-gold: #B4975A;
         background-color: $sidenav-main;
         margin-right: 4%;
         margin-top: 8px;
-        height: 24px;
     }
 }
 
@@ -189,8 +187,6 @@ $con-gold: #B4975A;
 }
 
 .form-managed-file .form-submit {
-    margin-top: 3px;
-    width: 84px;
     border: 0;
     border-radius: 5px;
     color: white;
@@ -198,7 +194,6 @@ $con-gold: #B4975A;
     background-color: $sidenav-main;
     margin-right: 4%;
     margin-top: 8px;
-    height: 24px;
     margin-bottom: 4px;
 }
 
@@ -219,6 +214,10 @@ $con-gold: #B4975A;
         margin-bottom: 8px;
     }
 }
+
+//.field-item {
+//    padding-bottom: 1rem;
+//}
 
 caption {
     padding-top: 15px;
@@ -252,16 +251,22 @@ caption {
 input[type=submit] {
     -webkit-appearance: button;
     background-color: $con-wesson;
-    border-radius: 2px;
-    height: 4rem;
-    color: white;
     margin-left: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Open Sans Pro', sans-serif;
+    font-weight: 400;
+    border-radius: 5px;
+    padding: 7px 7px 7px;
+    //border: 2px solid #cccccc;
+    box-shadow: 1px 1px 2px 0px #8e8e8e;
     &:hover,
     &:focus,
     &.focus,
     &:active,
     &.active{
-      border-color: lighten($con-wesson, 22%); // 12% default
+      background-color: lighten($con-wesson, 22%); // 12% default
 }
 }
 

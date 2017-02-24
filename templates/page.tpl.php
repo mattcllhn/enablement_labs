@@ -9,16 +9,17 @@
 </div>
 <div id="site">
   <div id="navigation-wrapper" class="clearfix">
-    <div class="page-wrapper">
+    <!--<div class="page-wrapper">-->
       <?php if($page['navigation']): ?>
         <div id="navigation">
           <?php print render ($page['navigation']); ?>
         </div>
       <?php endif; ?>
-    </div>
+    <!--</div>-->
   </div>
-  <div class="page-wrapper">
+  <div class="main-content-wrapper">
     <div id="content-wrapper" class="clearfix">
+      <div class="tab-wrapper">
       <?php if ($tabs): ?>
         <div class="tabs">
           <?php print render($tabs); ?>
@@ -29,6 +30,7 @@
           <?php print render ($page['content']); ?>
         </div>
       <?php endif; ?>
+      </div>
     </div>
   </div>
   <div class="secondary-offsides page-wrapper clearfix">
@@ -39,7 +41,7 @@
         </div>
       <?php endif; ?>
     </div>
-    <div class="page-wrapper">
+    <!--<div class="page-wrapper">-->
       <div id="secondary-content-wrapper" class="clearfix">
         <?php if($page['content2']): ?>
           <div id="content2">
@@ -47,9 +49,9 @@
           </div>
         <?php endif; ?>
       </div>
-    </div>
+    <!--</div>-->
   </div>
-  <div class="page-wrapper">
+  <div class="footer-parent-wrapper">
     <div id="footer-wrapper" class="clearfix">
       <?php if($page['footer']): ?>
         <div id="footer">

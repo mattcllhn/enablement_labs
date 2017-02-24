@@ -123,14 +123,17 @@ $top-border:darken($con-gold, 15%);
       height: 40px;
       margin: 1rem 0 1rem 70%;
       border:none;
-      padding: 1rem;;
+      padding: 1rem;
+      width: 25rem;
+      display: inline-block;
 }
 
 
 
 #block-user-login, #search-block-form{
-    background-color: #EBEBEB;
-    box-shadow: inset 0px 2px 7px 0 grey;
+    //Added to general-site.scss file
+    //background-color: #EBEBEB;
+    //box-shadow: inset 0px 2px 7px 0 grey;
     .form-item-name {
         display: inline-block;
     }
