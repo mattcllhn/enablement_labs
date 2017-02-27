@@ -50,18 +50,28 @@
         }
     }
     .steps-wrapper {
-        .item-list ul {
+        .item-list>ul { 
             counter-reset: step;
-            li {
+            &>li {
                 margin-top: 15px;
                 margin-bottom: 30px;
                 .field-name-field-step-content{
                   p{
                 &:before {
                     counter-increment: step;
-                    content: counters(step, ".") ". ";
-                  }
-                  }
+                    content: "Step " counters(step, ":");
+                    padding-bottom: 10px;
+                    display: block;
+                    font-weight: bold;
+                }
+                ol, ul { 
+                    padding-left: 30px;
+                }
+                ol li { 
+                    list-style-type: decimal;
+                }
+                ul li { 
+                    list-style-type: disc;
                 }
             }
         }
