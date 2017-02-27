@@ -28,7 +28,7 @@
 //Gutters for site
 .page-wrapper .node-top-navigation-menu,
 .page-wrapper .field-items,
-.main-content-wrapper .view-lab-selection,
+//.main-content-wrapper .view-lab-selection,
 .page-search #block-system-main {
   max-width: 1200px;
   margin-right: auto;
@@ -60,6 +60,9 @@ a {
   min-height: 200px;
     .footer-copywrite {
       padding: 3rem 3rem;
+      max-width: 1200px;
+      margin-right: auto;
+      margin-left: auto;
     }
 }
 
