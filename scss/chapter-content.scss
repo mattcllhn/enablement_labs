@@ -50,14 +50,18 @@
         }
     }
     .steps-wrapper {
-        .item-list ul { 
+        .item-list ul {
             counter-reset: step;
             li {
                 margin-top: 15px;
                 margin-bottom: 30px;
-                &:before { 
+                .field-name-field-step-content{
+                  p{
+                &:before {
                     counter-increment: step;
                     content: counters(step, ".") ". ";
+                  }
+                  }
                 }
             }
         }
