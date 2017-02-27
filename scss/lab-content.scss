@@ -44,7 +44,7 @@ $con-gold: #B4975A;
 
 .lab-header-wrapper {
     .field-name-field-fa-icon {
-        p {
+        span {
             margin-top: -50px;
             margin-left: 40px;
             margin-bottom: 20px;
@@ -179,6 +179,7 @@ $con-gold: #B4975A;
         background-color: $sidenav-main;
         margin-right: 4%;
         margin-top: 8px;
+        padding: 7px 7px 7px;
     }
 }
 
@@ -258,7 +259,7 @@ input[type=submit] {
     font-family: 'Open Sans Pro', sans-serif;
     font-weight: 400;
     border-radius: 5px;
-    padding: 7px 7px 7px;
+    padding: 2px 7px 2px;
     //border: 2px solid #cccccc;
     box-shadow: 1px 1px 2px 0px #8e8e8e;
     &:hover,

@@ -98,6 +98,21 @@ if($('#edit-submit').val() == "Log in"){
         }
     });
 
+    /**
+     * IF on last chapter, hide the 'back'/'forward' chevron buttons.
+     */
+    var back = $(".chapter-pager .pager-previous a"),
+        forward = $(".chapter-pager .pager-next a");
+    if (!back.length) {
+        console.log('hide the back button');
+        $('.chapter-navigation #chapter-back').hide();
+    }
+
+    if (!forward.length) {
+        console.log('hide the forward button');
+        $('.chapter-navigation #chapter-forward').hide();
+    } 
+    
     $('#chapter-back span').click(function (e) {
         console.log("Clicked backward");
         caretNav('back');

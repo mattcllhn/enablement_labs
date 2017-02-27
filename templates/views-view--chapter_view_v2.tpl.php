@@ -34,6 +34,7 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
   <?php if ($header): ?>
+  <div class="view-header-wrapper">
     <div class="view-header">
       <?php print $header; ?>
 
@@ -41,6 +42,7 @@
            <?php print $pager; ?>
         <?php endif; ?>          
     </div>
+  </div>
   <?php endif; ?>
 
   <?php if ($exposed): ?>
@@ -56,9 +58,11 @@
   <?php endif; ?>
 
   <?php if ($rows): ?>
+  <div class="view-content-wrapper">
     <div class="view-content">
       <?php print $rows; ?>
     </div>
+  </div>
   <?php elseif ($empty): ?>
     <div class="view-empty">
       <?php print $empty; ?>

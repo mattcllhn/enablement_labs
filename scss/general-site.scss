@@ -10,24 +10,30 @@
 }
 //Background colors for main blocks
 .front .main-content-wrapper {
-  background-color: $con-seattle;
+ // background-color: $con-seattle;
 }
 
 .tabs {
-  background-color: $white;
+  background-color: #EBEBEB;
 }
 
-#block-block-1 .page-color {
+#block-user-login .page-color,
+#block-block-1 .page-color,
+#block-search-form .page-color
+{
   background-color: #EBEBEB;
   box-shadow: inset 0px 2px 7px 0 grey;
 }
 
-.page-wrapper {
+//Gutters for site
+.page-wrapper .node-top-navigation-menu,
+.page-wrapper .field-items,
+//.main-content-wrapper .view-lab-selection,
+.page-search #block-system-main {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
 }
-
 
 .item-list ul li {
     margin: 0;
@@ -54,6 +60,9 @@ a {
   min-height: 200px;
     .footer-copywrite {
       padding: 3rem 3rem;
+      max-width: 1200px;
+      margin-right: auto;
+      margin-left: auto;
     }
 }
 
