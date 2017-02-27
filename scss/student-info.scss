@@ -12,11 +12,13 @@
 }//content-wrapper
 .tabs{
   ul.primary{
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
     list-style-type: none;
-    margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #EBEBEB;
+    border-bottom: none;
     li{
       a{
         display: inline-block;
