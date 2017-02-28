@@ -44,13 +44,23 @@
             text-align: center;
             font-size: 2.6rem;
             margin-top: 0px;
-        }
-        .chapter-navigation {
+            div span{
+              font-size: 13px;
+            }
+
+         .chapter-navigation{
+            #chapter-forward, #chapter-back{
+              span{
             cursor: pointer;
+            font-size:3rem;
+            color:black;
+          }
+          }
         }
+      }
     }
     .steps-wrapper {
-        .item-list>ul { 
+        .item-list>ul {
             counter-reset: step;
             &>li {
                 margin-top: 15px;
@@ -62,13 +72,13 @@
                     display: block;
                     font-weight: bold;
                 }
-                ol, ul { 
+                ol, ul {
                     padding-left: 30px;
                 }
-                ol li { 
+                ol li {
                     list-style-type: decimal;
                 }
-                ul li { 
+                ul li {
                     list-style-type: disc;
                 }
             }
@@ -100,8 +110,13 @@
                  background-color: $con-brick;
          }
      }
-    //Removed while we address changes to site
-//.flag-wrapper{
-//  display:none;
-//}
+
+.flag-wrapper{
+ display:none;
+}
+
+}
+.flag-outer-lab-enrollment{
+  text-align: center;
+  font-size: 3rem;
 }
