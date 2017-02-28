@@ -201,9 +201,7 @@ $top-border:darken($con-gold, 15%);
     #edit-actions {
         #edit-submit {
             color: white;
-            padding: 5px 22px;
             background-color: $sidenav-main;
-            border-radius: 37%;
             width: 6em;
             text-transform: uppercase;
             font-size: 20px;
@@ -213,7 +211,7 @@ $top-border:darken($con-gold, 15%);
             padding: 7px 0 7px;
             border: 2px;
             position: relative;
-            //bottom: -1px;
+            box-shadow: 1px 1px 2px 0 #8e8e8e;
         }
     }
 
@@ -239,7 +237,13 @@ $top-border:darken($con-gold, 15%);
         background-color: #414042;
         color: $white;
     }
-
+}
+.page-user {
+    .form-wrapper {
+        #signup-link {
+            font-size: 15px;
+        }
+    }
 }
 
 .block-search .container-inline {
