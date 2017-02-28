@@ -221,6 +221,10 @@ $top-border:darken($con-gold, 15%);
     }
 }
 
+#user-login-form div {
+    vertical-align: top;
+}
+
 #signup-link{
     margin-left: 2rem;
     padding: 9px 22px;

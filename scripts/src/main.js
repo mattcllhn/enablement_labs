@@ -1,7 +1,3 @@
-/**
- * Created by conor.budge on 1/25/2017.
- * https://css-tricks.com/snippets/jquery/smooth-scrolling/
- */
 jQuery(document).ready(function ($) {
 
 function caretNav(arg){
