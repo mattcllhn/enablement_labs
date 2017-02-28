@@ -55,8 +55,6 @@
             &>li {
                 margin-top: 15px;
                 margin-bottom: 30px;
-                .field-name-field-step-content{
-                  p{
                 &:before {
                     counter-increment: step;
                     content: "Step " counters(step, ":");
