@@ -29,6 +29,20 @@ $con-gold: #B4975A;
     font-size: $font-size;
 }
 
+
+.node-type-lab {
+    p {
+        line-height: 1.6875em;
+        padding: 5px 15px;
+    }
+    .chapter-introduction-wrapper {
+        border-bottom: 1px solid #999;
+        p {
+            padding: 0 1.75rem 1.75rem 1.75rem;
+        }
+    }
+}
+
 .field-name-title {
     background-color: #3a52a0;
     text-align: center;
@@ -143,9 +157,8 @@ $con-gold: #B4975A;
     margin-bottom: 0;
     background-color: #3a52a0;
     display: inline-block;
-    margin: -1rem .1rem;
     color: white;
-    padding: 4px;
+    padding: 4px 12px;
     margin: 2px;
 }
 
@@ -203,9 +216,9 @@ $con-gold: #B4975A;
     img {
         max-width: 100%;
         width: auto;
-        margin: 0 auto;
+        margin: 16px auto;
         display: block;
-        max-height: 450px;
+        height: auto;
         border: 2px solid lightgray;
     }
     .field-name-field-content-list-item {
