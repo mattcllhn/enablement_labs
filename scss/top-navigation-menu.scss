@@ -122,7 +122,7 @@ $top-border:darken($con-gold, 15%);
       border-radius: 5px;
       background-color: rgba(0,0,0,.25);
       //height: 40px;
-      margin: 1rem 0 1rem 70%;
+      margin: 1.5rem 0 1rem 70%;
       border:none;
       padding: 1rem 2rem 1rem 4rem;
       //width: 25rem;
@@ -146,7 +146,7 @@ $top-border:darken($con-gold, 15%);
     }
 
     #edit-actions {
-        margin-left: 30px;
+        margin-left: 15px;
         display: inline-block;
     }
 
@@ -201,9 +201,7 @@ $top-border:darken($con-gold, 15%);
     #edit-actions {
         #edit-submit {
             color: white;
-            padding: 5px 22px;
             background-color: $sidenav-main;
-            border-radius: 37%;
             width: 6em;
             text-transform: uppercase;
             font-size: 20px;
@@ -213,7 +211,7 @@ $top-border:darken($con-gold, 15%);
             padding: 7px 0 7px;
             border: 2px;
             position: relative;
-            bottom: -1px;
+            box-shadow: 1px 1px 2px 0 #8e8e8e;
         }
     }
 
@@ -223,10 +221,33 @@ $top-border:darken($con-gold, 15%);
     }
 }
 
+#user-login-form div {
+    vertical-align: top;
+}
+
 #signup-link{
-  margin-left: 2rem;
-  text-transform: uppercase;
-  color: black;
+    margin-left: 2rem;
+    padding: 9px 22px;
+    transition: .5s;
+    font-size: 20px;
+    font-family: 'Open Sans Pro', sans-serif;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: #000;
+    background-color: #b1b1b1;
+    border: 2px;
+    box-shadow: 1px 1px 2px 0 #8e8e8e;
+    &:hover {
+        background-color: #414042;
+        color: $white;
+    }
+}
+.page-user {
+    .form-wrapper {
+        #signup-link {
+            font-size: 15px;
+        }
+    }
 }
 
 .block-search .container-inline {

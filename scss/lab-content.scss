@@ -28,38 +28,26 @@ $con-gold: #B4975A;
     font-weight: $font-weight;
     font-size: $font-size;
 }
-
-
-.node-type-lab {
-    p {
-        line-height: 1.6875em;
-        padding: 5px 15px;
-    }
-    .chapter-introduction-wrapper {
-        border-bottom: 1px solid #999;
-        p {
-            padding: 0 1.75rem 1.75rem 1.75rem;
+.lab-header-wrapper {
+    .field-name-title {
+        background-color: #3a52a0;
+        text-align: center;
+        color: white;
+        padding: 20px;
+        h2 {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 3.6rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 10px;
         }
-    }
-}
-
-.field-name-title {
-    background-color: #3a52a0;
-    text-align: center;
-    color: white;
-    padding: 20px;
-    h2 {
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 2.6rem;
-        text-transform: uppercase;
-        font-weight: bold;
     }
 }
 
 .lab-header-wrapper {
     .field-name-field-fa-icon {
         span {
-            margin-top: -50px;
+            margin-top: -70px;
             margin-left: 40px;
             margin-bottom: 20px;
         }
@@ -86,7 +74,6 @@ $con-gold: #B4975A;
         }
     }
     .fa {
-        background-color: #3a52a0;
         color: white;
         border-radius: 50%;
         width: 6.6em;
@@ -94,13 +81,6 @@ $con-gold: #B4975A;
         line-height: 5.6em;
         text-align: center;
         border: 7px solid #999999;
-        @include fontSize(16px); //1.6em;
-        font-size: 1.6rem;
-    }
-    .fa:before {
-        //content: "\f0c0";
-        @include fontSize(32px); //2.6em;
-        font-size: 6rem;
     }
 }
 
@@ -157,8 +137,9 @@ $con-gold: #B4975A;
     margin-bottom: 0;
     background-color: #3a52a0;
     display: inline-block;
+    margin: -1rem .1rem;
     color: white;
-    padding: 4px 12px;
+    padding: 4px;
     margin: 2px;
 }
 
@@ -215,9 +196,6 @@ $con-gold: #B4975A;
     margin-bottom: 50px;
     img {
         max-width: 100%;
-        width: auto;
-        margin: 16px auto;
-        display: block;
         height: auto;
         border: 2px solid lightgray;
     }
@@ -231,10 +209,6 @@ $con-gold: #B4975A;
         margin-bottom: 8px;
     }
 }
-
-//.field-item {
-//    padding-bottom: 1rem;
-//}
 
 caption {
     padding-top: 15px;
@@ -271,13 +245,13 @@ input[type=submit] {
     margin-left: 0;
     color: #fff;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'Open Sans Pro', sans-serif;
     font-weight: 400;
     border-radius: 5px;
-    padding: 2px 7px 2px;
-    //border: 2px solid #cccccc;
-    box-shadow: 1px 1px 2px 0px #8e8e8e;
+    border: 2px;
+    padding: 8px 22px; //2px 7px 2px;
+    box-shadow: 1px 1px 2px 0 #8e8e8e;
     &:hover,
     &:focus,
     &.focus,
@@ -287,22 +261,8 @@ input[type=submit] {
 }
 }
 
-// #edit-search-block-form--2 {
-//     font-family: inherit;
-//     font-size: inherit;
-//     line-height: inherit;
-//     display: inline-block;
-//     margin-left: 36%;
-//     border-radius: 10px;
-//     background-color: rgba(255, 255, 255, .5);
-// }
-
 .field-name-field-content-paragraph {
     margin-bottom: 15px;
-}
-
-.field-name-field-content-list-item {
-    //margin-left:40px;
 }
 
 .pager {
