@@ -28,6 +28,21 @@ $con-gold: #B4975A;
     font-weight: $font-weight;
     font-size: $font-size;
 }
+
+
+.node-type-lab {
+    p {
+        line-height: 1.6875em;
+        padding: 5px 15px;
+    }
+    .chapter-introduction-wrapper {
+        border-bottom: 1px solid #999;
+        p {
+            padding: 0 1.75rem 1.75rem 1.75rem;
+        }
+    }
+}
+
 .lab-header-wrapper {
     .field-name-title {
         background-color: #3a52a0;
