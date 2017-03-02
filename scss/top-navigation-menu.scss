@@ -193,8 +193,8 @@ $top-border:darken($con-gold, 15%);
         }
     }
 
-    #edit-actions {
-        #edit-submit {
+        #edit-submit,
+        #edit-submit--5{
             color: white;
             background-color: $sidenav-main;
             width: 6em;
@@ -208,8 +208,10 @@ $top-border:darken($con-gold, 15%);
             position: relative;
             box-shadow: 1px 1px 2px 0 #8e8e8e;
         }
-    }
 
+    #edit-actions--3 {
+        margin-left: 15px;
+    }
 
     .item-list {
         display: none;

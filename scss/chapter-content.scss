@@ -116,7 +116,37 @@ visibility: hidden;
 }
 
 }
-.flag-outer-lab-enrollment{
-  text-align: center;
-  font-size: 3rem;
+.flag-outer-lab-enrollment {
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem;
+    .btn-primary {
+        background-color: #434343;
+        border-color: #494646;
+        box-shadow: 1px 1px 2px 0 #8e8e8e;
+        &:hover {
+            background-color: #434343;
+            color: $white;
+        }
+        a {
+            color: $white;
+        }
+    }
+}
+
+//Webform submission formatting
+.view-submitted-quiz {
+    .views-field {
+        margin-bottom: 1rem;
+
+        .views-label {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .field-content {
+            padding-left: .5rem;
+            font-size: 1.6rem;
+        }
+    }
 }
