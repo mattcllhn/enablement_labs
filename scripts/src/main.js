@@ -164,6 +164,8 @@ if($('#edit-submit').val() == "Log in"){
 
     addPlaceholders();
 
+    //Adding btn class to enrollment link
+    $('.flag-lab-enrollment').addClass('btn btn-primary');
 
     function resetSideMenu() {
         $(".view-id-exercise_view").removeClass("take-notes question-submit table-of-contents");

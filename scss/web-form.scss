@@ -36,3 +36,36 @@ form[id*="webform-client-form"],
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
 }
+
+input.form-checkbox, input.form-radio {
+  vertical-align: text-top;
+}
+
+
+//Search form styles
+#block-system-main {
+
+  .search-form {
+    padding: 2rem;
+
+    #edit-submit--3 {
+      margin: 1rem 0;
+    }
+  }
+  .search-results .search-info {
+    display: none;
+  }
+
+  .search-results li {
+    margin-bottom: 3rem;
+  }
+
+}
+
+.page-search {
+  .page-wrapper {
+    h2 {
+      font-size: 18px;
+    }
+  }
+}
