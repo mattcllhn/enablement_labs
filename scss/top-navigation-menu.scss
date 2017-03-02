@@ -121,11 +121,9 @@ $top-border:darken($con-gold, 15%);
 .container-inline .form-type-textfield #edit-search-block-form--2{
       border-radius: 5px;
       background-color: rgba(0,0,0,.25);
-      //height: 40px;
       margin: 1.5rem 0 1rem 70%;
       border:none;
       padding: 1rem 2rem 1rem 4rem;
-      //width: 25rem;
       display: inline-block;
 }
 
@@ -164,7 +162,6 @@ $top-border:darken($con-gold, 15%);
             width: 12em;
             font-size: 20px;
             font-family: 'Open Sans Pro', sans-serif;
-            font-weight: 400;
             border-radius: 5px;
             padding: 2px 0 2px;
             font-weight: bold;
@@ -183,9 +180,7 @@ $top-border:darken($con-gold, 15%);
             width: 12em;
             font-size: 20px;
             font-family: 'Open Sans Pro', sans-serif;
-            font-weight: 400;
             border-radius: 5px;
-            padding: 2px 0 2px;
             font-weight: bold;
             height: 40px;
             padding-left:1rem;

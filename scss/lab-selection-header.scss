@@ -26,10 +26,16 @@
 }
 
 .down-arrow-icon {
+    //font-size: 125px;
+    //position: absolute;
+    //left: calc(50% - 41.5px);
+    //bottom: 1%;
+    //Update to fix arrow on small screens
     font-size: 125px;
-    position: absolute;
+    position: relative;
     left: calc(50% - 41.5px);
-    bottom: 1%;
+    top: 75%;
+
     .fa {
         color: $white;
         font-size: 13rem;
