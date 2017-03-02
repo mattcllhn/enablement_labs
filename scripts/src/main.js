@@ -28,7 +28,7 @@ function caretNav(arg){
               $(".pager-previous a")[0].click();
             }//if
         break;
-    default:console.log('switch malfunctioned in caretnav');
+    default:console.error('switch malfunctioned in caretnav');
 
   }
 
@@ -94,6 +94,7 @@ if($('#edit-submit').val() == "Log in"){
     }
 
     $('#chapter-back span').click(function (e) {
+
         caretNav('back');
     });
     $('#chapter-forward span').click(function (e) {
