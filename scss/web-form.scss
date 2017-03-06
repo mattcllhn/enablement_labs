@@ -4,7 +4,10 @@ form[id*="webform-client-form"],
 #user-profile-form,
 #user-register-form,
 #user-login,
-#user-pass
+#user-pass,
+#quiz-question-answering-form,
+#quiz-progress,
+#quiz-take-question-feedback-form
 {
   padding: 1.5rem;
   margin-bottom: 0;
@@ -67,5 +70,11 @@ input.form-checkbox, input.form-radio {
     h2 {
       font-size: 18px;
     }
+  }
+}
+
+.answering-form {
+  input[type=submit] {
+    margin: 0 .5rem;
   }
 }
