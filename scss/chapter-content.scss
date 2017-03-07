@@ -65,13 +65,17 @@
             .zabadoo {
                 margin-top: 15px;
                 margin-bottom: 30px;
-                background-color: blue;
-                &:before {
-                    counter-increment: step;
-                    content: "Step " counters(step, ":");
-                    padding-bottom: 10px;
-                    display: block;
-                    font-weight: bold;
+                .field-items{
+                  .field-item{
+                    &:before {
+                        counter-increment: step;
+                        content: counters(step,".")". ";
+                        // padding-bottom: 10px;
+                        // display: block;
+                        font-weight: bold;
+                  }
+                }
+
                 }
                 ol, ul {
                     padding-left: 30px;
