@@ -7,7 +7,9 @@ form[id*="webform-client-form"],
 #user-pass,
 #quiz-question-answering-form,
 #quiz-progress,
-#quiz-take-question-feedback-form
+#quiz-take-question-feedback-form,
+.node-quiz,
+.view-quiz-user-results
 {
   padding: 1.5rem;
   margin-bottom: 0;
@@ -15,6 +17,14 @@ form[id*="webform-client-form"],
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.page-node-quiz-results {
+  #block-system-main {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .marker, .form-required {
@@ -76,5 +86,20 @@ input.form-checkbox, input.form-radio {
 .answering-form {
   input[type=submit] {
     margin: 0 .5rem;
+  }
+}
+
+#quiz-view-table {
+  tr.odd {
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+    padding: 0.1em 0.6em;
+  }
+  tr.even {
+    background-color: #FFFFFF;
+    border-bottom: none;
+  }
+  th {
+    border-bottom: none;
   }
 }
