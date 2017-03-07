@@ -1,14 +1,8 @@
 
 jQuery(document).ready(function ($) {
-$('code').each(function(){
-  // console.log($(this).outerHTML);
-  $(this).wrap('<pre></pre>');
+  //wraps each code tag to preformat contents
+$('code').each(function(){$(this).wrap('<pre></pre>');});
 
-});
-// for (var i = 0; i < codeTags.length; i++) {
-//   codeTags[i].wrap('pre');
-// console.log(codeTags[i].parent());
-// }
 function caretNav(arg){
   // console.log('caretNav still works');
   switch (arg) {
