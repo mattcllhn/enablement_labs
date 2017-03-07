@@ -62,9 +62,10 @@
     .steps-wrapper {
         .item-list>ul {
             counter-reset: step;
-            &>li {
+            .zabadoo {
                 margin-top: 15px;
                 margin-bottom: 30px;
+                background-color: blue;
                 &:before {
                     counter-increment: step;
                     content: "Step " counters(step, ":");
