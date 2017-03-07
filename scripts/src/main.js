@@ -1,5 +1,14 @@
-jQuery(document).ready(function ($) {
 
+jQuery(document).ready(function ($) {
+$('code').each(function(){
+  // console.log($(this).outerHTML);
+  $(this).wrap('<pre></pre>');
+
+});
+// for (var i = 0; i < codeTags.length; i++) {
+//   codeTags[i].wrap('pre');
+// console.log(codeTags[i].parent());
+// }
 function caretNav(arg){
   // console.log('caretNav still works');
   switch (arg) {
@@ -180,6 +189,5 @@ if($('#edit-submit').val() == "Log in"){
     //        $(".pager-next a").click();
     //        //e.preventDefault();
     //    });
-
 
 });
