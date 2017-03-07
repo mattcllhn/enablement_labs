@@ -167,6 +167,19 @@ if($('#edit-submit').val() == "Log in"){
     //Adding btn class to enrollment link
     $('.flag-lab-enrollment').addClass('btn btn-primary');
 
+    //PLEASE KEEP still working on this for advanced mode
+    // Add class to all images in labs and then show or hide based on button click
+    // $('.steps-wrapper img').addClass('imgSwitch');
+    // function showImage(){
+    //     $('#imgSwitch').show();
+    // }
+    // function hideImage(){
+    //     $('#imgSwitch').hide();
+    // }
+    // $('#target').click(function(){
+    //     $('#imgSwitch').hide();
+    // });
+
     function resetSideMenu() {
         $(".view-id-exercise_view").removeClass("take-notes question-submit table-of-contents");
     }
