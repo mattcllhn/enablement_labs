@@ -3,6 +3,17 @@ jQuery(document).ready(function ($) {
   //wraps each code tag to preformat contents
 $('code').each(function(){$(this).wrap('<pre></pre>');});
 
+$('.other-content > .field-items > .field-item')
+.each(function(){
+  console.log('this is a field item', $(this));
+})
+.contents()
+  .filter(function() {
+    // console.log('hello',this.nodeType);
+    return this.nodeType === 3;
+  })
+    .wrap( "<p></p>" )
+    .end();
 function caretNav(arg){
   // console.log('caretNav still works');
   switch (arg) {
