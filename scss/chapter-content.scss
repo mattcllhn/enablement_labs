@@ -74,20 +74,35 @@
                         // display: block;
                         font-weight: bold;
                   }
-                }
 
-                }
-                ol, ul {
-                    padding-left: 30px;
-                }
-                ol li {
-                    list-style-type: decimal;
-                }
-                ul li {
-                    list-style-type: disc;
-                }
+                }//field-item
+
+
+
+              }//field-items
+
+            }
+            ol, ul {
+                padding-left: 30px;
+            }
+            ol li {
+                list-style-type: decimal;
+            }
+            ul li {
+                list-style-type: disc;
             }
         }
+    }
+    .chapter-introduction-wrapper{
+      ol, ul {
+          padding-left: 30px;
+      }
+      ol li {
+          list-style-type: decimal;
+      }
+      ul li {
+          list-style-type: disc;
+      }
     }
      .chapter-block {
          .lab-perrywinkle
