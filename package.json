@@ -34,6 +34,7 @@
     "jshint-stylish": "^2.2.1"
   },
   "dependencies": {
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "timeme.js": "^2.0.2"
   }
 }
