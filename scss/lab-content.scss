@@ -41,6 +41,14 @@ $con-gold: #B4975A;
             padding: 0 1.75rem 1.75rem 1.75rem;
         }
     }
+    .field-item {
+        td,
+        th {
+            padding: 1rem;
+            border: 1px solid;
+            vertical-align: baseline;
+        }
+    }
 }
 
 .lab-header-wrapper {
