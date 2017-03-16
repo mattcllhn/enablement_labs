@@ -102,6 +102,9 @@ $top-border:darken($con-gold, 15%);
         line-height: 2em;
         text-align: center;
         margin-right: 8px;
+        &:hover {
+           background-color: lighten(#ecbc66, 5%);
+        }
     }
     .field-name-field-account-icon {
         display: inline-block;
@@ -116,6 +119,9 @@ $top-border:darken($con-gold, 15%);
         height: 2em;
         line-height: 2em;
         text-align: center;
+        &:hover {
+            background-color: lighten(#ecbc66, 5%);
+        }
     }
 }
 .container-inline .form-type-textfield #edit-search-block-form--2{
@@ -203,10 +209,18 @@ $top-border:darken($con-gold, 15%);
             font-family: 'Open Sans Pro', sans-serif;
             font-weight: 400;
             border-radius: 5px;
+            -webkit-transition: .5s;
+            transition: .5s;
             padding: 7px 0 7px;
             border: 2px;
             position: relative;
             box-shadow: 1px 1px 2px 0 #8e8e8e;
+
+            &:hover {
+                background-color: darken(#363636, 5%);
+                color: #fff;
+                box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+            }
         }
 
     #edit-actions--3 {
@@ -217,6 +231,8 @@ $top-border:darken($con-gold, 15%);
         display: none;
     }
 }
+
+
 
 #user-login-form div {
     vertical-align: top;
@@ -230,13 +246,14 @@ $top-border:darken($con-gold, 15%);
     font-family: 'Open Sans Pro', sans-serif;
     border-radius: 5px;
     text-transform: uppercase;
-    color: #000;
+    color: #FFFFFF;
     background-color: #b1b1b1;
     border: 2px;
     box-shadow: 1px 1px 2px 0 #8e8e8e;
     &:hover {
-        background-color: #414042;
-        color: $white;
+        background-color: darken(#b1b1b1, 5%);
+        color: #fff;
+        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     }
 }
 .page-user {

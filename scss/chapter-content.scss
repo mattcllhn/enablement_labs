@@ -8,15 +8,33 @@
         }
 
         th {
-            padding-left: 8px;
-            color: white;
-            background: $con-harvest;
+          padding: 5px 0 5px 8px;
+          color: white;
+          background: $con-harvest;
         }
+
+        tr {
+          border-bottom: none;
+        }
+
         tr td {
             padding: 5px;
         }
 
+        tr.odd {
+          background-color: #FFF;
+        }
+
+        .file {
+          a {
+            color: black;
+          }
+          a:hover {
+            color: grey;
+          }
+        }
     }
+
     .view-header {
         background: #FFFFFF;
         width: 100%;
@@ -95,6 +113,7 @@
     }
     .chapter-introduction-wrapper{
       ol, ul {
+          margin-bottom: 20px;
           padding-left: 30px;
       }
       ol li {
@@ -131,11 +150,15 @@
          }
      }
 
-.flag-wrapper{
-visibility: hidden;
+    .flag-wrapper{
+    visibility: hidden;
+    }
 }
 
+.entity.entity-field-collection-item.field-collection-item-field-content.clearfix {
+  margin-top: 10px;
 }
+
 .flag-outer-lab-enrollment {
     text-align: center;
     font-size: 3rem;
@@ -143,10 +166,13 @@ visibility: hidden;
     .btn-primary {
         background-color: #434343;
         border-color: #494646;
+        -webkit-transition: .5s;
+        transition: .5s;
         box-shadow: 1px 1px 2px 0 #8e8e8e;
         &:hover {
-            background-color: #434343;
+            background-color: darken(#434343, 5%);
             color: $white;
+            box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
         }
         a {
             color: $white;

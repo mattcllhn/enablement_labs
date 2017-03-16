@@ -36,6 +36,9 @@ $con-gold: #B4975A;
         padding: 5px 15px;
     }
     .chapter-introduction-wrapper {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        padding: 20px 0;
         border-bottom: 1px solid #999;
         p {
             padding: 0 1.75rem 1.75rem 1.75rem;
@@ -143,7 +146,9 @@ $con-gold: #B4975A;
     margin-bottom: 15px;
 }
 
-.field-name-field-prerequisites {
+.field-name-field-prerequisites,
+.field-name-field-teachers
+{
     margin-bottom: 15px;
 }
 
@@ -219,7 +224,10 @@ $con-gold: #B4975A;
     margin-bottom: 50px;
     img {
         max-width: 100%;
+        //Setting width to make images line up better
+        width: 850px;
         height: auto;
+        margin: 2rem 0;
         border: 2px solid lightgray;
     }
     .field-name-field-content-list-item {
@@ -243,49 +251,36 @@ caption {
     font-weight: bold;
 }
 
-.document-download-wrapper {
-    th {
-        background-color: gray;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-    td {
-        background-color: lightgray;
-    }
-    .file {
-        a {
-            color: black;
-        }
-        a:hover {
-            color: grey;
-        }
-    }
-}
-
 input[type=submit] {
-    -webkit-appearance: button;
-    background-color: $con-wesson;
-    margin-left: 0;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 15px;
-    font-family: 'Open Sans Pro', sans-serif;
-    font-weight: 400;
-    border-radius: 5px;
-    border: 2px;
-    padding: 8px 22px; //2px 7px 2px;
-    box-shadow: 1px 1px 2px 0 #8e8e8e;
-    &:hover,
-    &:focus,
-    &.focus,
-    &:active,
-    &.active{
-      background-color: lighten($con-wesson, 22%); // 12% default
-}
+        -webkit-appearance: button;
+        background-color: $con-wesson;
+        margin-left: 0;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-family: 'Open Sans Pro', sans-serif;
+        font-weight: 400;
+        border-radius: 5px;
+        -webkit-transition: .5s;
+        transition: .5s;
+        border: 2px;
+        padding: 8px 22px; //2px 7px 2px;
+        box-shadow: 1px 1px 2px 0 #8e8e8e;
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active{
+          //background-color: lighten($con-wesson, 22%); // 12% default
+            background-color: darken(#363636, 5%);
+            color: #fff;
+            box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+
 }
 
 .field-name-field-content-paragraph {
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
 .pager {
