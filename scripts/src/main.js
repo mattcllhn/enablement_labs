@@ -194,6 +194,24 @@ if($('#edit-submit').val() == "Log in"){
     //     $('#imgSwitch').hide();
     // });
 
+    //Clicking 'Start Quiz' will open in module
+    var getNode = $('.quiz-start-link');
+    if(getNode.length == 0) {
+        return;
+    }
+
+    if(getNode.length) {
+        var getHref = getNode.attr('href');
+        var nodeId = getHref.match(/node\/(\d+)/)[1];
+        var strOpenAttr = 'width=780,height=460,left=100,top=0,scrollbars,resizable';
+
+        getNode.click(function (e) {
+            e.preventDefault();
+            window.open("https://enablement.concordusa.com/node/" + nodeId + "/take", "EnablementLabQuiz", strOpenAttr);
+            return false;
+        });
+    }
+
     function resetSideMenu() {
         $(".view-id-exercise_view").removeClass("take-notes question-submit table-of-contents");
     }
