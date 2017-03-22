@@ -194,9 +194,17 @@ if($('#edit-submit').val() == "Log in"){
     //     $('#imgSwitch').hide();
     // });
 
+    //Changes Quiz button text on click
+    var quizBtnText = $('.quiz-btn');
+    if($('.views-field-field-quiz-node-ref').length) {
+        quizBtnText.click(function (e) {
+            quizBtnText.text('Thank you for submitting');
+        });
+    }
+
     //Clicking 'Start Quiz' will open in module
     var getNode = $('.quiz-start-link');
-    if(getNode.length == 0) {
+    if(getNode.length === 0) {
         return;
     }
 
