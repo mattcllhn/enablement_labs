@@ -19,7 +19,7 @@ function enablement_views_mini_pager($vars) {
   if ($pager_total[$element] > 1) {
 
     $li_previous = theme('pager_previous',
-      array( 
+      array(
         'text' => '<span class="fa fa-chevron-left"></span>',
         'element' => $element,
         'interval' => 1,
@@ -168,11 +168,22 @@ function enablement_pager_link($variables) {
   $attributes['href'] = url($_GET['q'], array('query' => $query));
 
   /**
-   * Removed the call to the check_plain() function, which strips out 
-   * HTML tags passed in. 
+   * Removed the call to the check_plain() function, which strips out
+   * HTML tags passed in.
    * @link: http://drupal.stackexchange.com/questions/68488/html-inside-mini-pager-navigation-control-labels-tag
    */
   return '<a' . drupal_attributes($attributes) . '>' . $text . '</a>';
 }
 
+
+function enablement_views_pre_render(&$view) {
+
+  switch ($view->name) {
+    case 'lab_admin':
+
+
+      $view->field['nothing']->options['alter']['text'] = 'My custom text';
+    break;
+  }
+}
 ?>

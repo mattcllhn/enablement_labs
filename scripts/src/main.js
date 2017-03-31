@@ -1,5 +1,6 @@
 
 jQuery(document).ready(function ($) {
+  
   //wraps each code tag to preformat contents
 $('code').each(function(){$(this).wrap('<pre></pre>');});
 
