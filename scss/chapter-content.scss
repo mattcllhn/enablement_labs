@@ -68,11 +68,11 @@
 
          .chapter-navigation{
             #chapter-forward, #chapter-back{
-              span{
-            cursor: pointer;
-            font-size:3rem;
-            color:black;
-          }
+              span  {
+                cursor: pointer;
+                font-size:3rem;
+                color:black;
+            }
           }
         }
       }
@@ -159,6 +159,18 @@
   margin-top: 10px;
 }
 
+.view-display-id-block {
+  .views-row {
+    .views-field-body {
+      .field-content {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        padding: 20px 0;
+      }
+    }
+  }
+}
+
 .flag-outer-lab-enrollment {
     text-align: center;
     font-size: 3rem;
@@ -178,6 +190,24 @@
             color: $white;
         }
     }
+}
+
+.block-views {
+  .btn-primary {
+    background-color: #434343;
+    border-color: #494646;
+    -webkit-transition: .5s;
+    transition: .5s;
+    box-shadow: 1px 1px 2px 0 #8e8e8e;
+    &:hover {
+      background-color: darken(#434343, 5%);
+      color: $white;
+      box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    }
+    a {
+      color: $white;
+    }
+  }
 }
 
 //Webform submission formatting

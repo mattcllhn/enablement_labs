@@ -35,6 +35,20 @@
   margin-left: auto;
 }
 
+.node-type-lab {
+  .views-row {
+    .views-field-body,
+    .views-field-field-quiz-node-ref {
+      margin: 0 auto;
+      max-width: 1000px;
+      padding-left: 65px;
+      padding-right: 65px;
+      width: 100%;
+    }
+  }
+}
+
+
 .item-list ul li {
     margin: 0;
 }

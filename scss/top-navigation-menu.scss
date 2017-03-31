@@ -149,7 +149,8 @@ $top-border:darken($con-gold, 15%);
         display: inline-block;
     }
 
-    #edit-actions {
+    #edit-actions,
+    #edit-actions--2{
         margin-left: 15px;
         display: inline-block;
     }
@@ -200,7 +201,9 @@ $top-border:darken($con-gold, 15%);
     }
 
         #edit-submit,
-        #edit-submit--5{
+        #edit-submit--5,
+        #edit-submit--4
+        {
             color: white;
             background-color: $sidenav-main;
             width: 6em;
