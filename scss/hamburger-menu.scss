@@ -37,7 +37,7 @@
           }
           a{
             color:black;
-
+            padding: 2rem 4rem;
           }
         }
       }
@@ -54,7 +54,6 @@
           li{
             list-style:none;
             border-bottom: 1px solid darken(#EBEBEB, 40%);
-            padding: 2rem 4rem;
             &:hover{
               background-color:lighten(#EBEBEB, 20%);
               cursor:pointer;
