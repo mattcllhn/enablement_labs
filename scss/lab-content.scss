@@ -10,9 +10,7 @@ $con-bone: #DFE1CF;
 $con-sandstone: #959484;
 $con-gold: #B4975A;
 @import "main-site-colors";
-@import "//fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'";
-@import "//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'";
-@import "//fonts.googleapis.com/css?family=Karla:400,300' rel='stylesheet' type='text/css'";
+
 @function calculateRem($size) {
     $remSize: $size / 16px;
     @return #{$remSize}rem;
@@ -61,7 +59,7 @@ $con-gold: #B4975A;
         color: white;
         padding: 20px;
         h2 {
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             font-size: 3.6rem;
             text-transform: uppercase;
             font-weight: bold;
@@ -248,21 +246,19 @@ caption {
     font-weight: bold;
 }
 
-input[type=submit] {
+input[type=submit],
+    button {
         -webkit-appearance: button;
         background-color: $con-wesson;
         margin-left: 0;
         color: #fff;
         text-transform: uppercase;
-        font-size: 15px;
+        font-size: 20px;
         font-family: 'Open Sans Pro', sans-serif;
         font-weight: 400;
         border-radius: 5px;
-        -webkit-transition: .5s;
-        transition: .5s;
         border: 2px;
-        padding: 8px 22px; //2px 7px 2px;
-        box-shadow: 1px 1px 2px 0 #8e8e8e;
+        padding: 6px 27px; //2px 7px 2px;
         &:hover,
         &:focus,
         &.focus,
@@ -271,7 +267,6 @@ input[type=submit] {
           //background-color: lighten($con-wesson, 22%); // 12% default
             background-color: darken(#363636, 5%);
             color: #fff;
-            box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     }
 
 }

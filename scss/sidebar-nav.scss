@@ -103,7 +103,29 @@
                 display: block;
             }
         }
-        .contents-label,
+
+        .lab-title-header {
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 3rem;
+            font-weight: 400;
+            vertical-align: middle;
+            padding: 1rem 0;
+            display: block;
+        }
+
+        .contents-label {
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 2rem;
+            font-weight: 300;
+            vertical-align: middle;
+            padding: 1rem 0;
+            display: block;
+        }
+
+
+
         .node label {
             text-align: center;
             text-transform: capitalize;
@@ -131,6 +153,7 @@
             display: block;
             color: white;
             cursor: pointer;
+            box-shadow: 7px 5px 0 #BEBEBE;
         }
     }
     //classes for side menu click toggles.

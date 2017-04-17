@@ -138,6 +138,7 @@ if($('#edit-submit').val() == "Log in"){
     $('.hamburger_menu').click(function () {
         $('#offside-navigation-wrapper').toggleClass('expanded');
         $('#site').toggleClass('body-menu-open');
+        $('.hamburger-menu-background').toggleClass('activated');
     });
 
 

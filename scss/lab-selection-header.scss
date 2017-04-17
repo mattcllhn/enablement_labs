@@ -26,19 +26,71 @@
 }
 
 .down-arrow-icon {
-    //font-size: 125px;
-    //position: absolute;
-    //left: calc(50% - 41.5px);
-    //bottom: 1%;
     //Update to fix arrow on small screens
     font-size: 125px;
     position: relative;
     left: calc(50% - 41.5px);
     top: 75%;
 
+    /*
+   PULSE for down arrow
+     */
+    .pulse-arrow {
+        cursor: pointer;
+        -webkit-animation: pulse 3s linear 12s infinite;
+        animation: pulse 3s linear 12s infinite;
+
+        &:hover {
+            -webkit-animation: none;
+            animation: none;
+        }
+
+    }
+
     .fa {
         color: $white;
         font-size: 13rem;
+    }
+}
+
+/* PULSE
+http://l-lin.github.io/font-awesome-animation/
+*/
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    50% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    100% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    50% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    100% {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
     }
 }
 
@@ -67,9 +119,10 @@
             line-height: 2.2;
             text-align: center;
             font-size: 3.25rem !important;
+            border: none;
         }
         .fa-users::before {
-            font-size: 9.125rem !important; //2.6em;
+            font-size: 10.5rem !important; //2.6em;
         }
     }
     .main-title {
@@ -93,5 +146,44 @@
         line-height: 1;
         @include fonts("Open Sans", 600, 4rem);
         margin-left: calc(5% + 235px);
+        margin-right: -300px;
+    }
+}
+
+
+//Home screen responsive styles
+@media only screen and (max-width: 1200px) {
+    .title-block {
+        .sub-title {
+            margin-right: 0;
+            margin-left: calc(5% + 135px);
+        }
+    }
+
+    .down-arrow-icon {
+        top: 80%;
+    }
+}
+
+
+
+@media only screen and (max-width: 768px){
+    .title-block {
+        position: initial;
+        padding-top: 1rem;
+
+        .sub-title {
+            margin-right: 0;
+        }
+    }
+
+    .down-arrow-icon {
+        top: -7%;
+    }
+}
+
+@media only screen and (max-width: 749px){
+    .title-block .main-title {
+        font-size: 5rem;
     }
 }

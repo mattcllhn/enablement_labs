@@ -1,8 +1,6 @@
 @import "font";
 @import "main-site-colors";
 
-::-moz-selection { background: $con-harvest; }
-::selection { background: $con-harvest; }
 
 #site{
   transition: all 500ms linear;
@@ -55,10 +53,6 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  button{
-    background-color:$con-sandstone;
-    border-radius:5px;
-  }
 }
 
 h3 {
@@ -88,3 +82,8 @@ a:focus, a:hover {
 li {
   list-style: none;
 }
+
+table.sticky-header {
+  display: none !important;
+}
+
