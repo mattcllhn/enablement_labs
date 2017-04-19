@@ -150,7 +150,7 @@
          }
      }
 
-    .flag-wrapper{
+  .flag-completed-chapter {
     visibility: hidden;
     }
 }
@@ -194,13 +194,10 @@
   .btn-primary {
     background-color: #434343;
     border-color: #494646;
-    -webkit-transition: .5s;
-    transition: .5s;
-    box-shadow: 1px 1px 2px 0 #8e8e8e;
+
     &:hover {
       background-color: darken(#434343, 5%);
       color: $white;
-      box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
     }
     a {
       color: $white;

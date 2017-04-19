@@ -33,11 +33,11 @@
         height: 100%;
         h3 {
             font-size: 2rem;
-            border-bottom: 1px solid rgba(0, 0, 0, .20);
+            border-bottom: 2px solid rgba(0, 0, 0, .20);
             padding: 20px 10px;
-            background: rgba(255, 255, 255, .6);
+            background: rgba(213, 213, 213, 0.6);
             &:first-child {
-                border-top: 1px solid rgba(0, 0, 0, .20);
+                border-top: 2px solid rgba(0, 0, 0, .20);
             }
         }
         .views-row {}

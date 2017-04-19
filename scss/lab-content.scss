@@ -84,6 +84,10 @@ $con-gold: #B4975A;
             font-weight: 600;
         }
     }
+
+
+
+
     .field-name-field-topic-shortlist {
         .field-item {
             text-align: center;
@@ -97,6 +101,18 @@ $con-gold: #B4975A;
             margin-top: 20px;
         }
     }
+
+    .field-collection-view {
+        margin: 0;
+        padding: 0;
+    }
+
+    .topic-shortlist-labs .field-item {
+        background-color: #fff !important;
+        color: #000 !important;
+        padding: 0px !important;
+    }
+
     .fa {
         color: white;
         border-radius: 50%;
@@ -152,10 +168,6 @@ $con-gold: #B4975A;
 
 .field-collection-container {
     border-bottom: none;
-
-    .field-collection-view {
-        padding: 0 0 0 1rem;
-    }
 }
 
 

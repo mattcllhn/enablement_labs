@@ -180,7 +180,7 @@ if($('#edit-submit').val() == "Log in"){
     addPlaceholders();
 
     //Adding btn class to enrollment link
-    $('.flag-lab-enrollment').addClass('btn btn-primary');
+    $('.flag-outer-lab-enrollment .flag-lab-enrollment').addClass('btn btn-primary');
 
     //PLEASE KEEP still working on this for advanced mode
     // Add class to all images in labs and then show or hide based on button click
