@@ -2,7 +2,7 @@ jQuery(document).ready(function ($) {
     var floatingHeader = $("#block-views-chapter-view-v2-block .view-header"),
         adminMenu = $('body.admin-menu');
 
-    if(floatingHeader.length == 0){
+    if(floatingHeader.length === 0){
         /**
          * If the fixed header can't be found, immediately
          * return and do nothing.

@@ -134,6 +134,51 @@
     }
 }
 
+.lab-burnt {
+  .lab-header-wrapper {
+    .lab-icon {
+      margin-top: -45px;
+    }
+    .icomoon {
+      border: 7px solid #ACACAC;
+      color: #fff;
+      background-color: #D34209;
+      padding: 22px;
+      margin-top: 10px;
+      font-size: 8.1rem;
+      border-radius: 50%;
+      &:before {
+        font-size: 8.2rem;
+      }
+    }
+  }
+}
+
+.jcarousel-item {
+  .lab-burnt {
+    .lab-icon {
+      margin-top: 28px;
+    }
+    .icomoon {
+      border: 7px solid #ACACAC;
+      color: #fff;
+      background-color: #D34209;
+      padding: 22px;
+      margin-top: 10px;
+      font-size: 8.1rem;
+      border-radius: 50%;
+      &:before {
+        font-size: 8.2rem;
+      }
+    }
+
+
+    .lab-title {
+      padding-top: 5.2rem;
+    }
+  }
+}
+
 .lab-header-wrapper {
   .fa-user-md {
     background-color: $awesomeinc_perrywinkle;

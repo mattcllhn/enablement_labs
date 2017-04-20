@@ -111,6 +111,8 @@ $con-gold: #B4975A;
         background-color: #fff !important;
         color: #000 !important;
         padding: 0px !important;
+        width: inherit !important;
+        margin-top: 0 !important;
     }
 
     .fa {
@@ -266,7 +268,7 @@ input[type=submit],
         color: #fff;
         text-transform: uppercase;
         font-size: 20px;
-        font-family: 'Open Sans Pro', sans-serif;
+        font-family: 'Open Sans', sans-serif;
         font-weight: 400;
         border-radius: 5px;
         border: 2px;
