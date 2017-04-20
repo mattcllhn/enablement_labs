@@ -37,8 +37,8 @@
      */
     .pulse-arrow {
         cursor: pointer;
-        -webkit-animation: pulse 3s linear 12s infinite;
-        animation: pulse 3s linear 12s infinite;
+        -webkit-animation: pulse 4s linear 0s infinite;
+        animation: pulse 4s linear 0s infinite;
 
         &:hover {
             -webkit-animation: none;
@@ -59,38 +59,38 @@ http://l-lin.github.io/font-awesome-animation/
 
 @-webkit-keyframes pulse {
     0% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
     }
 
-    50% {
-        -webkit-transform: scale(0.9);
-        transform: scale(0.9);
+    10% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
     }
 
-    100% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
+    20% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
     }
 }
 
 @keyframes pulse {
     0% {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
+        -webkit-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        transform: scale(1.0);
     }
 
-    50% {
-        -webkit-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-        transform: scale(0.9);
+    1% {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
     }
 
-    100% {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
+    20% {
+        -webkit-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        transform: scale(1.0);
     }
 }
 
@@ -142,7 +142,7 @@ http://l-lin.github.io/font-awesome-animation/
         color: $con-harvest;
         padding: 2.5rem;
         text-transform: uppercase;
-        background-color: #65828E; //Need updating
+        background: rgba(255,255,255,.15);
         line-height: 1;
         @include fonts("Open Sans", 600, 4rem);
         margin-left: calc(5% + 235px);
@@ -152,6 +152,31 @@ http://l-lin.github.io/font-awesome-animation/
 
 
 //Home screen responsive styles
+@media only screen and (min-width: 500px){
+    html {
+        font-size: 8px;
+    }
+}
+
+@media only screen and (min-width: 700px){
+    html {
+        font-size: 9px;
+    }
+    .title-block {
+        top: 7%;
+    }
+
+    .down-arrow-icon {
+        top: 68%;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    html {
+        font-size: 10px;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .title-block {
         .sub-title {
@@ -160,14 +185,14 @@ http://l-lin.github.io/font-awesome-animation/
         }
     }
 
-    .down-arrow-icon {
-        top: 80%;
-    }
+    //.down-arrow-icon {
+    //    top: 80%;
+    //}
 }
 
 
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 772px){
     .title-block {
         position: initial;
         padding-top: 1rem;
@@ -180,10 +205,33 @@ http://l-lin.github.io/font-awesome-animation/
     .down-arrow-icon {
         top: -7%;
     }
+
+    .lab-modules {
+        width: 100% !important;
+        height: 379px !important;
+    }
+
 }
 
 @media only screen and (max-width: 749px){
     .title-block .main-title {
         font-size: 5rem;
+    }
+    .view-id-lab_selection .view-content {
+        width: 81% !important;
+    }
+
+    #block-user-login {
+        .form-item {
+            float: left;
+            margin-left: 10px !important;
+        }
+        #signup-link {
+            margin-left: 1rem;
+        }
+
+        #edit-actions {
+            margin-left: 0px !important;
+        }
     }
 }

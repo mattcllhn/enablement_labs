@@ -10,3 +10,5 @@ jQuery(document).ready(function ($) {
     }
 
     progressBar();
+});
+

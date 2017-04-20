@@ -48,7 +48,7 @@ $top-border:darken($con-gold, 15%);
         }
         .field-items {
             margin-top: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             cursor: pointer;
         }
         .group-left {
@@ -74,17 +74,18 @@ $top-border:darken($con-gold, 15%);
     }
 
     .hamburger-bars {
-        -webkit-transition: background 0.2s ease 0.4s;
-        transition: background 0.2s ease 0.4s;
+        //-webkit-transition: background 0.2s ease 0.4s;
+        //transition: background 0.2s ease 0.4s;
         display: block;
-        width: 66%;
+        width: 62%;
         height: 3px;
         background: #ffffff;
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
+        //-webkit-transform-origin: 50% 50%;
+        //transform-origin: 50% 50%;
         position: relative;
-        right: -7px;
+        right: -8px;
         top: 18px;
+        transition: background-color 500ms ease;
     }
 
     .hamburger-bars:before {
@@ -104,35 +105,45 @@ $top-border:darken($con-gold, 15%);
         background: #ffffff;
         position: absolute;
         right: 0;
-        content: '';
-        -webkit-transition: width 0.2s ease 0.2s, top 0.2s ease 0.4s, right 0.2s ease 0.2s, -webkit-transform 0.2s ease 0s;
-        transition: width 0.2s ease 0.2s, top 0.2s ease 0.4s, right 0.2s ease 0.2s, -webkit-transform 0.2s ease 0s;
-        transition: transform 0.2s ease 0s, width 0.2s ease 0.2s, top 0.2s ease 0.4s, right 0.2s ease 0.2s;
-        transition: transform 0.2s ease 0s, width 0.2s ease 0.2s, top 0.2s ease 0.4s, right 0.2s ease 0.2s, -webkit-transform 0.2s ease 0s;
-        -webkit-transform-origin: 100% 50%;
-        transform-origin: 100% 50%;
+        //content: '';
+        //-webkit-transition: width 0.2s ease 0.2s, top 0.2s ease 0.4s, right 0.2s ease 0.2s, -webkit-transform 0.2s ease 0s;
+        //transition: width 0.2s ease 0.2s, top 0.2s ease 0.4s, right 0.2s ease 0.2s, -webkit-transform 0.2s ease 0s;
+        //transition: transform 0.2s ease 0s, width 0.2s ease 0.2s, top 0.2s ease 0.4s, right 0.2s ease 0.2s;
+        //transition: transform 0.2s ease 0s, width 0.2s ease 0.2s, top 0.2s ease 0.4s, right 0.2s ease 0.2s, -webkit-transform 0.2s ease 0s;
+        //-webkit-transform-origin: 100% 50%;
+        //transform-origin: 100% 50%;
+        content: " ";
+        transition: top 500ms ease, transform 500ms ease, width 500ms ease;
     }
 
     .hamburger-menu-background.activated {
         .hamburger-bars {
-            -webkit-transition: background 0.2s ease 0s;
-            transition: background 0.2s ease 0s;
+            //-webkit-transition: background 0.2s ease 0s;
+            //transition: background 0.2s ease 0s;
         }
 
             .hamburger-bars:before,
             .hamburger-bars:after {
-                right: 27px;
-                top: 0;
-                width: 60%;
-                transition: top 0.2s ease 0s, width 0.2s ease 0.2s, transform 0.2s ease 0.4s, right .2s ease .2s;
+                //right: 27px;
+                //top: 0;
+                //width: 60%;
+                //transition: top 0.2s ease 0s, width 0.2s ease 0.2s, transform 0.2s ease 0.4s, right .2s ease .2s;
             }
 
             .hamburger-bars:before {
-                transform: rotate(145deg);
+                //transform: rotate(145deg);
+                transform: rotate(225deg);
+                top: 5px;
+                left: -3px;
+                width: 18px;
             }
 
             .hamburger-bars:after {
-                transform: rotate(-145deg);
+                //transform: rotate(-145deg);
+                transform: rotate(-225deg);
+                top: -6px;
+                left: -3px;
+                width: 18px;
             }
 
     }

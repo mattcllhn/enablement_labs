@@ -81,12 +81,12 @@ if($('#edit-submit').val() == "Log in"){
             $(".view-id-exercise_view").addClass(e.currentTarget.className);
             menuOpen = true;
             currentSideTab = e.currentTarget.className;
-        } else if (menuOpen == true) {
-            if (currentSideTab == e.currentTarget.className) {
+        } else if (menuOpen === true) {
+            if (currentSideTab === e.currentTarget.className) {
                 $("#offside").removeClass("expanded");
                 setTimeout(resetSideMenu, 500);
                 menuOpen = false;
-            } else if (currentSideTab != e.currentTarget.className) {
+            } else if (currentSideTab !== e.currentTarget.className) {
                 resetSideMenu();
                 $(".view-id-exercise_view").addClass(e.currentTarget.className);
                 currentSideTab = e.currentTarget.className;
@@ -159,7 +159,7 @@ if($('#edit-submit').val() == "Log in"){
     }
 
     function scrollPage(speed) {
-        var speed = speed || 0;
+        speed = speed || 0;
         $('html, body').animate({
             scrollTop: $('#scroll-here').offset().top
         }, speed);
