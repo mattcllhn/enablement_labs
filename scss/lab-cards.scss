@@ -1,15 +1,139 @@
+@import "main-site-colors";
+
 .page-lab-preview {
+  .view-lab-preview {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
   .lab-header-wrapper {
+    border-top: 1px solid #EBEBEB;
+    border-right: 1px solid #bebebe;
+    position: relative;
+
+    .field.field-name-field-fa-icon.field-type-icon-field.field-label-hidden.lab-icon {
+      position: absolute;
+      top: 76px;
+    }
+
+    &:first-of-type {
+      margin: 30px 30px 15px 30px;
+    }
     box-shadow: 7px 5px 0 #BEBEBE;
-    margin: 0 40px 40px 40px;
+    margin: 15px 30px 15px 30px;
     background-color: #fff;
+
+    .field-name-field-fa-icon {
+      span {
+        margin-left: -119px;
+      }
+    }
+
+    .field-name-title {
+      background-color: #ffffff;
+      h2 {
+        color: #000000;
+      }
+    }
+
   }
 
-  .main-content-wrapper {
-    background-color: #EBEBEB;
+  .lab-icon .fa {
+    border-radius: 50%;
+    border: none;
+    color: #3a52a0;
+    background-color: #ffffff;
+    line-height: 6em;
+    width: 9.9em;
+    padding: 22px;
+    height: 9.9em;
+    font-size: 11px;
+
+    &:before {
+      font-size: 70px;
+    }
   }
 
-  .footer-parent-wrapper {
-    background-color: #EBEBEB;
+  .lab-burnt {
+    .lab-header-wrapper {
+      border-left: 130px solid $con-burnt;
+      .fa {
+        color: $con-burnt;
+      }
+    }
+  }
+
+  .lab-gold {
+    .lab-header-wrapper {
+      border-left: 130px solid $con-gold;
+      .fa {
+        color: $con-gold;
+      }
+    }
+  }
+
+  .lab-perrywinkle {
+    .lab-header-wrapper {
+      border-left: 130px solid $awesomeinc_perrywinkle;
+      .fa {
+        color: $awesomeinc_perrywinkle;
+      }
+    }
+  }
+
+  .lab-brick {
+    .lab-header-wrapper {
+      border-left: 130px solid  $con-brick;
+      .fa {
+        color: $con-brick;
+      }
+    }
+  }
+
+  .lab-sandstone {
+    .lab-header-wrapper {
+      border-left: 130px solid  $con-sandstone;
+      .fa {
+        color: $con-ecoforest;
+      }
+    }
+  }
+
+  .lab-ecoforest {
+    .lab-header-wrapper {
+      border-left: 130px solid  $con-ecoforest;
+      .fa {
+        color: $con-ecoforest;
+      }
+    }
+  }
+
+  //.main-content-wrapper {
+  //  background-color: #EBEBEB;
+  //}
+  //
+  //.footer-parent-wrapper {
+  //  background-color: #EBEBEB;
+  //}
+
+  .icomoon {
+    border: none;
+    color: #D34209;
+    background-color: #ffffff;
+    padding: 20px;
+    font-size: 40px;
+    margin-top: -66px !important;
+    &:before {
+      font-size: 69px;
+    }
+  }
+}
+
+@media only screen and (max-width: 795px){
+  .lab-header-wrapper {
+      .field-name-title h2 {
+        margin-left: 30px;
+        margin-bottom: 100px;
+    }
   }
 }
