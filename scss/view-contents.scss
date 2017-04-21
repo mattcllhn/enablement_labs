@@ -40,8 +40,8 @@
 }
 
 .topic-shortlist {
-  line-height: 2.8;
-  font-size: 1.7rem;
+  line-height: 1.8;
+  font-size: 2rem;
   padding: .5rem;
   color: $white;
   display: table-row-group;
@@ -134,11 +134,8 @@
     }
 }
 
-.lab-burnt {
+
   .lab-header-wrapper {
-    .lab-icon {
-      margin-top: -45px;
-    }
     .icomoon {
       border: 7px solid #ACACAC;
       color: #fff;
@@ -147,36 +144,27 @@
       margin-top: 10px;
       font-size: 8.1rem;
       border-radius: 50%;
+      display: inline-block;
       &:before {
         font-size: 8.2rem;
       }
     }
   }
-}
+
 
 .jcarousel-item {
-  .lab-burnt {
-    .lab-icon {
-      margin-top: 28px;
-    }
     .icomoon {
       border: 7px solid #ACACAC;
       color: #fff;
       background-color: #D34209;
       padding: 22px;
-      margin-top: 10px;
       font-size: 8.1rem;
       border-radius: 50%;
+      display: inline-block;
       &:before {
         font-size: 8.2rem;
       }
     }
-
-
-    .lab-title {
-      padding-top: 5.2rem;
-    }
-  }
 }
 
 .lab-header-wrapper {

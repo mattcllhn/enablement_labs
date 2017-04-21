@@ -184,13 +184,13 @@ http://l-lin.github.io/font-awesome-animation/
             margin-left: calc(5% + 135px);
         }
     }
-
-    //.down-arrow-icon {
-    //    top: 80%;
-    //}
 }
 
-
+@media only screen and (max-width: 870px) {
+    .topic-shortlist {
+        font-size: 1.5rem !important;
+    }
+}
 
 @media only screen and (max-width: 772px){
     .title-block {

@@ -20,7 +20,7 @@
 #block-search-form .page-color
 {
   background-color: #EBEBEB;
-  box-shadow: inset 0px 2px 7px 0 grey;
+  box-shadow: inset 0px 7px 7px -5px grey;
 }
 
 //Gutters for site
@@ -87,3 +87,7 @@ table.sticky-header {
   display: none !important;
 }
 
+
+ul.menu li {
+  margin: 0 0 0 0;
+}
