@@ -126,7 +126,7 @@ http://l-lin.github.io/font-awesome-animation/
         }
     }
     .main-title {
-        @include fonts("Open Sans", 600, 6rem);
+        @include fonts("Open Sans", 600, 5rem);
         text-transform: uppercase;
         color: $white;
         display: table;
@@ -156,24 +156,30 @@ http://l-lin.github.io/font-awesome-animation/
     html {
         font-size: 8px;
     }
-}
 
-@media only screen and (min-width: 700px){
-    html {
-        font-size: 9px;
-    }
     .title-block {
         top: 7%;
     }
 
-    .down-arrow-icon {
-        top: 68%;
+    //.down-arrow-icon {
+    //    top: 68%;
+    //}
+}
+
+@media only screen and (min-width: 1030px){
+    html {
+        font-size: 9px;
     }
+
 }
 
 @media only screen and (min-width: 1200px){
     html {
         font-size: 10px;
+    }
+
+    .down-arrow-icon {
+        top: 75%;
     }
 }
 
@@ -208,7 +214,7 @@ http://l-lin.github.io/font-awesome-animation/
 
     .lab-modules {
         width: 100% !important;
-        height: 379px !important;
+        height: 310px !important;
     }
 
 }

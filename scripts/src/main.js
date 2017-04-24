@@ -179,8 +179,20 @@ if($('#edit-submit').val() == "Log in"){
 
     addPlaceholders();
 
+
+    //Add HTML to Hamburger Menu
+    $('<div class="menu-title-hamburger"><i class="hamburger_menuX fa fa-times" aria-hidden="true"></i>' +
+        '<div class="main-menu-title">Main Menu</div></div>').insertBefore('.menu');
+
+    $('.hamburger_menuX').click(function () {
+        $('#offside-navigation-wrapper').toggleClass('expanded');
+        $('#site').toggleClass('body-menu-open');
+    });
+
     //Adding btn class to enrollment link
     $('.flag-outer-lab-enrollment .flag-lab-enrollment').addClass('btn btn-primary');
+
+
 
     //PLEASE KEEP still working on this for advanced mode
     // Add class to all images in labs and then show or hide based on button click

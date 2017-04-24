@@ -77,14 +77,14 @@ $top-border:darken($con-gold, 15%);
         //-webkit-transition: background 0.2s ease 0.4s;
         //transition: background 0.2s ease 0.4s;
         display: block;
-        width: 62%;
+        width: 51%;
         height: 3px;
         background: #ffffff;
         //-webkit-transform-origin: 50% 50%;
         //transform-origin: 50% 50%;
         position: relative;
-        right: -8px;
-        top: 18px;
+        right: -10px;
+        top: 19px;
         transition: background-color 500ms ease;
     }
 
@@ -133,9 +133,9 @@ $top-border:darken($con-gold, 15%);
             .hamburger-bars:before {
                 //transform: rotate(145deg);
                 transform: rotate(225deg);
-                top: 5px;
+                top: 4px;
                 left: -3px;
-                width: 18px;
+                width: 16px;
             }
 
             .hamburger-bars:after {
@@ -143,7 +143,7 @@ $top-border:darken($con-gold, 15%);
                 transform: rotate(-225deg);
                 top: -6px;
                 left: -3px;
-                width: 18px;
+                width: 16px;
             }
 
     }
@@ -152,7 +152,7 @@ $top-border:darken($con-gold, 15%);
         display: inline-block;
 
         img {
-            margin-left: 8px;
+            margin-left: 13px;
             margin-top: 4px;
             height: 34px;
         }
@@ -222,7 +222,7 @@ $top-border:darken($con-gold, 15%);
     }
 
     .form-type-password {
-        margin-left: 36px;
+        margin-left: 15px;
         display: inline-block;
     }
 
@@ -303,7 +303,7 @@ $top-border:darken($con-gold, 15%);
 }
 
 #signup-link{
-    margin-left: 2rem;
+    margin-left: 15px;
     padding: 6.37px 22px;
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
