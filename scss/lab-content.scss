@@ -64,6 +64,14 @@ $con-gold: #B4975A;
             text-transform: uppercase;
             font-weight: bold;
             margin-top: 10px;
+            color: $white;
+            a{
+                color: $white;
+                &:hover {
+                    color: $white;
+                    cursor: default;
+                }
+            }
         }
     }
 }
@@ -146,7 +154,8 @@ $con-gold: #B4975A;
     }
 }
 
-.field-name-field-description {
+.field-name-field-description,
+.field-name-field-prerequisites {
     margin-bottom: 15px;
     .field-items {
         width: calc(100% - 125px);

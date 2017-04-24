@@ -11,21 +11,26 @@
     border-right: 1px solid #bebebe;
     position: relative;
 
+    .flag-lab-enrollment {
+      display: none;
+    }
+
     .field.field-name-field-fa-icon.field-type-icon-field.field-label-hidden.lab-icon {
       position: absolute;
       top: 76px;
     }
 
     &:first-of-type {
-      margin: 30px 30px 15px 30px;
+      margin: 30px 45px 15px 45px;
     }
     box-shadow: 7px 5px 0 #BEBEBE;
-    margin: 15px 30px 15px 30px;
+    margin: 15px 45px 15px 45px;
     background-color: #fff;
 
     .field-name-field-fa-icon {
       span {
         margin-left: -119px;
+        margin-top: -54px;
       }
     }
 
@@ -33,6 +38,13 @@
       background-color: #ffffff;
       h2 {
         color: #000000;
+        a {
+          color: #000000;
+          &:hover {
+            color: #337ab7;
+            cursor: pointer;
+          }
+        }
       }
     }
 
@@ -106,15 +118,18 @@
         color: $con-ecoforest;
       }
     }
+
   }
 
   //.main-content-wrapper {
   //  background-color: #EBEBEB;
   //}
   //
-  //.footer-parent-wrapper {
-  //  background-color: #EBEBEB;
-  //}
+  .footer-parent-wrapper {
+    #footer-wrapper {
+      min-height: initial;
+    }
+  }
 
   .icomoon {
     border: none;
@@ -122,7 +137,7 @@
     background-color: #ffffff;
     padding: 20px;
     font-size: 40px;
-    margin-top: -66px !important;
+    margin-top: -54px !important;
     &:before {
       font-size: 69px;
     }

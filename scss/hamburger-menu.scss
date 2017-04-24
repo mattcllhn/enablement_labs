@@ -67,18 +67,23 @@
 
     }
 
-  //Adding Fontawesome icons to hamburger menu
-    #block-menu-menu-hamburger-menu {
-      .menu {
-        .first {
-          a::before {
-            font-family: FontAwesome;
-            content: "\f015";
-            color: #000000; //#ACACAC;
-            padding-right: 1rem;
-            font-size: 2.5rem;
-          }
-        }
-      }
+  .menu-title-hamburger {
+    border-bottom: 1px solid #858585;
+    padding: 2rem 4rem;
+
+    .hamburger_menuX {
+      cursor: pointer;
     }
+    .main-menu-title {
+      display: inline-block;
+      margin-left: 2rem;
+      font-size: 2rem;
+    }
+
+    .fa-remove:before, .fa-close:before, .fa-times:before {
+      font-size: 2rem;
+    }
+  }
+
+
 }

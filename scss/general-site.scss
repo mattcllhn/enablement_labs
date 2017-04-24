@@ -21,6 +21,7 @@
 {
   background-color: #EBEBEB;
   box-shadow: inset 0px 7px 7px -5px grey;
+  border-bottom: 1px solid darken(#EBEBEB, 20%);
 }
 
 //Gutters for site
@@ -65,9 +66,9 @@ a {
 }
 
 #footer-wrapper {
-  min-height: 200px;
+  min-height: 80px;
     .footer-copywrite {
-      padding: 3rem 3rem;
+      padding: 40px 40px 20px 40px;
       max-width: 1200px;
       margin-right: auto;
       margin-left: auto;
