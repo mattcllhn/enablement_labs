@@ -187,6 +187,7 @@ if($('#edit-submit').val() == "Log in"){
     $('.hamburger_menuX').click(function () {
         $('#offside-navigation-wrapper').toggleClass('expanded');
         $('#site').toggleClass('body-menu-open');
+        $('.hamburger-menu-background').toggleClass('activated');
     });
 
     //Adding btn class to enrollment link
